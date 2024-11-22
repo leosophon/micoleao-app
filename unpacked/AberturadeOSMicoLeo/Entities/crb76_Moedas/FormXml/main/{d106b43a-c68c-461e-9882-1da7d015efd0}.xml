@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{d106b43a-c68c-461e-9882-1da7d015efd0}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{5eb2a82e-3f70-4b7c-b547-dd76d390dc7a}" IsUserDefined="1">
+          <labels>
+            <label description="Geral" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{8a46327d-6fa7-4f18-8f59-573bb072b76f}">
+                  <labels>
+                    <label description="Geral" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c11d7337-87f8-4589-aa7b-e74027ea8599}">
+                        <labels>
+                          <label description="Nome da Moeda" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_nomedamoeda" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="crb76_nomedamoeda" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6f61055a-bc3f-4c8b-8f91-06245fdb23f0}">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1abdfa56-c530-4584-be1e-65a86030028d}">
+                        <labels>
+                          <label description="Simbolo" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_simbolo" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="crb76_simbolo" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

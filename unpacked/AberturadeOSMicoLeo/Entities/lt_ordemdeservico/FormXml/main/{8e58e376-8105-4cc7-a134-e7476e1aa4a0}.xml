@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{8e58e376-8105-4cc7-a134-e7476e1aa4a0}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{c5a61daa-c86d-4ac5-92e4-f674ac183724}" name="StageStep3" locklevel="0" expanded="true" visible="false" labelid="{f354e9eb-78e8-4037-b706-2101f8a894fd}">
+          <labels>
+            <label description="Nova Solicitação" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{e9cb8922-10c8-bfb7-3d6e-9b34c7c01921}" name="StageStep3_section1" labelid="{41819a5e-c3cd-4c54-a0de-3ec4be5a84a2}">
+                  <labels>
+                    <label description="Nova Solicitação" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{101a248b-95ba-4e92-9564-c4ad7cafa181}" showlabel="true" visible="true" labelid="{0185ac7f-d404-434c-a772-8c31a1f30a5a}">
+                        <labels>
+                          <label description="Loja" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_ordservicoos_lt_ordemdeservico:lt_lojaos" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="lt_lojaos" disabled="false" relationship="bpf_cre0a_ordservicoos_lt_ordemdeservico" isrequired="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4ed7e9f9-c1da-4963-9a9d-dd0088d9db7d}" showlabel="true" visible="true" labelid="{722cc72b-9f8c-4f15-8de0-2429f59ac402}">
+                        <labels>
+                          <label description="Qual será o problema para reportar ?" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_ordservicoos_lt_ordemdeservico:lt_qualproblemaparareportar" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="lt_qualproblemaparareportar" disabled="false" relationship="bpf_cre0a_ordservicoos_lt_ordemdeservico" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{217190e7-db53-4fe2-858e-eaa297d57f72}" name="StageStep9" locklevel="0" expanded="true" visible="false" labelid="{8d2ec287-fd0e-42f4-bf96-1a76e24dbabf}">
+          <labels>
+            <label description="Técnico Responsável" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{16e3a842-932f-c55b-5cc5-dc52877ef10e}" name="StageStep9_section1" labelid="{53220362-6d94-4e8c-9789-ca5f06b545a2}">
+                  <labels>
+                    <label description="Técnico Responsável" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{15a57beb-a683-426a-a2a1-0769c48cf5e2}" showlabel="true" visible="true" labelid="{73656a41-b95b-4eba-84e7-93289970a772}">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_ordservicoos_lt_ordemdeservico:ownerid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ownerid" disabled="false" relationship="bpf_cre0a_ordservicoos_lt_ordemdeservico" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{4ec04ccb-39ed-4940-930a-9b58b88f6cdb}" name="StageStep13" locklevel="0" expanded="true" visible="false" labelid="{c9d65998-c6c7-43d4-af4b-3a1b798f62fc}">
+          <labels>
+            <label description="Avaliação Inicial OS" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{02164387-9f89-cbda-d785-ea034f42357e}" name="StageStep13_section1" labelid="{c06aa4f1-834d-4915-afd3-e1f6778cfe8b}">
+                  <labels>
+                    <label description="Avaliação Inicial OS" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d52a7a48-e9a3-4f01-bc2b-6cdea64f3f8a}" showlabel="true" visible="true" labelid="{eb4cf708-9af6-4136-a06e-1992348dfa1c}">
+                        <labels>
+                          <label description="Avaliação Inicial OS" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_ordservicoos_lt_ordemdeservico:lt_avaliacaoinicialos" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="lt_avaliacaoinicialos" disabled="false" relationship="bpf_cre0a_ordservicoos_lt_ordemdeservico" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{16633a91-17d5-474a-a8e6-e95c6a3b5ab4}" name="StageStep17" locklevel="0" expanded="true" visible="false" labelid="{5f009fdb-0672-43ac-81f6-05d8e9bf0301}">
+          <labels>
+            <label description="Parecer Final OS" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{68cca11e-6cad-f9c2-fa2d-d9b166721578}" name="StageStep17_section1" labelid="{77a5cc97-d256-4253-bc25-1fa4dbcdbf38}">
+                  <labels>
+                    <label description="Parecer Final OS" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3391c4e7-6574-4010-8346-2365bc179b52}" showlabel="true" visible="true" labelid="{8ff8e515-0ed4-462d-8fb5-fd53e45060d4}">
+                        <labels>
+                          <label description="Parecer Final OS" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_ordservicoos_lt_ordemdeservico:lt_parecerfinalos" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="lt_parecerfinalos" disabled="false" relationship="bpf_cre0a_ordservicoos_lt_ordemdeservico" isrequired="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

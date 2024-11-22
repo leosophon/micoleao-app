@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{771bcaf4-41cb-4a8b-ba9d-7e4117be1c8c}</savedqueryid>
+    <layoutxml>
+      <grid name="lt_emailsmkts" jump="lt_idenvio" select="1" icon="1" preview="1">
+        <row name="lt_emailsmkt" id="lt_emailsmktid">
+          <cell name="lt_idenvio" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_emailsmkt">
+          <attribute name="lt_emailsmktid" />
+          <attribute name="lt_idenvio" />
+          <attribute name="createdon" />
+          <order attribute="lt_idenvio" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição Associada de E-mails MKT" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

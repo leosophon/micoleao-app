@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{27736dc3-3521-4daf-ad87-c8b8353ddb03}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="cre0a_vistoriaid" select="1" icon="1" preview="1">
+        <row name="result" id="cre0a_vistoriasid">
+          <cell name="lt_lojamaquina" width="100" />
+          <cell name="lt_abastecimentodasmaquinas" width="297" />
+          <cell name="lt_datahorainicioabastecimento" width="222" />
+          <cell name="lt_finalizarabastecimentomaquinas" width="273" />
+          <cell name="lt_datahorafinalabastecimento" width="236" />
+          <cell name="lt_algoreportar" width="136" />
+          <cell name="createdby" width="101" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="cre0a_vistorias">
+          <attribute name="cre0a_vistoriasid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_lojamaquina" />
+          <attribute name="lt_abastecimentodasmaquinas" />
+          <attribute name="lt_algoreportar" />
+          <attribute name="createdby" />
+          <attribute name="lt_datahorainicioabastecimento" />
+          <attribute name="lt_finalizarabastecimentomaquinas" />
+          <attribute name="lt_datahorafinalabastecimento" />
+          <order attribute="lt_datahorainicioabastecimento" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Todos os Abastecimentos" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

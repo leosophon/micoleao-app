@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{65036b5b-b7c0-4da0-afa3-aa716dcbbcc3}</savedqueryid>
+    <layoutxml>
+      <grid name="cre0a_lojas" jump="cre0a_nomeloja" select="1" icon="1" preview="0">
+        <row name="cre0a_loja" id="cre0a_lojaid">
+          <cell name="cre0a_lojasid" width="100" />
+          <cell name="cre0a_nomeloja" width="300" />
+          <cell name="cre0a_email" width="100" />
+          <cell name="cre0a_telefone" width="100" />
+          <cell name="lt_tipoloja" width="140" />
+          <cell name="cre0a_cep" width="100" />
+          <cell name="cre0a_rua" width="100" />
+          <cell name="cre0a_cidade" width="100" />
+          <cell name="cre0a_estado" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" distinct="true">
+        <entity name="cre0a_loja">
+          <attribute name="cre0a_lojaid" />
+          <attribute name="cre0a_nomeloja" />
+          <attribute name="cre0a_lojasid" />
+          <attribute name="cre0a_email" />
+          <attribute name="cre0a_telefone" />
+          <attribute name="cre0a_cep" />
+          <attribute name="cre0a_cidade" />
+          <attribute name="cre0a_rua" />
+          <attribute name="cre0a_estado" />
+          <attribute name="lt_tipoloja" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Consulta de Loja" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

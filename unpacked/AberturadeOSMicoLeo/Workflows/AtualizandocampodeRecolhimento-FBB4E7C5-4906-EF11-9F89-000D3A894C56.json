@@ -1,0 +1,540 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_15970"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "8fe8b70b-80c3-4124-a2c2-5c12bb1a7fbb"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "lt_recolhimento",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "lt_malotelook"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condition": {
+          "actions": {
+            "List_rows": {
+              "runAfter": {
+                "Update_a_row": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1ee0fa9e-cb4b-43f7-ac88-6d679880c368"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "lt_funcionarioses"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each": {
+              "foreach": "@outputs('List_rows')?['body/value']",
+              "actions": {
+                "Condition_2": {
+                  "actions": {
+                    "Set_variable": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "c317c4f8-d655-423d-853a-7f5211ad3478"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Colaborador",
+                        "value": "@items('Apply_to_each')?['@odata.id']"
+                      }
+                    },
+                    "Update_a_row_3": {
+                      "runAfter": {
+                        "Set_variable": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "f0765c78-15ce-414c-a48f-d90e296af4a6"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "UpdateRecord",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "lt_recolhimentos",
+                          "recordId": "@triggerOutputs()?['body/lt_recolhimentoid']",
+                          "item/lt_colaborador@odata.bind": "@variables('Colaborador')",
+                          "item/lt_idrecolhimento": "@outputs('Compose2')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {},
+                  "else": {
+                    "actions": {
+                      "Update_a_row_4": {
+                        "runAfter": {},
+                        "metadata": {
+                          "operationMetadataId": "cf621c6b-49b0-47ca-810a-ae418b13fbc0"
+                        },
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "host": {
+                            "connectionName": "shared_commondataserviceforapps",
+                            "operationId": "UpdateRecord",
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                          },
+                          "parameters": {
+                            "entityName": "lt_recolhimentos",
+                            "recordId": "@triggerOutputs()?['body/lt_recolhimentoid']",
+                            "item/lt_idrecolhimento": "@outputs('Compose2')"
+                          },
+                          "authentication": "@parameters('$authentication')"
+                        }
+                      }
+                    }
+                  },
+                  "expression": {
+                    "equals": [
+                      "@triggerOutputs()?['body/_createdby_value']",
+                      "@items('Apply_to_each')?['_lt_usuariosistema_value']"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "a57f7197-aca2-4c82-8810-7eb46af84db0"
+                  },
+                  "type": "If"
+                }
+              },
+              "runAfter": {
+                "List_rows": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d1d65259-3bd4-4ebe-b224-e7121db6e22d"
+              },
+              "type": "Foreach"
+            },
+            "Update_a_row": {
+              "runAfter": {
+                "Compose2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "0a80b00d-a3f5-45dd-99c1-98131a60d404"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "lt_recolhimentos",
+                  "recordId": "@triggerOutputs()?['body/lt_recolhimentoid']",
+                  "item/lt_idrecolhimento": "@outputs('Compose2')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Obtendo_Loja": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "a0af0efe-bb10-41cc-852c-de255fa3d3d2"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cre0a_lojas",
+                  "recordId": "@triggerOutputs()?['body/_lt_loja_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Compose2": {
+              "runAfter": {
+                "Novo_Malote": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "cc11e830-f717-4f07-82e9-1f0a048f0bd8"
+              },
+              "type": "Compose",
+              "inputs": "@{triggerOutputs()?['body/lt_idrecolhimento1']}- @{outputs('Loja')} - @{outputs('Máquina')} - @{formatDateTime(triggerOutputs()?['body/lt_data'], 'dd/MM/yyyy')} - @{outputs('Novo_Malote')} - @{triggerOutputs()?['body/lt_lacre']}"
+            },
+            "Loja": {
+              "runAfter": {
+                "Obtendo_Loja": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "713ee6e3-68f7-4497-ac39-47f804e1bbef"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Loja')?['body/cre0a_nomeloja']"
+            },
+            "Obtendo_Máquina": {
+              "runAfter": {
+                "Loja": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f4cbcfb3-9165-4d95-bc1f-c31240a1880a"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cre0a_maquinas",
+                  "recordId": "@triggerOutputs()?['body/_lt_maquina_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Máquina": {
+              "runAfter": {
+                "Obtendo_Máquina": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "be825fd5-89a3-4211-a39e-52f2814a9846"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Máquina')?['body/cre0a_nomemaq']"
+            },
+            "Obtendo_Malote": {
+              "runAfter": {
+                "Máquina": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "fe3e4ca0-57b2-4540-890b-7ddd010256a6"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "crb76_malotes",
+                  "recordId": "@triggerOutputs()?['body/_lt_malotelook_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Novo_Malote": {
+              "runAfter": {
+                "Obtendo_Malote": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "9f5a5890-313f-46d6-aa09-f63946b5fbd3"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Malote')?['body/lt_nomemalote']"
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Update_a_row_2": {
+                "runAfter": {
+                  "Compose_2": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "3161774d-a0bc-4d57-b9f1-7710e3289321"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "UpdateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "lt_recolhimentos",
+                    "recordId": "@triggerOutputs()?['body/lt_recolhimentoid']",
+                    "item/lt_idrecolhimento": "@outputs('Compose_2')"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Obtendo_Loja_2": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "4de84a06-b32d-4656-a349-f9836b14f145"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "cre0a_lojas",
+                    "recordId": "@triggerOutputs()?['body/_lt_loja_value']"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Compose_2": {
+                "runAfter": {
+                  "Novo_Malote_2": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "1b72f8e9-2568-4bae-85af-7dbf207bec29"
+                },
+                "type": "Compose",
+                "inputs": "@{triggerOutputs()?['body/lt_idrecolhimento1']} - @{outputs('Loja_2')} - @{outputs('Máquina_2')} - @{formatDateTime(triggerOutputs()?['body/lt_data'], 'dd/MM/yyyy')} - @{outputs('Novo_Malote_2')} - @{triggerOutputs()?['body/lt_lacre']}"
+              },
+              "Loja_2": {
+                "runAfter": {
+                  "Obtendo_Loja_2": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "e80c7b51-9f27-4429-9915-f882cb1c938a"
+                },
+                "type": "Compose",
+                "inputs": "@outputs('Obtendo_Loja_2')?['body/cre0a_nomeloja']"
+              },
+              "Obtendo_Máquina_2": {
+                "runAfter": {
+                  "Loja_2": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "31c0d196-9435-4faa-be63-2ee146e25bf5"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "cre0a_maquinas",
+                    "recordId": "@triggerOutputs()?['body/_lt_maquina_value']"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Máquina_2": {
+                "runAfter": {
+                  "Obtendo_Máquina_2": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "f733a1c0-3395-40d3-b64c-40d07ed37b08"
+                },
+                "type": "Compose",
+                "inputs": "@outputs('Obtendo_Máquina_2')?['body/cre0a_nomemaq']"
+              },
+              "Obtendo_Malote_2": {
+                "runAfter": {
+                  "Máquina_2": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "209cfe46-459f-4245-a5a8-a0d04b403d6c"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "crb76_malotes",
+                    "recordId": "@triggerOutputs()?['body/_lt_malotelook_value']"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Novo_Malote_2": {
+                "runAfter": {
+                  "Obtendo_Malote_2": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "42093cfb-a6a4-4441-82f7-c9e86f7cb203"
+                },
+                "type": "Compose",
+                "inputs": "@outputs('Obtendo_Malote_2')?['body/lt_nomemalote']"
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "contains": [
+                  "@triggerOutputs()?['body/_lt_maquina_value']",
+                  "@triggerOutputs()?['body/_lt_maquina_value']"
+                ]
+              },
+              {
+                "equals": [
+                  "@triggerOutputs()?['body/_lt_colaborador_value']",
+                  "@null"
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "26e90ef7-9995-4dca-a093-6bffd4d6210e"
+          },
+          "type": "If"
+        },
+        "Initialize_variable": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "b344abea-326b-4167-a752-ac2be71a7f99"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Colaborador",
+                "type": "string",
+                "value": "@triggerOutputs()?['body/_lt_colaborador_value']"
+              }
+            ]
+          }
+        },
+        "Condition_3": {
+          "actions": {},
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Update_a_row_5": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "4ade9455-1910-4d27-baef-12834f4e98e8"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "UpdateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "crb76_auditoriamaquinas",
+                    "recordId": "@triggerOutputs()?['body/_lt_auditoria_value']",
+                    "item/lt_auditoriajaligadaaumrecolhimento": true
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/_lt_auditoria_value']",
+              "@null"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1042049a-a223-40c5-9881-1d6164620f57"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{45d769cc-2158-451d-838b-66713009fd3e}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="true" showImage="false" maxWidth="1920">
+      <tabs>
+        <tab verticallayout="true" id="{af87fe25-29a9-4f31-a285-a08787362c73}" IsUserDefined="1">
+          <labels>
+            <label description="Geral" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="null_section_3" id="98227aca-13f0-425c-a2a2-bb6b1aded7bb" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Informações" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3c9ce3c7-ed3f-4f76-82ab-b5da231e391a}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                      <cell id="{2a48c7ca-b9e0-48ae-ad39-ed06e1d1c08c}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d5f308f9-c2cc-473a-94a9-8987f106d987}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Loja" languagecode="1046" />
+                        </labels>
+                        <control id="lt_lojaos" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_lojaos" disabled="false">
+                          <parameters>
+                            <DefaultViewId>{2BA1FC70-F7D7-EE11-904C-00224835D1DD}</DefaultViewId>
+                            <AvailableViewIds>{65036B5B-B7C0-4DA0-AFA3-AA716DCBBCC3},{CD0C2D8B-DAD1-4F18-AB50-49F266F7B2BA},{A65DE54B-4576-4E67-9D9B-5859D6B63DDE},{6EE7B519-36CF-EE11-904D-000D3A888E51},{B8132C59-EED0-EE11-904D-000D3A888E51},{2BA1FC70-F7D7-EE11-904C-00224835D1DD}</AvailableViewIds>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{24b10d56-8fde-42e1-b502-3d953840204b}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{60649940-b8b2-45ad-adb7-50af06cd1816}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Qual será o problema para reportar ?" languagecode="1046" />
+                        </labels>
+                        <control id="lt_qualproblemaparareportar" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_qualproblemaparareportar" disabled="false" />
+                      </cell>
+                      <cell id="{4428622a-fe8d-4e0b-8e60-74f9764b455e}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Criada Por" languagecode="1046" />
+                        </labels>
+                        <control id="createdby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6c1537fb-5598-4b21-b095-eed93a95c85d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Máquina" languagecode="1046" />
+                        </labels>
+                        <control id="cre0a_maquinaid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="cre0a_maquinaid" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                            <DependentAttributeName>cre0a_ordservicoos.lt_lojaos</DependentAttributeName>
+                            <DependentAttributeType>cre0a_loja</DependentAttributeType>
+                            <FilterRelationshipName>cre0a_maquina_loja_cre0a_loja</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{2b465554-f4b7-4ef3-a58e-95db48d45567}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a9d06ee4-4e39-43cb-9131-00412b4e40f2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Condição da Máquina" languagecode="1046" />
+                        </labels>
+                        <control id="lt_condicaodamaquina" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_condicaodamaquina" disabled="false" />
+                      </cell>
+                      <cell id="{428c38f8-edbd-440e-9d05-488defa67ce8}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{175fd9b9-5955-4b49-baa3-78a471aa28b0}" locklevel="0" colspan="1" rowspan="4">
+                        <labels>
+                          <label description="Motivo de Abertura" languagecode="1046" />
+                        </labels>
+                        <control id="lt_motivodeabertura" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="lt_motivodeabertura" disabled="false" uniqueid="{722c1204-c10d-8893-de0c-aae7a75c0e19}" />
+                      </cell>
+                      <cell locklevel="0" id="{cfe3ceff-c2fe-463e-b2e3-016e8c944073}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{9fe427d2-189e-466a-abce-a93c503035ef}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{17ac6810-d464-4d8e-ae9b-8d502bcf012c}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{bac58e89-4491-4835-9b78-6a9e3dedde85}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{258bb752-4b25-4f68-89b5-1585bb2a2010}" locklevel="0" colspan="1" rowspan="1" showlabel="true">
+                        <labels>
+                          <label description="Prioridade OS" languagecode="1046" />
+                        </labels>
+                        <control id="lt_prioridadeos" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_prioridadeos" disabled="true" uniqueid="{971a5bcd-2100-2c07-6e04-c842ce7bd2d6}" />
+                      </cell>
+                      <cell id="{12330067-97d4-63b9-d5e9-e074e51aa21b}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4be59a10-35fd-40d4-a4da-1fc90415b844}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status da Ordem de Serviço" languagecode="1046" />
+                        </labels>
+                        <control id="lt_statusdaordemdeservico" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_statusdaordemdeservico" disabled="true" />
+                      </cell>
+                      <cell id="{3e91714d-aa58-91d3-a819-560036724c81}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{62bead11-5d6e-4c91-a484-6e7faceb2f87}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{4a3a350e-c758-4959-b557-999a52c19092}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="5b8831ec-078c-4a9e-bb8c-ed2e60ca47d7" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Linha do Tempo" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_2_section_1" id="a3d6f694-2527-4f90-abf1-7e751d5a02d5" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Nova Seção" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{49d7c287-5b54-49cf-bc83-fbf91b1ab076}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{d0f1cf80-f50b-46f9-aa0c-4affa1d36ee6}" rowspan="15" colspan="1">
+                        <labels>
+                          <label description="Note Text" languagecode="1046" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false">
+                          <parameters>
+                            <UClientActivities>appointment,phonecall,task,adx_portalcomment,chat</UClientActivities>
+                            <UClientDisplayActivityUsing>defaultfields</UClientDisplayActivityUsing>
+                            <UClientActivityCardMap>appointment:4201:,email:4202:,fax:4204:,letter:4207:,phonecall:4210:,recurringappointmentmaster:4251:,socialactivity:4216:,task:4212:,adx_inviteredemption:10503:,adx_portalcomment:10504:,chat:10092:,msfp_alert:10480:,msfp_surveyinvite:10481:,msfp_surveyresponse:10482:,</UClientActivityCardMap>
+                            <UClientActivitiesConfigurationJSON>{"email":{"showTopDate":true,"showStatus":true,"canCreate":true,"createUsing":"default","openUsing":"default"},"socialactivity":{"showTopDate":true,"showStatus":true,"canCreate":false,"createUsing":"default","openUsing":"default"},"msfp_surveyresponse":{"showTopDate":true,"showStatus":true,"canCreate":false,"createUsing":"default","openUsing":"default"},"msfp_surveyinvite":{"showTopDate":true,"showStatus":true,"canCreate":false,"createUsing":"default","openUsing":"default"},"msfp_alert":{"showTopDate":true,"showStatus":true,"canCreate":true,"createUsing":"default","openUsing":"default"},"adx_inviteredemption":{"showTopDate":true,"showStatus":true,"canCreate":true,"createUsing":"default","openUsing":"default"},"recurringappointmentmaster":{"showTopDate":true,"showStatus":true,"canCreate":false,"createUsing":"default","openUsing":"default"}}</UClientActivitiesConfigurationJSON>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{6b6ed490-76e9-4c33-8278-a0561cb00764}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{cce08b66-9566-4d35-ae25-7a0b9fe6fb03}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{38de1f53-273f-460e-b300-22ce602e0458}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{e266f578-72ac-4999-a1fe-4714a9644d39}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{11b71376-e859-4325-baf7-59b1f47b8eff}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Proprietário" languagecode="1046" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{f482f75b-48e1-47f4-a282-9f1be8b6ae84}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{816f9172-8f9e-4c00-9c70-ebb089b44f5e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{4f5b2651-baf1-447e-a702-7ba4cebebbd5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{b32a1009-a0dd-4a78-af91-9081437dc85b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <controlDescriptions />
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1046" Text="Comum" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1046" Text="Vendas" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1046" Text="Serviços" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1046" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1046" Text="Sessões de Processo" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <formLibraries>
+        <Library name="lt_cores" libraryUniqueId="{4a575958-b78a-c875-601c-b1aca3d15535}" />
+      </formLibraries>
+      <events>
+        <event name="onchange" application="false" active="false" attribute="lt_prioridadeos">
+          <Handlers>
+            <Handler functionName="Cores" libraryName="lt_cores" handlerUniqueId="{ca9b2367-e292-72c8-6ccc-9429ed948eb6}" enabled="true" parameters="" passExecutionContext="false" />
+          </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="Cores" libraryName="lt_cores" handlerUniqueId="{ae5cdb5b-9618-946d-351c-4069a5b17569}" enabled="true" parameters="" passExecutionContext="false" />
+          </Handlers>
+        </event>
+      </events>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

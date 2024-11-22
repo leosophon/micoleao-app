@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{2c1dcd34-298c-4b2d-afae-e474c92367c5}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{131253e7-4d74-4c11-8a60-f4dfbdf5bb33}" IsUserDefined="1">
+          <labels>
+            <label description="Geral" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="null_section_4" id="bc89db04-3b8e-4dcb-8a5b-efe01dead9e0" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Tipo de Checklist" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{9480e841-cd1b-4f73-8eee-231038aa33bd}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Tipo de Checklist" languagecode="1046" />
+                        </labels>
+                        <control id="lt_tipodechecklist" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_tipodechecklist" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{f20d5ca2-ad19-417d-a0f0-e1459e838ccf}">
+                  <labels>
+                    <label description="Informações Veículo" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c29026f4-03f5-47d4-9242-dba9d705cd5d}" visible="false">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{64a274c2-946a-44c3-934f-673de309317a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Veículo" languagecode="1046" />
+                        </labels>
+                        <control id="lt_veiculo" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_veiculo" disabled="false">
+                          <parameters />
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="4f51aa3a-98be-4a81-93a0-53fb662a6f65" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Informações Retirada do Veículo" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{dae23c55-f3f5-4bc3-b739-446b29863474}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Colaborador" languagecode="1046" />
+                        </labels>
+                        <control id="lt_colaborador" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_colaborador" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3d4f8c4b-f642-4aaf-ad62-1d84cb7b469a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data de Retirada" languagecode="1046" />
+                        </labels>
+                        <control id="lt_dataderetirada" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="lt_dataderetirada" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{40523575-cbdb-4b3f-8b19-81b5d920a02b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="KM (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_km" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="lt_km" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_5" id="aae39e7a-0d67-461b-8fb7-8c9ee7edf964" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Informações do Checklist - Retirada de Veículo" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{e09aa564-162b-4a05-92dc-d8b8ef9e92bf}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{389bc05f-1083-41a4-800b-70b13d9542d9}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f6538041-8019-4137-b16c-4d2d70136843}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Faróis / Lâmpadas / Piscas (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_faroislampadaspiscas" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_faroislampadaspiscas" disabled="false" />
+                      </cell>
+                      <cell id="{c401cda7-d628-4e07-9240-1cc75bf71061}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Antena e Traseira (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_antenatraseira" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_antenatraseira" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a8e723d2-7fba-4ae5-b317-87c0fefeb585}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Estepe / Chave de roda (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_estepechavederoda" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_estepechavederoda" disabled="false" />
+                      </cell>
+                      <cell id="{421bd8b4-3a33-4bcd-921a-3161fc1e8f0f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Cinto de Segurança" languagecode="1046" />
+                        </labels>
+                        <control id="lt_cintodeseguranca" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_cintodeseguranca" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2e26ab04-cf21-4e16-8371-fbe56892e7d4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Macaco / Triângulo" languagecode="1046" />
+                        </labels>
+                        <control id="lt_macacotriangulo" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_macacotriangulo" disabled="false" />
+                      </cell>
+                      <cell id="{e52bf174-ac35-4eb0-bb12-c6cabcaaded6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Indicadores Painel (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_indicadorespainel" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_indicadorespainel" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5d6c73b4-d3d0-4f3f-a07a-ee555fe462c3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Limpador Parabrisa (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_limpadorparabrisa" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_limpadorparabrisa" disabled="false" />
+                      </cell>
+                      <cell id="{47b07225-7348-4f17-a76c-1e63754fe483}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Óleo Motor (nível) (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_oleomotor" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_oleomotor" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8520a415-ea77-4842-a4ad-875a93f8b6b0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Extintor" languagecode="1046" />
+                        </labels>
+                        <control id="lt_extintor" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_extintor" disabled="false" />
+                      </cell>
+                      <cell id="{53670bb8-90a1-4c7d-95fa-0edcc7643e77}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fluido de freio (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_fluidodefreio" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_fluidodefreio" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{888be8ff-fa90-4557-81b5-a5e582799bcc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pneu Dianteiro (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_pneudianteiro" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_pneudianteiro" disabled="false" />
+                      </cell>
+                      <cell id="{9efbff75-5f1f-476e-9785-2cc847fd58d4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Líquido Abastecimento (nível) (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_liquidoabastecimentonivel" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_liquidoabastecimentonivel" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c956f7b5-51ea-4e69-afb0-8213525ebb12}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pneu Traseiro (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_pneutraseiro" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_pneutraseiro" disabled="false" />
+                      </cell>
+                      <cell id="{f0250221-12b9-44a6-86e5-61fce5581528}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Motor de Partida (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_motordepartida" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_motordepartida" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{513f254f-b531-473c-988f-d4ca6f6d0c95}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Calotas / Rodas (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_calotasrodas" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_calotasrodas" disabled="false" />
+                      </cell>
+                      <cell id="{a7c456e3-fbe9-492f-bedf-37aaaf4fae41}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Tapetes" languagecode="1046" />
+                        </labels>
+                        <control id="lt_tapetes" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_tapetes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fc048253-c27a-4170-81e8-5a339e58b330}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Freios (pé e mão) (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_freiospemao" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_freiospemao" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{b637e6d3-7633-4202-be60-bc8661016b2c}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a4e8dbdc-4910-4179-9963-ac08b66b9326}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Freios (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_freios" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_freios" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{c810a636-ae6c-4d3f-88a6-41c85a5c7000}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5dba4d24-d1a8-492b-9fa0-341f6bb8bbd3}" locklevel="0" colspan="2" rowspan="1">
+                        <labels>
+                          <label description="Observação Retirada" languagecode="1046" />
+                        </labels>
+                        <control id="lt_observacaoretirada" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="lt_observacaoretirada" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{17e4ccca-5a9a-4c87-bbf5-aa2342f00978}" locklevel="0" colspan="2" rowspan="1">
+                        <labels>
+                          <label description="Foto Veículo (R)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_fotoveiculor" classid="{7E548B0D-209C-477B-9DCD-F0F44472381D}" datafieldname="lt_fotoveiculor" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_7" id="cd3f72aa-9892-465a-931d-f5f6cbde58ab" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Informações Devolução do Veículo" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{639f7eaa-6a2f-4363-b8dc-7e2339903d26}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data de Devolução" languagecode="1046" />
+                        </labels>
+                        <control id="lt_datadedevolucao" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="lt_datadedevolucao" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1ef61b6c-a2cd-4fe8-b09d-da0075921d98}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="KM (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_kmd" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="lt_kmd" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d6e51a31-6741-4925-a5d2-ba6cba93ad07}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Criada Por" languagecode="1046" />
+                        </labels>
+                        <control id="createdby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0d321505-f4e1-4e1e-8a27-61abfe5275d4}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Devolução Pendente" languagecode="1046" />
+                        </labels>
+                        <control id="lt_devolucaopendente" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="lt_devolucaopendente" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_6" id="852e0db5-a868-4a78-9778-f2df3675f758" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Informações do Checklist - Devolução de Veículo" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{63b36fce-bc91-4407-8bfa-ebf6e3019a7b}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{14508d0f-6ead-47d0-a755-f356e2af30ab}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{57c8ad95-c0b1-4156-ae2a-3fe5ef158a84}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Faróis / Lâmpadas / Piscas (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_faroislampadaspiscasd" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_faroislampadaspiscasd" disabled="false" />
+                      </cell>
+                      <cell id="{5b092778-c0e0-4555-bcf9-69d1d1b90bd5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Antena e Traseira (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_antenaetraseirad" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_antenaetraseirad" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0cf5170f-1407-4260-bf92-6d5452192d33}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Estepe / Chave de roda (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_estepechavederodad" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_estepechavederodad" disabled="false" />
+                      </cell>
+                      <cell id="{3b937653-450f-4211-9502-1a0bc04a9dab}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Cinto de Segurança (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_cintodesegurancad" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_cintodesegurancad" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cdd1a37c-ad4e-4b60-9a43-16c6e372ac5a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Macaco / Triângulo (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_macacotriangulod" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_macacotriangulod" disabled="false" />
+                      </cell>
+                      <cell id="{03d88090-c2bf-4b7f-bc7f-1fdf3ab0411d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Indicadores Painel (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_indicadorespaineld" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_indicadorespaineld" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3fbeeea0-e0b3-4140-8f05-f524e8c3fb6c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Limpador Parabrisa (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_limpadorparabrisad" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_limpadorparabrisad" disabled="false" />
+                      </cell>
+                      <cell id="{ec7527a7-7f06-4eb4-b253-b0bbaf3390a9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Óleo Motor (nível) (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_oleomotorniveld" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_oleomotorniveld" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{192d127e-11d9-4c7c-89f5-347b71952aa4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Extintor (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_extintord" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_extintord" disabled="false" />
+                      </cell>
+                      <cell id="{4dc2a961-f43c-4e0a-bc59-3422aae0ae3c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fluido de freio (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_fluidodefreiod" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_fluidodefreiod" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cf05bf31-6d93-4a59-96eb-7050c7711ba6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pneu Dianteiro (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_pneudianteirod" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_pneudianteirod" disabled="false" />
+                      </cell>
+                      <cell id="{24c7ec57-195c-4308-bcc4-838624fdb052}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Líquido Abastecimento (nível) (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_liquidoabastecimentoniveld" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_liquidoabastecimentoniveld" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ad6f5cb2-f270-46a4-a1dd-17d7ae1cdb10}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pneu Traseiro (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_pneutraseirod" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_pneutraseirod" disabled="false" />
+                      </cell>
+                      <cell id="{42ffbbac-0da6-4b27-8ab2-dc76d78cef36}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Motor de Partida (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_motordepartidad" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_motordepartidad" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d48d26bf-ca0f-4e34-83db-bd8256d69868}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Calotas / Rodas (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_calotasrodasd" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_calotasrodasd" disabled="false" />
+                      </cell>
+                      <cell id="{cc342916-8ab9-48d9-ae76-dfe391d89d0e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Tapetes (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_tapetesd" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_tapetesd" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a8f2ebfc-3d22-496b-86e5-5a1ce9dd137d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Freios (pé e mão) (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_freiospeemaod" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_freiospeemaod" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{56e458a1-18b0-4673-a01d-45e1046f0f93}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{289cf8b4-9ec8-4dbd-8243-5d509e797d5a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Freios (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_freiosd" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_freiosd" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{4a56cfce-26fd-4903-9d88-7d61c4d4cb2f}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bdb186a0-936b-477e-9486-1df53fa9e680}" locklevel="0" colspan="2" rowspan="1">
+                        <labels>
+                          <label description="Observação Devolução" languagecode="1046" />
+                        </labels>
+                        <control id="lt_observacaodevolucao" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="lt_observacaodevolucao" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ee9c026d-8ffc-452a-b6e4-a2e4e51c7bc4}" locklevel="0" colspan="2" rowspan="1">
+                        <labels>
+                          <label description="Foto Veículo (D)" languagecode="1046" />
+                        </labels>
+                        <control id="lt_fotoveiculod" classid="{7E548B0D-209C-477B-9DCD-F0F44472381D}" datafieldname="lt_fotoveiculod" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{34612461-b68a-430f-b856-be467aca1815}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{9b6e9c13-6ad4-4dab-90fb-72994759a7da}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{ce9b0861-4ded-46e3-b712-60a6927afa42}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{492cdaaa-8aef-4ad2-b95f-374ecf02a741}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{a86bd3bb-9804-4cd8-abf1-0d5aece25043}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{10f27be1-17d1-4455-81bc-7fb90b4c7343}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{01342843-19e3-4baf-9f3a-5083b7527713}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{f8c55bbe-2592-43cf-9a3b-606771b79a37}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

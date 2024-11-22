@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{861b51c3-5f69-46af-9a3f-5663ab0b8063}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nomecliente" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_clienteid">
+          <cell name="lt_numerocliente" width="130" />
+          <cell name="lt_nomecliente" width="300" />
+          <cell name="lt_tipopessoa" width="150" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_cliente">
+          <attribute name="crb76_clienteid" />
+          <attribute name="lt_nomecliente" />
+          <attribute name="createdon" />
+          <order attribute="lt_nomecliente" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_tipopessoa" />
+          <attribute name="lt_numerocliente" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Cliente Ativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

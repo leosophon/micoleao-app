@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{398b73e6-5780-41b5-9800-98425f758cc6}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="false">
+      <tabs>
+        <tab verticallayout="true" id="{c29b20ba-8a8a-4cf2-940f-7681dbfd6e84}" IsUserDefined="1" visible="true">
+          <labels>
+            <label description="Geral" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{adf509d1-641a-4bc1-94ea-9ac54fb7b371}">
+                  <labels>
+                    <label description="Referência" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f6dd420d-4ad6-4cc3-8fbb-d2956d08c9ae}" visible="false">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{696bd878-34c7-4f29-bef3-311dd8e8911f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Loja" languagecode="1046" />
+                        </labels>
+                        <control id="lt_loja" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_loja" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{98b5a367-2721-4cc7-8afd-8b7f0f267817}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Ano" languagecode="1046" />
+                        </labels>
+                        <control id="lt_ano" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="lt_ano" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="95c9a47e-b5c9-4b05-8edf-417898a36df1" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Meses" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{497adca1-3680-43a8-8171-93c697d9bf5e}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                      <cell id="{bb513bb0-2a48-4f12-a434-c3a7380918e5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Julho" languagecode="1046" />
+                        </labels>
+                        <control id="lt_julho" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_julho" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c1e075b0-b85c-4dfd-96b9-d5edf78342b9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Janeiro" languagecode="1046" />
+                        </labels>
+                        <control id="lt_janeiro" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_janeiro" disabled="false" />
+                      </cell>
+                      <cell id="{e020ffc1-5719-4e16-b660-16f16b34f378}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Agosto" languagecode="1046" />
+                        </labels>
+                        <control id="lt_agosto" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_agosto" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{18c131cb-a93e-423b-bc85-f95bd19205f1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fevereiro" languagecode="1046" />
+                        </labels>
+                        <control id="lt_fevereiro" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_fevereiro" disabled="false" />
+                      </cell>
+                      <cell id="{107ac0df-484a-4a8e-a062-30e7edce672e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Setembro" languagecode="1046" />
+                        </labels>
+                        <control id="lt_setembro" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_setembro" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{14a1a06f-752a-4068-bde1-236e485e9495}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Março" languagecode="1046" />
+                        </labels>
+                        <control id="lt_marco" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_marco" disabled="false" />
+                      </cell>
+                      <cell id="{d25c96b9-621f-4306-9eb0-5be8f9dded28}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Outubro" languagecode="1046" />
+                        </labels>
+                        <control id="lt_outubro" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_outubro" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{998274b4-9b79-49ae-a264-fa1bf3054596}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Abril" languagecode="1046" />
+                        </labels>
+                        <control id="lt_abril" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_abril" disabled="false" />
+                      </cell>
+                      <cell id="{90990f50-bb92-497a-b20b-20bb033d33ec}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Novembro" languagecode="1046" />
+                        </labels>
+                        <control id="lt_novembro" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_novembro" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0ba10ad8-af31-4967-b23d-d9abfc6cf6db}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Maio" languagecode="1046" />
+                        </labels>
+                        <control id="lt_maio" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_maio" disabled="false" />
+                      </cell>
+                      <cell id="{c8e59d6e-fbc8-431f-b8a3-8fa6fd7a0d90}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dezembro" languagecode="1046" />
+                        </labels>
+                        <control id="lt_dezembro" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_dezembro" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fc730dd7-32be-4e20-b59f-66c70208636e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Junho" languagecode="1046" />
+                        </labels>
+                        <control id="lt_junho" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_junho" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{f107a9ff-387f-4279-a259-5ab04f85ed93}">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{8b6cc4fa-3751-438a-9ad3-ad9122dce33e}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{6504b065-eaea-4a3a-b8ca-26e91deea901}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{e09cdd22-bf2b-4ea8-ab4e-61eeae8f1314}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{47f7480b-f39c-4873-8c25-dd8c0d0e082a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{a54af912-5d71-4be0-91e8-e6f46f83ee18}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{563ee44f-bba4-476e-858e-3ccadd25816c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{fb659a78-2543-482f-833b-3826f4e76ec1}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{504f6ecf-0488-4a32-90e4-a40b4b4f1e91}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

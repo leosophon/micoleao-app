@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_maquina.Flows.RefreshCommandBar.Hide" Location="Mscrm.HomepageGrid.cre0a_maquina.Flows.RefreshCommandBar" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_maquina.MainTab.QuickPowerBI.Button.Hide" Location="Mscrm.HomepageGrid.cre0a_maquina.MainTab.QuickPowerBI.Button" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_maquina.RunReport.Hide" Location="Mscrm.HomepageGrid.cre0a_maquina.RunReport" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_maquina.RunWorkflow.Hide" Location="Mscrm.HomepageGrid.cre0a_maquina.RunWorkflow" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_maquina.Send.Hide" Location="Mscrm.HomepageGrid.cre0a_maquina.Send" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions />
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

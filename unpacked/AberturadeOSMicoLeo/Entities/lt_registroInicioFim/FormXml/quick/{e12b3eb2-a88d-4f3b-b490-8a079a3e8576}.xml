@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e12b3eb2-a88d-4f3b-b490-8a079a3e8576}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{0f7ad569-ae49-4a1f-86d5-62f1d40f284d}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{8661dc9e-0ccb-4eff-bf6e-a395791bd5a5}">
+                  <labels>
+                    <label description="GERAL" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{12afa10c-b249-4560-8721-a9428b3fe933}">
+                        <labels>
+                          <label description="Registro ID" languagecode="1046" />
+                        </labels>
+                        <control id="lt_registroid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="lt_registroid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8d88e4e5-169d-4a1a-9926-8e78eabe3918}">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+  </systemform>
+</forms>

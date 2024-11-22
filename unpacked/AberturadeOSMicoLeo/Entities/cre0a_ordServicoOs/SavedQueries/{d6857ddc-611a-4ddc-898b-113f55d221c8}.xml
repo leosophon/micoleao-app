@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d6857ddc-611a-4ddc-898b-113f55d221c8}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="cre0a_ordemservicoid" select="1" icon="1" preview="1">
+        <row name="result" id="cre0a_ordservicoosid">
+          <cell name="cre0a_ordemservicoid" width="300" />
+          <cell name="ownerid" width="107" />
+          <cell name="lt_lojaos" width="100" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="cre0a_ordservicoos">
+          <attribute name="cre0a_ordservicoosid" />
+          <attribute name="cre0a_ordemservicoid" />
+          <attribute name="createdon" />
+          <order attribute="cre0a_ordemservicoid" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="cre0a_ordemservicoid" operator="like" value="{0}" />
+            <condition attribute="ownerid" operator="like" value="{0}" />
+            <condition attribute="lt_lojaos" operator="like" value="{0}" />
+          </filter>
+          <attribute name="ownerid" />
+          <attribute name="lt_lojaos" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Localização Rápida de Ordem de Serviço Ativo(a)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

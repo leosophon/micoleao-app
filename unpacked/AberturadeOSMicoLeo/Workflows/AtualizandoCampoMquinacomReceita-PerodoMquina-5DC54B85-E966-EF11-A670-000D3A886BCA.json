@@ -1,0 +1,97 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "5db3e2b7-c2d0-45eb-b670-3bf556dad38f"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "lt_periodomaquinaloja",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Obter_uma_linha_por_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "a1ab9157-245a-4b6d-a97a-a0ac6b1da6a8"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "cre0a_maquinas",
+              "recordId": "@triggerOutputs()?['body/_lt_maquina_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Atualizar_uma_linha": {
+          "runAfter": {
+            "Obter_uma_linha_por_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "584bcd55-8f97-4bd3-9e9d-b5ef4db0e2e9"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "lt_periodomaquinalojas",
+              "recordId": "@triggerOutputs()?['body/lt_periodomaquinalojaid']",
+              "item/lt_maquinageradorareceita": "@outputs('Obter_uma_linha_por_ID')?['body/lt_regadoradereceita']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{64cfe4e1-3a80-4ca6-b578-d125706eea70}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_idregistroparafechamento" select="1" icon="1" preview="1">
+        <row name="result" id="lt_registroparafechamentoid">
+          <cell name="lt_idregistroparafechamento" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_registroparafechamento">
+          <attribute name="lt_registroparafechamentoid" />
+          <attribute name="lt_idregistroparafechamento" />
+          <attribute name="createdon" />
+          <order attribute="lt_idregistroparafechamento" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="lt_idregistroparafechamento" operator="like" value="{0}" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Localização Rápida de Registro Para Fechamento Ativo(a)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

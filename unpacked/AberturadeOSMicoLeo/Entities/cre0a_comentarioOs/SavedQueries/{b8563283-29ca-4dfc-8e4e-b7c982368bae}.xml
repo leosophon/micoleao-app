@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{b8563283-29ca-4dfc-8e4e-b7c982368bae}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="cre0a_comentarioid" select="1" icon="1" preview="1">
+        <row name="result" id="cre0a_comentarioosid">
+          <cell name="cre0a_comentarioid" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="cre0a_comentarioos">
+          <attribute name="cre0a_comentarioosid" />
+          <attribute name="cre0a_comentarioid" />
+          <attribute name="createdon" />
+          <order attribute="cre0a_comentarioid" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Localização Avançada de Comentário" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

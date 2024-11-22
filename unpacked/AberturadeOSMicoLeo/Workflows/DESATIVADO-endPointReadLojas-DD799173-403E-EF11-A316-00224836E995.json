@@ -1,0 +1,100 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_a5054"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "dfe7c01f-53cd-41b8-902b-b228881c551c"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "method": "GET",
+            "triggerAuthenticationType": "All"
+          }
+        }
+      },
+      "actions": {
+        "List_rows": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "e2625de3-65f8-48a1-9090-2484ab961019"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "cre0a_lojas"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Response": {
+          "runAfter": {
+            "Select": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "531e95a0-2cbb-47ec-aa58-a05598cb97fc"
+          },
+          "type": "Response",
+          "kind": "Http",
+          "inputs": {
+            "statusCode": 200,
+            "body": "@body('Select')"
+          }
+        },
+        "Select": {
+          "runAfter": {
+            "List_rows": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7fa2941b-7811-4f7a-80df-9b904d41c839"
+          },
+          "type": "Select",
+          "inputs": {
+            "from": "@outputs('List_rows')?['body/value']",
+            "select": {
+              "Nome": "@item()?['cre0a_nomeloja']",
+              "Tipo": "@item()?['lt_tipoloja']",
+              "Status": "@item()?['statuscode']",
+              "Id": "@item()?['@odata.id']"
+            }
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

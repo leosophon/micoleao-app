@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{8818e3cd-f21f-410c-8f5e-31c99e522e43}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{bacab42d-fee9-4c31-a1b0-9851337b7beb}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{0b015019-9da2-455f-a212-ce7019fab721}">
+                  <labels>
+                    <label description="GERAL" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4cb7fb8d-6e7e-4c6a-a779-942d8803ce25}">
+                        <labels>
+                          <label description="Nome Parametro Estoque Loja" languagecode="1046" />
+                        </labels>
+                        <control id="lt_nomeparametroestoqueloja" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="lt_nomeparametroestoqueloja" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{90b18af8-2b98-4c4f-914e-9080c354f41e}">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+  </systemform>
+</forms>

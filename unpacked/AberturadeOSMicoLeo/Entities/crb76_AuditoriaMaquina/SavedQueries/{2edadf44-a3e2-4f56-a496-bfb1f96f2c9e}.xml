@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{2edadf44-a3e2-4f56-a496-bfb1f96f2c9e}</savedqueryid>
+    <layoutxml>
+      <grid name="crb76_auditoriamaquinas" jump="crb76_novacoluna" select="1" icon="1" preview="0">
+        <row name="crb76_auditoriamaquina" id="crb76_auditoriamaquinaid">
+          <cell name="crb76_novacoluna" width="125" />
+          <cell name="lt_loja" width="100" />
+          <cell name="lt_maquina" width="100" />
+          <cell name="lt_datahoraauditoria" width="159" />
+          <cell name="lt_quantidadepremios" width="154" />
+          <cell name="lt_quantidadedecredito" width="167" />
+          <cell name="ownerid" width="110" />
+          <cell name="createdon" width="131" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_auditoriamaquina">
+          <attribute name="crb76_auditoriamaquinaid" />
+          <attribute name="crb76_novacoluna" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_loja" />
+          <attribute name="lt_maquina" />
+          <attribute name="lt_datahoraauditoria" />
+          <attribute name="lt_quantidadedecredito" />
+          <attribute name="lt_quantidadepremios" />
+          <attribute name="ownerid" />
+          <attribute name="createdon" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Consulta de Auditoria Maquina" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

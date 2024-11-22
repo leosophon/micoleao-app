@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{faa2693f-f358-44c0-84d0-d5ec9d74a758}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crb76_nomemateria" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_revistainternaid">
+          <cell name="crb76_nomemateria" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_revistainterna">
+          <attribute name="crb76_revistainternaid" />
+          <attribute name="crb76_nomemateria" />
+          <attribute name="createdon" />
+          <order attribute="crb76_nomemateria" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Revista Interna Inativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

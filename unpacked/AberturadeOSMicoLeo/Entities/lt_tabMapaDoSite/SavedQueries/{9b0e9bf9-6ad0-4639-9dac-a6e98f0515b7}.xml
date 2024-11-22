@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{9b0e9bf9-6ad0-4639-9dac-a6e98f0515b7}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_name" select="1" icon="1" preview="1">
+        <row name="result" id="lt_tabmapadositeid">
+          <cell name="lt_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_tabmapadosite">
+          <attribute name="lt_tabmapadositeid" />
+          <attribute name="lt_name" />
+          <attribute name="createdon" />
+          <order attribute="lt_name" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Localização Avançada de TabMapaDoSite" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

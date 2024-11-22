@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{12a1b5aa-c5a0-45f4-baeb-c3736c36fc3b}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{4c02af38-9213-4f9a-936d-2e25a603ddb8}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{1729e721-d86f-4bf5-afd0-5c062b846196}">
+                  <labels>
+                    <label description="GERAL" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2308eeef-cda0-44f1-af07-ec4f8726d3f1}">
+                        <labels>
+                          <label description="Ordem Serviço ID" languagecode="1046" />
+                        </labels>
+                        <control id="cre0a_ordemservicoid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="cre0a_ordemservicoid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{13c5f9ea-5b20-46ec-a197-14d02eed7aec}">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+  </systemform>
+</forms>

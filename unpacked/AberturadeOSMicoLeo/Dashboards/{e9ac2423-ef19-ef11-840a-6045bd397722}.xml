@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="Dashboard Faturamento" languagecode="1046" />
+  </LocalizedNames>
+  <FormId>{e9ac2423-ef19-ef11-840a-6045bd397722}</FormId>
+  <IsCustomizable>1</IsCustomizable>
+  <IsDefault>0</IsDefault>
+  <FormXml>
+    <forms type="dashboard">
+      <form>
+        <tabs>
+          <tab showlabel="false" verticallayout="true" id="{2df62d6c-bace-40a3-972e-3bd228ceb1d3}">
+            <labels>
+              <label description="Guia" languagecode="1046" />
+            </labels>
+            <columns>
+              <column width="100%">
+                <sections>
+                  <section showlabel="false" showbar="false" columns="111" id="{8f2b4f69-cfaf-4221-a9e5-61bf2c89ebdf}">
+                    <labels>
+                      <label description="Seção" languagecode="1046" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell colspan="1" rowspan="12" showlabel="false" id="{daa866dd-6f7f-4167-bdbe-352849c94679}" auto="false">
+                          <labels>
+                            <label description="Registro Para Fechamento" languagecode="1046" />
+                          </labels>
+                          <control id="Component0b8c0f7" uniqueid="{40ac570a-4ae0-d964-17ea-8cdad433ddc8}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>lt_registroparafechamento</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>true</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>12</RecordsPerPage>
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                              <ViewId>{25AC3CCE-C1E7-4523-88D8-2BA9876A294D}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{513FF4B0-EC19-EF11-840A-6045BD397722}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="1" rowspan="12" showlabel="false" id="{d95dbe69-1e3f-490c-8122-289ec963ca4e}" auto="false">
+                          <labels>
+                            <label description="Registro Para Fechamento" languagecode="1046" />
+                          </labels>
+                          <control id="Component2d16f99" uniqueid="{086a08d1-5685-9368-b2c1-89973c38c93b}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>lt_registroparafechamento</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>true</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>12</RecordsPerPage>
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                              <ViewId>{25AC3CCE-C1E7-4523-88D8-2BA9876A294D}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{1BAF42F9-EC19-EF11-840A-6045BD397722}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="1" rowspan="12" showlabel="false" id="{43173735-7a6e-4508-8822-c3d640f25eff}" auto="false">
+                          <labels>
+                            <label description="Registro Para Fechamento" languagecode="1046" />
+                          </labels>
+                          <control id="Componente619410" uniqueid="{303896e2-7e93-5abd-5a36-6bd456d53952}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>lt_registroparafechamento</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>true</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>12</RecordsPerPage>
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                              <ViewId>{25AC3CCE-C1E7-4523-88D8-2BA9876A294D}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{7BF76921-EE19-EF11-840A-6045BD397722}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row>
+                        <cell id="{656e6464-5ea2-b567-d138-78339296b8b4}" showlabel="false" colspan="1" auto="false" rowspan="12">
+                          <labels>
+                            <label description="Produto Vendido" languagecode="1046" />
+                          </labels>
+                          <control id="Component7402659" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{36432963-c97d-4a17-b541-947814d4acb4}">
+                            <parameters>
+                              <ViewId>{25AC3CCE-C1E7-4523-88D8-2BA9876A294D}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <RelationshipName />
+                              <TargetEntityType>lt_registroparafechamento</TargetEntityType>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>true</EnableViewPicker>
+                              <ViewIds>{25AC3CCE-C1E7-4523-88D8-2BA9876A294D}</ViewIds>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <VisualizationId>{AA75D629-F75F-EF11-BFE4-6045BD3C58B6}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RecordsPerPage>12</RecordsPerPage>
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="2" rowspan="12" showlabel="false" id="{1ef80e33-b50d-4550-97a8-e6158affce7e}" auto="false">
+                          <labels>
+                            <label description="Registro Para Fechamento" languagecode="1046" />
+                          </labels>
+                          <control id="Componentb9b343e" uniqueid="{41aab598-67c2-2458-5742-764d8dc7ed1a}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>lt_registroparafechamento</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>true</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>12</RecordsPerPage>
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                              <ViewId>{25AC3CCE-C1E7-4523-88D8-2BA9876A294D}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{993DDF29-ED19-EF11-840A-6045BD397722}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>true</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+      </form>
+    </forms>
+  </FormXml>
+  <IntroducedVersion>1.0.0.89</IntroducedVersion>
+  <IsTabletEnabled>0</IsTabletEnabled>
+</Dashboard>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{94760660-837c-4c0a-9aad-0f5facc1e6d2}</savedqueryid>
+    <layoutxml>
+      <grid name="lt_funcionarioses" jump="lt_name" select="1" icon="1" preview="0">
+        <row name="lt_funcionarios" id="lt_funcionariosid">
+          <cell name="lt_empresa" width="100" />
+          <cell name="lt_matricula" width="100" />
+          <cell name="lt_name" width="300" />
+          <cell name="lt_areadocolaborador" width="159" />
+          <cell name="crb76_dataentrada" width="114" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_funcionarios">
+          <attribute name="lt_funcionariosid" />
+          <attribute name="lt_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_empresa" />
+          <attribute name="lt_matricula" />
+          <attribute name="lt_areadocolaborador" />
+          <attribute name="crb76_dataentrada" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Consulta de Funcionarios" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

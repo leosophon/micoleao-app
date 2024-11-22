@@ -1,0 +1,1754 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "crb76_conferencianumerario",
+              "subscriptionRequest/scope": 4
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "649668ac-2be6-4c13-98de-9ddd4e919f8b"
+          }
+        }
+      },
+      "actions": {
+        "ValorTotalConferido": {
+          "type": "Compose",
+          "inputs": "@triggerOutputs()?['body/crb76_valortotalconferido']",
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "83c134c6-ce8c-4d53-b3d0-4dd01807b543"
+          }
+        },
+        "Condition_18": {
+          "type": "If",
+          "expression": {
+            "and": [
+              {
+                "not": {
+                  "equals": [
+                    "@outputs('Obtendo_Máquina')?['body/lt_possuiauditoria']",
+                    "Não"
+                  ]
+                }
+              },
+              {
+                "or": [
+                  {
+                    "not": {
+                      "equals": [
+                        "@outputs('Obtendo_Máquina')?['body/lt_tipoauditoria']",
+                        "Digital (Entrada Sistemas)"
+                      ]
+                    }
+                  },
+                  {
+                    "not": {
+                      "equals": [
+                        "@outputs('Obtendo_Máquina')?['body/lt_tipoauditoria']",
+                        "Analógica (Por Cálculo)"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "actions": {
+            "Obtendo_Auditoria": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "crb76_auditoriamaquinas",
+                  "recordId": "@outputs('Obtendo_Recolhimento')?['body/_lt_auditoria_value']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "1860b10d-c168-43b3-8694-3cd142eea93e"
+              }
+            },
+            "ID_Auditoria": {
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Auditoria')?['body/crb76_novacoluna']",
+              "runAfter": {
+                "Obtendo_Auditoria": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "131be54a-9cf7-4c04-9038-b6ab70526f87"
+              }
+            },
+            "DataHora_Auditoria": {
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Auditoria')?['body/lt_datahoraauditoria']",
+              "runAfter": {
+                "ID_Auditoria": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "10d6d270-d99c-4674-a6d5-f70664fb4fd5"
+              }
+            },
+            "Obtendo_Loja": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "cre0a_lojas",
+                  "recordId": "@outputs('Obtendo_Recolhimento')?['body/_lt_loja_value']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "DataHora_Auditoria": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "c1b31f66-253d-4e2d-be9e-a9d28f01b93a"
+              }
+            },
+            "Loja": {
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Loja')?['body/@odata.id']",
+              "runAfter": {
+                "Obtendo_Loja": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "84d84ba3-6912-466c-9028-27be91738a4b"
+              }
+            },
+            "Obtendo_Produto_da_Máquina": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "crb76_produtos",
+                  "recordId": "@outputs('Obtendo_Máquina')?['body/_lt_produto_value']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "Loja": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "242c7401-77b2-40bf-b62a-e481bdd434a9"
+              }
+            },
+            "Produto": {
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Produto_da_Máquina')?['body/@odata.id']",
+              "runAfter": {
+                "Obtendo_Produto_da_Máquina": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "3865011b-b5e8-411e-8c36-f5ad5a7b7513"
+              }
+            },
+            "List_rows": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "crb76_precos"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "Produto": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "a116edec-3f36-4ded-8a11-a1d35aad5e2d"
+              }
+            },
+            "Filter_array": {
+              "type": "Query",
+              "inputs": {
+                "from": "@outputs('List_rows')?['body/value']",
+                "where": "@and(\n  equals(item()?['_crb76_produto_value'], outputs('Obtendo_Produto_da_Máquina')?['body/crb76_produtoid']),\n  greaterOrEquals(outputs('DataHora_Auditoria'), item()?['crb76_datainicio']),\n  lessOrEquals(outputs('DataHora_Auditoria'), if(empty(item()?['lt_datafim']), utcNow(), item()?['lt_datafim'])),\n  equals(item()?['_lt_loja_value'], outputs('Obtendo_Loja')?['body/cre0a_lojaid']),\n  not(equals(item()?['crb76_preco'], 0))\n)\n"
+              },
+              "runAfter": {
+                "List_rows": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2c0e1619-d763-4f11-843a-83a3649bd102"
+              }
+            },
+            "Preço_do_Produto": {
+              "type": "Compose",
+              "inputs": "@body('Parse_JSON')[0]['crb76_preco']\r\n",
+              "runAfter": {
+                "Parse_JSON": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2ec69860-7780-4306-b388-cc3c80b5b0de"
+              }
+            },
+            "Parse_JSON": {
+              "type": "ParseJson",
+              "inputs": {
+                "content": "@body('Filter_array')",
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "crb76_preco": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "crb76_preco"
+                    ]
+                  }
+                }
+              },
+              "runAfter": {
+                "Filter_array": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "bee43ae6-d900-4fbf-9b0d-cdb2d676d1b0"
+              }
+            },
+            "Condition_19": {
+              "type": "If",
+              "expression": {
+                "equals": [
+                  "@length(body('Filter_array'))",
+                  1
+                ]
+              },
+              "actions": {
+                "Criando_Venda": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "lt_registroparafechamentos"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "CreateRecord",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f6b1dc07-79c2-444d-b41b-a6324f1fb9de"
+                  }
+                },
+                "Verificando_Promoção": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "crb76_promocaovendas"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "ListRecords",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "runAfter": {
+                    "Criando_Venda": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "a2ea6e70-2e77-482a-8804-410e71350263"
+                  }
+                },
+                "Filtrando_Promoção": {
+                  "type": "Query",
+                  "inputs": {
+                    "from": "@outputs('Verificando_Promoção')?['body/value']",
+                    "where": "@and(\n    equals(item()?['_lt_loja_value'], outputs('Obtendo_Loja')?['body/cre0a_lojaid']),\n    equals(outputs('Obtendo_Produto_da_Máquina')?['body/crb76_produtoid'], item()?['_lt_produto_value'])\n)"
+                  },
+                  "runAfter": {
+                    "Verificando_Promoção": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "edcb99df-ecd1-4433-87fe-e83a614237ff"
+                  }
+                },
+                "Parse_JSON_4": {
+                  "type": "ParseJson",
+                  "inputs": {
+                    "content": "@body('Filtrando_Promoção')",
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "_lt_loja_value": {
+                            "type": "string"
+                          },
+                          "_lt_produto_value": {
+                            "type": "string"
+                          },
+                          "lt_valor1": {
+                            "type": "number"
+                          },
+                          "lt_valor2": {
+                            "type": "number"
+                          },
+                          "lt_valor3": {
+                            "type": "number"
+                          },
+                          "lt_desconto1": {
+                            "type": "number"
+                          },
+                          "lt_desconto2": {
+                            "type": "number"
+                          },
+                          "lt_desconto3": {
+                            "type": "number"
+                          },
+                          "lt_datainicio": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "lt_datafim": {
+                            "type": "string",
+                            "format": "date-time"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Filtrando_Promoção": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d6c5677c-cff7-4c90-bf0e-9a53002aa9d7"
+                  }
+                },
+                "Apply_to_each_3": {
+                  "type": "Foreach",
+                  "foreach": "@body('Parse_JSON_4')",
+                  "actions": {
+                    "Condition_20": {
+                      "type": "If",
+                      "expression": {
+                        "and": [
+                          {
+                            "greater": [
+                              "@length(body('Filtrando_Promoção'))",
+                              0
+                            ]
+                          },
+                          {
+                            "equals": [
+                              "@items('Apply_to_each_3')?['lt_datafim']",
+                              "@null"
+                            ]
+                          }
+                        ]
+                      },
+                      "actions": {
+                        "Condition_21": {
+                          "type": "If",
+                          "expression": {
+                            "and": [
+                              {
+                                "greaterOrEquals": [
+                                  "@outputs('ValorTotalConferido')",
+                                  "@items('Apply_to_each_3')?['lt_valor3']"
+                                ]
+                              },
+                              {
+                                "greaterOrEquals": [
+                                  "@outputs('DataHora_Auditoria')",
+                                  "@items('Apply_to_each_3')?['lt_datainicio']"
+                                ]
+                              }
+                            ]
+                          },
+                          "actions": {
+                            "Desconto3": {
+                              "type": "Compose",
+                              "inputs": "@items('Apply_to_each_3')?['lt_desconto3']",
+                              "metadata": {
+                                "operationMetadataId": "8ec62506-a079-45e6-908f-85bd1f8c3811"
+                              }
+                            },
+                            "ValorComDesconto3": {
+                              "type": "Compose",
+                              "inputs": "@mul(outputs('ValorTotalConferido'), sub(1, div(outputs('Desconto3'), 100)))",
+                              "runAfter": {
+                                "Desconto3": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "3d5cdd23-58e2-40d1-8bfc-a5924354848d"
+                              }
+                            },
+                            "ValorDoDesconto3": {
+                              "type": "Compose",
+                              "inputs": "@sub(outputs('ValorTotalConferido'), outputs('ValorComDesconto3'))",
+                              "runAfter": {
+                                "ValorComDesconto3": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "ab576f26-0e9f-4fc6-9364-ca80c3147e0b"
+                              }
+                            },
+                            "Quantidade3": {
+                              "type": "Compose",
+                              "inputs": "@int(first(split(string(div(outputs('ValorTotalConferido'), outputs('Preço_do_Produto'))), '.')))",
+                              "runAfter": {
+                                "ValorDoDesconto3": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "54c2d305-47eb-4aa3-92c6-c2c94e619d38"
+                              }
+                            },
+                            "PreçoUnitárioMédio3": {
+                              "type": "Compose",
+                              "inputs": "@div(outputs('ValorTotalConferido'), outputs('Quantidade3'))",
+                              "runAfter": {
+                                "Quantidade3": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "63d27da9-dcca-48b0-8b9b-75ce88c73bd1"
+                              }
+                            },
+                            "ValorVenda3": {
+                              "type": "Compose",
+                              "inputs": "@mul(outputs('Quantidade3'), outputs('Preço_do_Produto'))",
+                              "runAfter": {
+                                "PreçoUnitárioMédio3": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "fd908007-0f96-498a-a185-10f278a85773"
+                              }
+                            },
+                            "Produto_Vendido_3": {
+                              "type": "OpenApiConnection",
+                              "inputs": {
+                                "parameters": {
+                                  "entityName": "crb76_produtovendidos",
+                                  "item/lt_criacaovendadevido1": "",
+                                  "item/crb76_Produto@odata.bind": "@outputs('Produto')",
+                                  "item/crb76_quantidade": "@outputs('Quantidade3')",
+                                  "item/lt_vendaId@odata.bind": "@outputs('Criando_Venda')?['body/@odata.id']",
+                                  "item/lt_datahoratransacao": "@outputs('DataHora_Auditoria')",
+                                  "item/lt_loja@odata.bind": "@outputs('Loja')",
+                                  "item/lt_precounitario": "@outputs('Preço_do_Produto')",
+                                  "item/lt_precomedio": "@outputs('PreçoUnitárioMédio3')",
+                                  "item/lt_valordesconto": "@outputs('ValorDoDesconto3')",
+                                  "item/lt_valorvenda": "@outputs('ValorVenda3')"
+                                },
+                                "host": {
+                                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                  "operationId": "CreateRecord",
+                                  "connectionName": "shared_commondataserviceforapps"
+                                }
+                              },
+                              "runAfter": {
+                                "ValorVenda3": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "d5798c3d-3761-483e-96c0-3c04439bcb5c"
+                              }
+                            },
+                            "Atualizando_Venda_3": {
+                              "type": "OpenApiConnection",
+                              "inputs": {
+                                "parameters": {
+                                  "entityName": "lt_registroparafechamentos",
+                                  "recordId": "@outputs('Criando_Venda')?['body/lt_registroparafechamentoid']",
+                                  "item/lt_valor": "@outputs('ValorComDesconto3')",
+                                  "item/lt_valordescontoof": "@outputs('ValorDoDesconto3')"
+                                },
+                                "host": {
+                                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                  "operationId": "UpdateRecord",
+                                  "connectionName": "shared_commondataserviceforapps"
+                                }
+                              },
+                              "runAfter": {
+                                "Produto_Vendido_3": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "f7616e3e-55d3-4b5e-bf79-61e1f807c923"
+                              }
+                            }
+                          },
+                          "else": {
+                            "actions": {
+                              "Condition_22": {
+                                "type": "If",
+                                "expression": {
+                                  "and": [
+                                    {
+                                      "greaterOrEquals": [
+                                        "@outputs('ValorTotalConferido')",
+                                        "@items('Apply_to_each_3')?['lt_valor2']"
+                                      ]
+                                    },
+                                    {
+                                      "greaterOrEquals": [
+                                        "@outputs('DataHora_Auditoria')",
+                                        "@items('Apply_to_each_3')?['lt_datainicio']"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "actions": {
+                                  "Desconto2": {
+                                    "type": "Compose",
+                                    "inputs": "@items('Apply_to_each_3')?['lt_desconto2']",
+                                    "metadata": {
+                                      "operationMetadataId": "710ff315-211a-407d-be49-5c3ce029fb4c"
+                                    }
+                                  },
+                                  "ValorComDesconto2": {
+                                    "type": "Compose",
+                                    "inputs": "@mul(outputs('ValorTotalConferido'), sub(1, div(outputs('Desconto2'), 100)))",
+                                    "runAfter": {
+                                      "Desconto2": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "0eefecb7-41e4-44b7-924e-35a17b0c7ee2"
+                                    }
+                                  },
+                                  "ValorDoDesconto2": {
+                                    "type": "Compose",
+                                    "inputs": "@sub(outputs('ValorTotalConferido'), outputs('ValorComDesconto2'))",
+                                    "runAfter": {
+                                      "ValorComDesconto2": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "8e120930-a69b-42e5-8c06-e5d0500a86ac"
+                                    }
+                                  },
+                                  "Quantidade2": {
+                                    "type": "Compose",
+                                    "inputs": "@int(first(split(string(div(outputs('ValorTotalConferido'), outputs('Preço_do_Produto'))), '.')))\r\n",
+                                    "runAfter": {
+                                      "ValorDoDesconto2": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "a7c89e3e-b643-4e99-ac5b-b37212bf4ae5"
+                                    }
+                                  },
+                                  "PreçoUnitárioMédio2": {
+                                    "type": "Compose",
+                                    "inputs": "@div(outputs('ValorTotalConferido'), outputs('Quantidade2'))",
+                                    "runAfter": {
+                                      "Quantidade2": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "f8473bde-eadf-4ef3-b5f3-8fc19521e927"
+                                    }
+                                  },
+                                  "ValorVenda2": {
+                                    "type": "Compose",
+                                    "inputs": "@mul(outputs('Quantidade2'), outputs('Preço_do_Produto'))",
+                                    "runAfter": {
+                                      "PreçoUnitárioMédio2": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "c13a4fa7-4c4c-4fa2-8f6c-b810326e9320"
+                                    }
+                                  },
+                                  "Produto_Vendido_2": {
+                                    "type": "OpenApiConnection",
+                                    "inputs": {
+                                      "parameters": {
+                                        "entityName": "crb76_produtovendidos",
+                                        "item/lt_criacaovendadevido1": "",
+                                        "item/crb76_Produto@odata.bind": "@outputs('Produto')",
+                                        "item/crb76_quantidade": "@outputs('Quantidade2')",
+                                        "item/lt_vendaId@odata.bind": "@outputs('Criando_Venda')?['body/@odata.id']",
+                                        "item/lt_datahoratransacao": "@outputs('DataHora_Auditoria')",
+                                        "item/lt_loja@odata.bind": "@outputs('Loja')",
+                                        "item/lt_precounitario": "@outputs('Preço_do_Produto')",
+                                        "item/lt_precomedio": "@outputs('PreçoUnitárioMédio2')",
+                                        "item/lt_valordesconto": "@outputs('ValorDoDesconto2')",
+                                        "item/lt_valorvenda": "@outputs('ValorVenda2')"
+                                      },
+                                      "host": {
+                                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                        "operationId": "CreateRecord",
+                                        "connectionName": "shared_commondataserviceforapps"
+                                      }
+                                    },
+                                    "runAfter": {
+                                      "ValorVenda2": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "d504ff18-ba53-48db-9e0a-935cf40b18c8"
+                                    }
+                                  },
+                                  "Atualizando_Venda_2": {
+                                    "type": "OpenApiConnection",
+                                    "inputs": {
+                                      "parameters": {
+                                        "entityName": "lt_registroparafechamentos",
+                                        "recordId": "@outputs('Criando_Venda')?['body/lt_registroparafechamentoid']",
+                                        "item/lt_valor": "@outputs('ValorComDesconto2')",
+                                        "item/lt_valordescontoof": "@outputs('ValorDoDesconto2')"
+                                      },
+                                      "host": {
+                                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                        "operationId": "UpdateRecord",
+                                        "connectionName": "shared_commondataserviceforapps"
+                                      }
+                                    },
+                                    "runAfter": {
+                                      "Produto_Vendido_2": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "556a1a5b-3d57-456f-8ea4-e418c9d4e3c6"
+                                    }
+                                  }
+                                },
+                                "else": {
+                                  "actions": {
+                                    "Condition_23": {
+                                      "type": "If",
+                                      "expression": {
+                                        "and": [
+                                          {
+                                            "greaterOrEquals": [
+                                              "@outputs('ValorTotalConferido')",
+                                              "@items('Apply_to_each_3')?['lt_valor1']"
+                                            ]
+                                          },
+                                          {
+                                            "greaterOrEquals": [
+                                              "@outputs('DataHora_Auditoria')",
+                                              "@items('Apply_to_each_3')?['lt_datainicio']"
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "actions": {
+                                        "Desconto1": {
+                                          "type": "Compose",
+                                          "inputs": "@items('Apply_to_each_3')?['lt_desconto1']",
+                                          "metadata": {
+                                            "operationMetadataId": "bc44d742-963e-4d0c-8ffd-a8fe75771fad"
+                                          }
+                                        },
+                                        "ValorComDesconto1": {
+                                          "type": "Compose",
+                                          "inputs": "@mul(outputs('ValorTotalConferido'), sub(1, div(outputs('Desconto1'), 100)))",
+                                          "runAfter": {
+                                            "Desconto1": [
+                                              "Succeeded"
+                                            ]
+                                          },
+                                          "metadata": {
+                                            "operationMetadataId": "a855b2dd-474b-491a-8309-de69a9e92cb4"
+                                          }
+                                        },
+                                        "ValorDoDesconto1": {
+                                          "type": "Compose",
+                                          "inputs": "@sub(outputs('ValorTotalConferido'), outputs('ValorComDesconto1'))",
+                                          "runAfter": {
+                                            "ValorComDesconto1": [
+                                              "Succeeded"
+                                            ]
+                                          },
+                                          "metadata": {
+                                            "operationMetadataId": "640c7215-1978-4e53-9a2b-d3c3134e2775"
+                                          }
+                                        },
+                                        "Quantidade1": {
+                                          "type": "Compose",
+                                          "inputs": "@int(first(split(string(div(outputs('ValorTotalConferido'), outputs('Preço_do_Produto'))), '.')))",
+                                          "runAfter": {
+                                            "ValorDoDesconto1": [
+                                              "Succeeded"
+                                            ]
+                                          },
+                                          "metadata": {
+                                            "operationMetadataId": "ef55a27e-a5e6-4864-a607-eb5baeda9092"
+                                          }
+                                        },
+                                        "PreçoUnitárioMédio1": {
+                                          "type": "Compose",
+                                          "inputs": "@div(outputs('ValorTotalConferido'), outputs('Quantidade1'))",
+                                          "runAfter": {
+                                            "Quantidade1": [
+                                              "Succeeded"
+                                            ]
+                                          },
+                                          "metadata": {
+                                            "operationMetadataId": "f437c799-7107-4077-814b-c4cb81b0cde0"
+                                          }
+                                        },
+                                        "ValorVenda1": {
+                                          "type": "Compose",
+                                          "inputs": "@mul(outputs('Quantidade1'), outputs('Preço_do_Produto'))",
+                                          "runAfter": {
+                                            "PreçoUnitárioMédio1": [
+                                              "Succeeded"
+                                            ]
+                                          },
+                                          "metadata": {
+                                            "operationMetadataId": "d87f94f8-b76b-4dbf-a269-d214d3f305e3"
+                                          }
+                                        },
+                                        "Produto_Vendido_1": {
+                                          "type": "OpenApiConnection",
+                                          "inputs": {
+                                            "parameters": {
+                                              "entityName": "crb76_produtovendidos",
+                                              "item/lt_criacaovendadevido1": "",
+                                              "item/crb76_Produto@odata.bind": "@outputs('Produto')",
+                                              "item/crb76_quantidade": "@outputs('Quantidade1')",
+                                              "item/lt_vendaId@odata.bind": "@outputs('Criando_Venda')?['body/@odata.id']",
+                                              "item/lt_datahoratransacao": "@outputs('DataHora_Auditoria')",
+                                              "item/lt_loja@odata.bind": "@outputs('Loja')",
+                                              "item/lt_precounitario": "@outputs('Preço_do_Produto')",
+                                              "item/lt_precomedio": "@outputs('PreçoUnitárioMédio1')",
+                                              "item/lt_valordesconto": "@outputs('ValorDoDesconto1')",
+                                              "item/lt_valorvenda": "@outputs('ValorVenda1')"
+                                            },
+                                            "host": {
+                                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                              "operationId": "CreateRecord",
+                                              "connectionName": "shared_commondataserviceforapps"
+                                            }
+                                          },
+                                          "runAfter": {
+                                            "ValorVenda1": [
+                                              "Succeeded"
+                                            ]
+                                          },
+                                          "metadata": {
+                                            "operationMetadataId": "4c01c506-e882-41d8-97a2-2c042eba8906"
+                                          }
+                                        },
+                                        "Atualizando_Venda_1": {
+                                          "type": "OpenApiConnection",
+                                          "inputs": {
+                                            "parameters": {
+                                              "entityName": "lt_registroparafechamentos",
+                                              "recordId": "@outputs('Criando_Venda')?['body/lt_registroparafechamentoid']",
+                                              "item/lt_valor": "@outputs('ValorComDesconto1')",
+                                              "item/lt_valordescontoof": "@outputs('ValorDoDesconto1')"
+                                            },
+                                            "host": {
+                                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                              "operationId": "UpdateRecord",
+                                              "connectionName": "shared_commondataserviceforapps"
+                                            }
+                                          },
+                                          "runAfter": {
+                                            "Produto_Vendido_1": [
+                                              "Succeeded"
+                                            ]
+                                          },
+                                          "metadata": {
+                                            "operationMetadataId": "1b6483e7-c6c9-4a0d-baa6-f48447812401"
+                                          }
+                                        }
+                                      },
+                                      "else": {
+                                        "actions": {
+                                          "Condition_24": {
+                                            "type": "If",
+                                            "expression": {
+                                              "and": [
+                                                {
+                                                  "less": [
+                                                    "@outputs('ValorTotalConferido')",
+                                                    "@items('Apply_to_each_3')?['lt_valor1']"
+                                                  ]
+                                                },
+                                                {
+                                                  "greaterOrEquals": [
+                                                    "@outputs('DataHora_Auditoria')",
+                                                    "@items('Apply_to_each_3')?['lt_datainicio']"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "actions": {
+                                              "PreçoUnitárioMédio0": {
+                                                "type": "Compose",
+                                                "inputs": "@div(outputs('ValorTotalConferido'), outputs('Quantidade0'))",
+                                                "runAfter": {
+                                                  "Quantidade0": [
+                                                    "Succeeded"
+                                                  ]
+                                                },
+                                                "metadata": {
+                                                  "operationMetadataId": "61ed72a1-17e9-4ab8-b15f-95e23dd1a9ad"
+                                                }
+                                              },
+                                              "ValorVenda0": {
+                                                "type": "Compose",
+                                                "inputs": "@mul(outputs('Quantidade0'), outputs('Preço_do_Produto'))",
+                                                "runAfter": {
+                                                  "PreçoUnitárioMédio0": [
+                                                    "Succeeded"
+                                                  ]
+                                                },
+                                                "metadata": {
+                                                  "operationMetadataId": "74c12fbb-acaa-4869-87d5-f17eea4e0d33"
+                                                }
+                                              },
+                                              "Produto_Vendido_0": {
+                                                "type": "OpenApiConnection",
+                                                "inputs": {
+                                                  "parameters": {
+                                                    "entityName": "crb76_produtovendidos",
+                                                    "item/lt_criacaovendadevido1": "",
+                                                    "item/crb76_Produto@odata.bind": "@outputs('Produto')",
+                                                    "item/crb76_quantidade": "@outputs('Quantidade0')",
+                                                    "item/lt_vendaId@odata.bind": "@outputs('Criando_Venda')?['body/@odata.id']",
+                                                    "item/lt_datahoratransacao": "@outputs('DataHora_Auditoria')",
+                                                    "item/lt_loja@odata.bind": "@outputs('Loja')",
+                                                    "item/lt_precounitario": "@outputs('Preço_do_Produto')",
+                                                    "item/lt_precomedio": "@outputs('PreçoUnitárioMédio0')",
+                                                    "item/lt_valordesconto": "@outputs('Desconto0')",
+                                                    "item/lt_valorvenda": "@outputs('ValorVenda0')"
+                                                  },
+                                                  "host": {
+                                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                                    "operationId": "CreateRecord",
+                                                    "connectionName": "shared_commondataserviceforapps"
+                                                  }
+                                                },
+                                                "runAfter": {
+                                                  "ValorVenda0": [
+                                                    "Succeeded"
+                                                  ]
+                                                },
+                                                "metadata": {
+                                                  "operationMetadataId": "4db2fe67-f707-4de8-b1a8-067aba62b7b6"
+                                                }
+                                              },
+                                              "Atualizando_Venda_0": {
+                                                "type": "OpenApiConnection",
+                                                "inputs": {
+                                                  "parameters": {
+                                                    "entityName": "lt_registroparafechamentos",
+                                                    "recordId": "@outputs('Criando_Venda')?['body/lt_registroparafechamentoid']",
+                                                    "item/lt_valor": "@outputs('ValorComDesconto0')",
+                                                    "item/lt_valordescontoof": "@outputs('Desconto0')"
+                                                  },
+                                                  "host": {
+                                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                                    "operationId": "UpdateRecord",
+                                                    "connectionName": "shared_commondataserviceforapps"
+                                                  }
+                                                },
+                                                "runAfter": {
+                                                  "Produto_Vendido_0": [
+                                                    "Succeeded"
+                                                  ]
+                                                },
+                                                "metadata": {
+                                                  "operationMetadataId": "d943c11b-032b-474b-a99d-906cf814c5e4"
+                                                }
+                                              },
+                                              "Desconto0": {
+                                                "type": "Compose",
+                                                "inputs": 0,
+                                                "metadata": {
+                                                  "operationMetadataId": "45a1fd9a-b078-4702-8dcf-c8c9c5a041b3"
+                                                }
+                                              },
+                                              "Quantidade0": {
+                                                "type": "Compose",
+                                                "inputs": "@int(first(split(string(div(outputs('ValorTotalConferido'), outputs('Preço_do_Produto'))), '.')))",
+                                                "runAfter": {
+                                                  "ValorComDesconto0": [
+                                                    "Succeeded"
+                                                  ]
+                                                },
+                                                "metadata": {
+                                                  "operationMetadataId": "d5b88dc5-77f6-4451-a53b-c020df3d8778"
+                                                }
+                                              },
+                                              "ValorComDesconto0": {
+                                                "type": "Compose",
+                                                "inputs": "@mul(outputs('ValorTotalConferido'), sub(1, div(outputs('Desconto0'), 100)))",
+                                                "runAfter": {
+                                                  "Desconto0": [
+                                                    "Succeeded"
+                                                  ]
+                                                },
+                                                "metadata": {
+                                                  "operationMetadataId": "9ae61936-1ad0-4604-a4bb-c638f65a68cc"
+                                                }
+                                              }
+                                            },
+                                            "else": {
+                                              "actions": {}
+                                            },
+                                            "metadata": {
+                                              "operationMetadataId": "bec0e6ef-8a40-45de-8702-954384614c31"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "metadata": {
+                                        "operationMetadataId": "9e963c1f-cef8-4d2c-b9f4-cdac697bef03"
+                                      }
+                                    }
+                                  }
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "382436e8-69f3-47be-960e-0c6bd39bb43e"
+                                }
+                              }
+                            }
+                          },
+                          "metadata": {
+                            "operationMetadataId": "dc1e3b19-9ae1-49a4-b77b-1b107909bb9f"
+                          }
+                        }
+                      },
+                      "else": {
+                        "actions": {
+                          "Condition_25": {
+                            "type": "If",
+                            "expression": {
+                              "and": [
+                                {
+                                  "greaterOrEquals": [
+                                    "@outputs('ValorTotalConferido')",
+                                    "@items('Apply_to_each_3')?['lt_valor3']"
+                                  ]
+                                },
+                                {
+                                  "greaterOrEquals": [
+                                    "@outputs('DataHora_Auditoria')",
+                                    "@items('Apply_to_each_3')?['lt_datainicio']"
+                                  ]
+                                },
+                                {
+                                  "lessOrEquals": [
+                                    "@outputs('ValorTotalConferido')",
+                                    "@items('Apply_to_each_3')?['lt_datafim']"
+                                  ]
+                                }
+                              ]
+                            },
+                            "actions": {
+                              "Desconto33": {
+                                "type": "Compose",
+                                "inputs": "@items('Apply_to_each_3')?['lt_desconto3']",
+                                "metadata": {
+                                  "operationMetadataId": "b9466641-f7c3-44c3-b4b7-9229829ac02f"
+                                }
+                              },
+                              "ValorComDesconto33": {
+                                "type": "Compose",
+                                "inputs": "@mul(outputs('ValorTotalConferido'), sub(1, div(outputs('Desconto33'), 100)))",
+                                "runAfter": {
+                                  "Desconto33": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "283498ca-ccc4-4d8c-a571-4cf930d19780"
+                                }
+                              },
+                              "ValorDoDesconto33": {
+                                "type": "Compose",
+                                "inputs": "@sub(outputs('ValorTotalConferido'), outputs('ValorComDesconto33'))",
+                                "runAfter": {
+                                  "ValorComDesconto33": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "567dcdc7-4b64-4149-9185-2cc931cb11d4"
+                                }
+                              },
+                              "Quantidade33": {
+                                "type": "Compose",
+                                "inputs": "@int(first(split(string(div(outputs('ValorTotalConferido'), outputs('Preço_do_Produto'))), '.')))",
+                                "runAfter": {
+                                  "ValorDoDesconto33": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "6d2c973e-767d-439a-84b6-c0b5279372d3"
+                                }
+                              },
+                              "PreçoUnitárioMédio33": {
+                                "type": "Compose",
+                                "inputs": "@div(outputs('ValorTotalConferido'), outputs('Quantidade33'))",
+                                "runAfter": {
+                                  "Quantidade33": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "300167c2-472f-4513-916e-a84b23505fc5"
+                                }
+                              },
+                              "ValorVenda33": {
+                                "type": "Compose",
+                                "inputs": "@mul(outputs('Quantidade33'), outputs('Preço_do_Produto'))",
+                                "runAfter": {
+                                  "PreçoUnitárioMédio33": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "4fc38322-36e6-440e-90ec-37078b41a87b"
+                                }
+                              },
+                              "Produto_Vendido_33": {
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "parameters": {
+                                    "entityName": "crb76_produtovendidos",
+                                    "item/lt_criacaovendadevido1": "",
+                                    "item/crb76_Produto@odata.bind": "@outputs('Produto')",
+                                    "item/crb76_quantidade": "@outputs('Quantidade33')",
+                                    "item/lt_vendaId@odata.bind": "@outputs('Criando_Venda')?['body/@odata.id']",
+                                    "item/lt_datahoratransacao": "@outputs('DataHora_Auditoria')",
+                                    "item/lt_loja@odata.bind": "@outputs('Loja')",
+                                    "item/lt_precounitario": "@outputs('Preço_do_Produto')",
+                                    "item/lt_precomedio": "@outputs('PreçoUnitárioMédio33')",
+                                    "item/lt_valordesconto": "@outputs('ValorDoDesconto33')",
+                                    "item/lt_valorvenda": "@outputs('ValorVenda33')"
+                                  },
+                                  "host": {
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                    "operationId": "CreateRecord",
+                                    "connectionName": "shared_commondataserviceforapps"
+                                  }
+                                },
+                                "runAfter": {
+                                  "ValorVenda33": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "bddf14e5-d58e-4b68-9bf2-b0c1c832b06c"
+                                }
+                              },
+                              "Atualizando_Venda_33": {
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "parameters": {
+                                    "entityName": "lt_registroparafechamentos",
+                                    "recordId": "@outputs('Criando_Venda')?['body/lt_registroparafechamentoid']",
+                                    "item/lt_valor": "@outputs('ValorComDesconto33')",
+                                    "item/lt_valordescontoof": "@outputs('ValorDoDesconto33')"
+                                  },
+                                  "host": {
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                    "operationId": "UpdateRecord",
+                                    "connectionName": "shared_commondataserviceforapps"
+                                  }
+                                },
+                                "runAfter": {
+                                  "Produto_Vendido_33": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "4c2947fe-b15e-4a74-8f2a-b648aa403276"
+                                }
+                              }
+                            },
+                            "else": {
+                              "actions": {
+                                "Condition_26": {
+                                  "type": "If",
+                                  "expression": {
+                                    "and": [
+                                      {
+                                        "greaterOrEquals": [
+                                          "@outputs('ValorTotalConferido')",
+                                          "@items('Apply_to_each_3')?['lt_valor2']"
+                                        ]
+                                      },
+                                      {
+                                        "greaterOrEquals": [
+                                          "@outputs('DataHora_Auditoria')",
+                                          "@items('Apply_to_each_3')?['lt_datainicio']"
+                                        ]
+                                      },
+                                      {
+                                        "lessOrEquals": [
+                                          "@outputs('DataHora_Auditoria')",
+                                          "@items('Apply_to_each_3')?['lt_datafim']"
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "actions": {
+                                    "Desconto22": {
+                                      "type": "Compose",
+                                      "inputs": "@items('Apply_to_each_3')?['lt_desconto2']",
+                                      "metadata": {
+                                        "operationMetadataId": "10f417ee-15b3-4c28-a981-fdd5f57328d3"
+                                      }
+                                    },
+                                    "ValorComDesconto22": {
+                                      "type": "Compose",
+                                      "inputs": "@mul(outputs('ValorTotalConferido'), sub(1, div(outputs('Desconto22'), 100)))",
+                                      "runAfter": {
+                                        "Desconto22": [
+                                          "Succeeded"
+                                        ]
+                                      },
+                                      "metadata": {
+                                        "operationMetadataId": "b0c25c11-1088-4cc3-8f5c-8c943b0262c4"
+                                      }
+                                    },
+                                    "ValorDoDesconto22": {
+                                      "type": "Compose",
+                                      "inputs": "@sub(outputs('ValorTotalConferido'), outputs('ValorComDesconto22'))",
+                                      "runAfter": {
+                                        "ValorComDesconto22": [
+                                          "Succeeded"
+                                        ]
+                                      },
+                                      "metadata": {
+                                        "operationMetadataId": "7526e204-7fb9-4732-9fbf-f30ac090cfc7"
+                                      }
+                                    },
+                                    "Quantidade22": {
+                                      "type": "Compose",
+                                      "inputs": "@int(first(split(string(div(outputs('ValorTotalConferido'), outputs('Preço_do_Produto'))), '.')))",
+                                      "runAfter": {
+                                        "ValorDoDesconto22": [
+                                          "Succeeded"
+                                        ]
+                                      },
+                                      "metadata": {
+                                        "operationMetadataId": "6d1b9af5-17d3-41d6-ae5b-1756035d366a"
+                                      }
+                                    },
+                                    "PreçoUnitárioMédio22": {
+                                      "type": "Compose",
+                                      "inputs": "@div(outputs('ValorTotalConferido'), outputs('Quantidade22'))",
+                                      "runAfter": {
+                                        "Quantidade22": [
+                                          "Succeeded"
+                                        ]
+                                      },
+                                      "metadata": {
+                                        "operationMetadataId": "997ebe13-4664-4e75-b15b-7f86842fb064"
+                                      }
+                                    },
+                                    "ValorVenda22": {
+                                      "type": "Compose",
+                                      "inputs": "@mul(outputs('Quantidade22'), outputs('Preço_do_Produto'))",
+                                      "runAfter": {
+                                        "PreçoUnitárioMédio22": [
+                                          "Succeeded"
+                                        ]
+                                      },
+                                      "metadata": {
+                                        "operationMetadataId": "785bb2fc-7b78-42fd-bd91-3ac6f919f6a3"
+                                      }
+                                    },
+                                    "Produto_Vendido_22": {
+                                      "type": "OpenApiConnection",
+                                      "inputs": {
+                                        "parameters": {
+                                          "entityName": "crb76_produtovendidos",
+                                          "item/lt_criacaovendadevido1": "",
+                                          "item/crb76_Produto@odata.bind": "@outputs('Produto')",
+                                          "item/crb76_quantidade": "@outputs('Quantidade22')",
+                                          "item/lt_vendaId@odata.bind": "@outputs('Criando_Venda')?['body/@odata.id']",
+                                          "item/lt_datahoratransacao": "@outputs('DataHora_Auditoria')",
+                                          "item/lt_loja@odata.bind": "@outputs('Loja')",
+                                          "item/lt_precounitario": "@outputs('Preço_do_Produto')",
+                                          "item/lt_precomedio": "@outputs('PreçoUnitárioMédio22')",
+                                          "item/lt_valordesconto": "@outputs('ValorDoDesconto22')",
+                                          "item/lt_valorvenda": "@outputs('ValorVenda22')"
+                                        },
+                                        "host": {
+                                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                          "operationId": "CreateRecord",
+                                          "connectionName": "shared_commondataserviceforapps"
+                                        }
+                                      },
+                                      "runAfter": {
+                                        "ValorVenda22": [
+                                          "Succeeded"
+                                        ]
+                                      },
+                                      "metadata": {
+                                        "operationMetadataId": "2e650656-766b-4c87-891e-c140a7774bae"
+                                      }
+                                    },
+                                    "Atualizando_Venda_22": {
+                                      "type": "OpenApiConnection",
+                                      "inputs": {
+                                        "parameters": {
+                                          "entityName": "lt_registroparafechamentos",
+                                          "recordId": "@outputs('Criando_Venda')?['body/lt_registroparafechamentoid']",
+                                          "item/lt_valor": "@outputs('ValorComDesconto22')",
+                                          "item/lt_valordescontoof": "@outputs('ValorDoDesconto22')"
+                                        },
+                                        "host": {
+                                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                          "operationId": "UpdateRecord",
+                                          "connectionName": "shared_commondataserviceforapps"
+                                        }
+                                      },
+                                      "runAfter": {
+                                        "Produto_Vendido_22": [
+                                          "Succeeded"
+                                        ]
+                                      },
+                                      "metadata": {
+                                        "operationMetadataId": "b5cf419c-69e6-4914-a6a2-c3ffbd11a872"
+                                      }
+                                    }
+                                  },
+                                  "else": {
+                                    "actions": {
+                                      "Condition_27": {
+                                        "type": "If",
+                                        "expression": {
+                                          "and": [
+                                            {
+                                              "greaterOrEquals": [
+                                                "@outputs('ValorTotalConferido')",
+                                                "@items('Apply_to_each_3')?['lt_valor1']"
+                                              ]
+                                            },
+                                            {
+                                              "greaterOrEquals": [
+                                                "@outputs('DataHora_Auditoria')",
+                                                "@items('Apply_to_each_3')?['lt_datainicio']"
+                                              ]
+                                            },
+                                            {
+                                              "lessOrEquals": [
+                                                "@outputs('DataHora_Auditoria')",
+                                                "@items('Apply_to_each_3')?['lt_datafim']"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        "actions": {
+                                          "Desconto11": {
+                                            "type": "Compose",
+                                            "inputs": "@items('Apply_to_each_3')?['lt_desconto1']",
+                                            "metadata": {
+                                              "operationMetadataId": "85cc2d32-f483-4c6d-9148-1211a4f72157"
+                                            }
+                                          },
+                                          "ValorComDesconto11": {
+                                            "type": "Compose",
+                                            "inputs": "@mul(outputs('ValorTotalConferido'), sub(1, div(outputs('Desconto11'), 100)))",
+                                            "runAfter": {
+                                              "Desconto11": [
+                                                "Succeeded"
+                                              ]
+                                            },
+                                            "metadata": {
+                                              "operationMetadataId": "95d104c2-1b2e-410b-832f-4b27c9c349a3"
+                                            }
+                                          },
+                                          "ValorDoDesconto11": {
+                                            "type": "Compose",
+                                            "inputs": "@sub(outputs('ValorTotalConferido'), outputs('ValorComDesconto11'))",
+                                            "runAfter": {
+                                              "ValorComDesconto11": [
+                                                "Succeeded"
+                                              ]
+                                            },
+                                            "metadata": {
+                                              "operationMetadataId": "612fd06f-cbb0-4c5a-bcf6-71def9bcb116"
+                                            }
+                                          },
+                                          "Quantidade11": {
+                                            "type": "Compose",
+                                            "inputs": "@int(first(split(string(div(outputs('ValorTotalConferido'), outputs('Preço_do_Produto'))), '.')))",
+                                            "runAfter": {
+                                              "ValorDoDesconto11": [
+                                                "Succeeded"
+                                              ]
+                                            },
+                                            "metadata": {
+                                              "operationMetadataId": "69e2301c-4fc7-48f8-a497-f6ebf2b55717"
+                                            }
+                                          },
+                                          "PreçoUnitárioMédio11": {
+                                            "type": "Compose",
+                                            "inputs": "@div(outputs('ValorTotalConferido'), outputs('Quantidade11'))",
+                                            "runAfter": {
+                                              "Quantidade11": [
+                                                "Succeeded"
+                                              ]
+                                            },
+                                            "metadata": {
+                                              "operationMetadataId": "58044f2e-78ee-4044-aa6b-bfdf6aaa2640"
+                                            }
+                                          },
+                                          "ValorVenda11": {
+                                            "type": "Compose",
+                                            "inputs": "@mul(outputs('Quantidade11'), outputs('Preço_do_Produto'))",
+                                            "runAfter": {
+                                              "PreçoUnitárioMédio11": [
+                                                "Succeeded"
+                                              ]
+                                            },
+                                            "metadata": {
+                                              "operationMetadataId": "3ab61dd2-e4d4-4944-895b-9af208e9e74e"
+                                            }
+                                          },
+                                          "Produto_Vendido_11": {
+                                            "type": "OpenApiConnection",
+                                            "inputs": {
+                                              "parameters": {
+                                                "entityName": "crb76_produtovendidos",
+                                                "item/lt_criacaovendadevido1": "",
+                                                "item/crb76_Produto@odata.bind": "@outputs('Produto')",
+                                                "item/crb76_quantidade": "@outputs('Quantidade11')",
+                                                "item/lt_vendaId@odata.bind": "@outputs('Criando_Venda')?['body/@odata.id']",
+                                                "item/lt_datahoratransacao": "@outputs('DataHora_Auditoria')",
+                                                "item/lt_loja@odata.bind": "@outputs('Loja')",
+                                                "item/lt_precounitario": "@outputs('Preço_do_Produto')",
+                                                "item/lt_precomedio": "@outputs('PreçoUnitárioMédio11')",
+                                                "item/lt_valordesconto": "@outputs('ValorDoDesconto11')",
+                                                "item/lt_valorvenda": "@outputs('ValorVenda11')"
+                                              },
+                                              "host": {
+                                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                                "operationId": "CreateRecord",
+                                                "connectionName": "shared_commondataserviceforapps"
+                                              }
+                                            },
+                                            "runAfter": {
+                                              "ValorVenda11": [
+                                                "Succeeded"
+                                              ]
+                                            },
+                                            "metadata": {
+                                              "operationMetadataId": "193e9d02-c1d2-4376-804a-851d43b7f48a"
+                                            }
+                                          },
+                                          "Atualizando_Venda_11": {
+                                            "type": "OpenApiConnection",
+                                            "inputs": {
+                                              "parameters": {
+                                                "entityName": "lt_registroparafechamentos",
+                                                "recordId": "@outputs('Criando_Venda')?['body/lt_registroparafechamentoid']",
+                                                "item/lt_valor": "@outputs('ValorComDesconto11')",
+                                                "item/lt_valordescontoof": "@outputs('ValorDoDesconto11')"
+                                              },
+                                              "host": {
+                                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                                "operationId": "UpdateRecord",
+                                                "connectionName": "shared_commondataserviceforapps"
+                                              }
+                                            },
+                                            "runAfter": {
+                                              "Produto_Vendido_11": [
+                                                "Succeeded"
+                                              ]
+                                            },
+                                            "metadata": {
+                                              "operationMetadataId": "121841ed-8b0b-4e9a-be61-c38b8d19ed67"
+                                            }
+                                          }
+                                        },
+                                        "else": {
+                                          "actions": {
+                                            "Condition": {
+                                              "type": "If",
+                                              "expression": {
+                                                "and": [
+                                                  {
+                                                    "less": [
+                                                      "@outputs('ValorTotalConferido')",
+                                                      "@items('Apply_to_each_3')?['lt_valor1']"
+                                                    ]
+                                                  },
+                                                  {
+                                                    "greaterOrEquals": [
+                                                      "@outputs('DataHora_Auditoria')",
+                                                      "@items('Apply_to_each_3')?['lt_datainicio']"
+                                                    ]
+                                                  },
+                                                  {
+                                                    "lessOrEquals": [
+                                                      "@outputs('DataHora_Auditoria')",
+                                                      "@items('Apply_to_each_3')?['lt_datafim']"
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              "actions": {
+                                                "PreçoUnitárioMédio00": {
+                                                  "type": "Compose",
+                                                  "inputs": "@div(outputs('ValorTotalConferido'), outputs('Quantidade00'))",
+                                                  "runAfter": {
+                                                    "Quantidade00": [
+                                                      "Succeeded"
+                                                    ]
+                                                  },
+                                                  "metadata": {
+                                                    "operationMetadataId": "f59241cf-beb5-402d-9807-49030048db8e"
+                                                  }
+                                                },
+                                                "ValorVenda00": {
+                                                  "type": "Compose",
+                                                  "inputs": "@mul(outputs('Quantidade00'), outputs('Preço_do_Produto'))",
+                                                  "runAfter": {
+                                                    "PreçoUnitárioMédio00": [
+                                                      "Succeeded"
+                                                    ]
+                                                  },
+                                                  "metadata": {
+                                                    "operationMetadataId": "660afdaa-37d3-4b04-a374-6dbfac6a84c4"
+                                                  }
+                                                },
+                                                "Produto_Vendido_00": {
+                                                  "type": "OpenApiConnection",
+                                                  "inputs": {
+                                                    "parameters": {
+                                                      "entityName": "crb76_produtovendidos",
+                                                      "item/lt_criacaovendadevido1": "",
+                                                      "item/crb76_Produto@odata.bind": "@outputs('Produto')",
+                                                      "item/crb76_quantidade": "@outputs('Quantidade00')",
+                                                      "item/lt_vendaId@odata.bind": "@outputs('Criando_Venda')?['body/@odata.id']",
+                                                      "item/lt_datahoratransacao": "@outputs('DataHora_Auditoria')",
+                                                      "item/lt_loja@odata.bind": "@outputs('Loja')",
+                                                      "item/lt_precounitario": "@outputs('Preço_do_Produto')",
+                                                      "item/lt_precomedio": "@outputs('PreçoUnitárioMédio00')",
+                                                      "item/lt_valordesconto": 0,
+                                                      "item/lt_valorvenda": "@outputs('ValorVenda00')"
+                                                    },
+                                                    "host": {
+                                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                                      "operationId": "CreateRecord",
+                                                      "connectionName": "shared_commondataserviceforapps"
+                                                    }
+                                                  },
+                                                  "runAfter": {
+                                                    "ValorVenda00": [
+                                                      "Succeeded"
+                                                    ]
+                                                  },
+                                                  "metadata": {
+                                                    "operationMetadataId": "1122b06b-0026-4c5b-9772-4fcbee0dbb91"
+                                                  }
+                                                },
+                                                "Desconto00": {
+                                                  "type": "Compose",
+                                                  "inputs": 0,
+                                                  "metadata": {
+                                                    "operationMetadataId": "353500b5-ff1d-4188-86da-8675aeed0409"
+                                                  }
+                                                },
+                                                "Quantidade00": {
+                                                  "type": "Compose",
+                                                  "inputs": "@int(first(split(string(div(outputs('ValorTotalConferido'), outputs('Preço_do_Produto'))), '.')))",
+                                                  "runAfter": {
+                                                    "ValorComDesconto00": [
+                                                      "Succeeded"
+                                                    ]
+                                                  },
+                                                  "metadata": {
+                                                    "operationMetadataId": "e2fb0a44-10d9-4b8b-b551-c062450f0538"
+                                                  }
+                                                },
+                                                "ValorComDesconto00": {
+                                                  "type": "Compose",
+                                                  "inputs": "@mul(outputs('ValorTotalConferido'), sub(1, div(outputs('Desconto00'), 100)))",
+                                                  "runAfter": {
+                                                    "Desconto00": [
+                                                      "Succeeded"
+                                                    ]
+                                                  },
+                                                  "metadata": {
+                                                    "operationMetadataId": "094b457a-8365-4ed4-acf8-693bc6305a9a"
+                                                  }
+                                                },
+                                                "Atualizando_Venda_00": {
+                                                  "type": "OpenApiConnection",
+                                                  "inputs": {
+                                                    "parameters": {
+                                                      "entityName": "lt_registroparafechamentos",
+                                                      "recordId": "@outputs('Criando_Venda')?['body/lt_registroparafechamentoid']",
+                                                      "item/lt_valor": "@outputs('ValorComDesconto00')",
+                                                      "item/lt_valordescontoof": "@outputs('Desconto00')"
+                                                    },
+                                                    "host": {
+                                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                                      "operationId": "UpdateRecord",
+                                                      "connectionName": "shared_commondataserviceforapps"
+                                                    }
+                                                  },
+                                                  "runAfter": {
+                                                    "Produto_Vendido_00": [
+                                                      "Succeeded"
+                                                    ]
+                                                  },
+                                                  "metadata": {
+                                                    "operationMetadataId": "f5a86471-9c6c-49ec-b49c-e2372ba3b624"
+                                                  }
+                                                }
+                                              },
+                                              "else": {
+                                                "actions": {}
+                                              },
+                                              "metadata": {
+                                                "operationMetadataId": "6e877e54-e8d3-4ebb-859d-83b8d3c46467"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "metadata": {
+                                          "operationMetadataId": "afdd4c85-184e-42b3-b53a-3f46d8afbb5b"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "3edd8219-df50-49de-a43a-f9048ef282cc"
+                                  }
+                                }
+                              }
+                            },
+                            "metadata": {
+                              "operationMetadataId": "cb645f7f-27c6-4eb5-84bc-9a60be0697cb"
+                            }
+                          }
+                        }
+                      },
+                      "metadata": {
+                        "operationMetadataId": "0ca41e9c-5f6b-4b59-bdcf-5b7eb6349ba1"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Parse_JSON_4": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "2d179e32-a38b-4a0e-958d-fd6903ce80a2"
+                  }
+                }
+              },
+              "else": {
+                "actions": {}
+              },
+              "runAfter": {
+                "Preço_do_Produto": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "36df5b41-2cf6-4de0-b425-8469bc26f79c"
+              }
+            }
+          },
+          "else": {
+            "actions": {}
+          },
+          "runAfter": {
+            "PossuiAuditoria": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f2f6eb45-1d99-4010-8581-701bf936f8e2"
+          }
+        },
+        "Obtendo_Recolhimento": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "lt_recolhimentos",
+              "recordId": "@triggerOutputs()?['body/_lt_recolhimento1_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "ValorTotalConferido": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "504f5006-eac2-42d0-89bc-c9e95bd6d7f0"
+          }
+        },
+        "ID_Recolhimento": {
+          "type": "Compose",
+          "inputs": "@outputs('Obtendo_Recolhimento')?['body/lt_recolhimentoid']",
+          "runAfter": {
+            "Obtendo_Recolhimento": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0aeb8f8c-da91-4691-baec-e95693afcb3d"
+          }
+        },
+        "Obtendo_Máquina": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "cre0a_maquinas",
+              "recordId": "@outputs('Obtendo_Recolhimento')?['body/_lt_maquina_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "ID_Recolhimento": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "91876d77-5152-4d6c-8bfa-bfb4cb5a2fa0"
+          }
+        },
+        "Máquina": {
+          "type": "Compose",
+          "inputs": "@outputs('Obtendo_Máquina')?['body/@odata.id']",
+          "runAfter": {
+            "Obtendo_Máquina": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e9f65996-99f4-4639-913c-9c45f7bd8008"
+          }
+        },
+        "TipoAuditoria": {
+          "type": "Compose",
+          "inputs": "@outputs('Obtendo_Máquina')?['body/lt_tipoauditoria']",
+          "runAfter": {
+            "Máquina": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7d773e63-1fc0-4d5a-ae23-8bd24cd2ff62"
+          }
+        },
+        "PossuiAuditoria": {
+          "type": "Compose",
+          "inputs": "@outputs('Obtendo_Máquina')?['body/lt_possuiauditoria']",
+          "runAfter": {
+            "TipoAuditoria": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "03826432-6e5c-4835-b84f-75cdb2275e6e"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{e9521dba-37fe-4baa-b4a7-74342c73617a}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nomepromocao" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_promocaovendaid">
+          <cell name="lt_nomepromocao" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_promocaovenda">
+          <attribute name="crb76_promocaovendaid" />
+          <attribute name="lt_nomepromocao" />
+          <attribute name="createdon" />
+          <order attribute="lt_nomepromocao" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Promoção Venda Inativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

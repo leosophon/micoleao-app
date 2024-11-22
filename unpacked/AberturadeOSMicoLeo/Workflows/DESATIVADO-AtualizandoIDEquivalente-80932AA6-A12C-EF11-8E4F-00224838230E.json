@@ -1,0 +1,192 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "e7a9bbc6-e3b3-4b80-891a-a691cb3ea15f"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "cre0a_maquina",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condição": {
+          "actions": {
+            "Atualizar_uma_linha": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "870ef747-5c68-432d-b500-7828539ac1e2"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cre0a_maquinas",
+                  "recordId": "@triggerOutputs()?['body/cre0a_maquinaid']",
+                  "item/lt_idequivalenteoficial": "@triggerOutputs()?['body/lt_idequivalente']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Inicializar_variável": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Condição_2": {
+                "actions": {
+                  "Atualizar_uma_linha_2": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "0a32b5f8-4c18-4fed-8e37-f24b8e84d995"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_commondataserviceforapps",
+                        "operationId": "UpdateRecord",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                      },
+                      "parameters": {
+                        "entityName": "cre0a_maquinas",
+                        "recordId": "@triggerOutputs()?['body/cre0a_maquinaid']",
+                        "item/lt_idequivalenteoficial": "@triggerOutputs()?['body/lt_idequivalentevendpago']"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "else": {
+                  "actions": {
+                    "Condição_3": {
+                      "actions": {
+                        "Atualizar_uma_linha_3": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "54787bea-772e-4f24-8d18-1ced08e47650"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_commondataserviceforapps",
+                              "operationId": "UpdateRecord",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                            },
+                            "parameters": {
+                              "entityName": "cre0a_maquinas",
+                              "recordId": "@triggerOutputs()?['body/cre0a_maquinaid']",
+                              "item/lt_idequivalenteoficial": "@triggerOutputs()?['body/lt_idequivalentevmlink']"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        }
+                      },
+                      "runAfter": {},
+                      "expression": {
+                        "not": {
+                          "equals": [
+                            "@triggerOutputs()?['body/lt_idequivalentevmlink']",
+                            "@null"
+                          ]
+                        }
+                      },
+                      "metadata": {
+                        "operationMetadataId": "639bb68f-c20a-40c9-8f4c-3fcbad83d15a"
+                      },
+                      "type": "If"
+                    }
+                  }
+                },
+                "expression": {
+                  "not": {
+                    "equals": [
+                      "@triggerOutputs()?['body/lt_idequivalentevendpago']",
+                      "@null"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "76bed9e5-ef3d-41ef-906f-76ab9d5c0ba1"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "not": {
+              "equals": [
+                "@triggerOutputs()?['body/lt_idequivalente']",
+                "@null"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "88c44e39-a4b6-4193-9bde-37ecf3266720"
+          },
+          "type": "If"
+        },
+        "Inicializar_variável": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "30c32ef9-f1b7-4a28-8f75-13bd702ffd8b"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ValorSelecionado",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

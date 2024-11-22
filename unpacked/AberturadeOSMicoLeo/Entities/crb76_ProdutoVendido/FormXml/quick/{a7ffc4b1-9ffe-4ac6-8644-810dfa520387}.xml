@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a7ffc4b1-9ffe-4ac6-8644-810dfa520387}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{27517e98-c414-45e4-b0c2-5c3b53e8f0a6}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{b827e0b4-f86d-4f4c-bf74-b45f1eab7b56}">
+                  <labels>
+                    <label description="GERAL" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{305e6109-42d7-4d28-8b2b-2df5b48d3b74}">
+                        <labels>
+                          <label description="Nova coluna" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_novacoluna" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="crb76_novacoluna" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{292e9d3f-909e-4adb-a4ae-c5f873dbdf10}">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+  </systemform>
+</forms>

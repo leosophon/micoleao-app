@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{50ba428d-e134-48fc-bf33-93c395b556c1}</savedqueryid>
+    <layoutxml>
+      <grid name="cre0a_maquinas" jump="cre0a_nomemaq" select="1" icon="1" preview="0">
+        <row name="cre0a_maquina" id="cre0a_maquinaid">
+          <cell name="cre0a_maquinasid" width="109" />
+          <cell name="cre0a_nomemaq" width="300" />
+          <cell name="cre0a_loja" width="100" />
+          <cell name="lt_tipo" width="100" />
+          <cell name="a_839245d0faf44b2bbf6b4a3622cb58bb.lt_vistoriarealizadahoje" width="213" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+        <entity name="cre0a_maquina">
+          <attribute name="cre0a_maquinaid" />
+          <attribute name="cre0a_nomemaq" />
+          <attribute name="cre0a_loja" />
+          <attribute name="cre0a_maquinasid" />
+          <attribute name="lt_tipo" />
+          <order attribute="cre0a_nomemaq" descending="false" />
+          <filter type="and">
+            <condition attribute="cre0a_nomemaq" operator="not-null" />
+          </filter>
+          <link-entity name="cre0a_loja" from="cre0a_lojaid" to="cre0a_loja" visible="false" link-type="outer" alias="a_839245d0faf44b2bbf6b4a3622cb58bb">
+            <attribute name="lt_vistoriarealizadahoje" />
+          </link-entity>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Consulta de Máquina" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

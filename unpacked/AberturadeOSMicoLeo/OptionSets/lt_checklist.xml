@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="lt_checklist" localizedName="Checklist" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.195</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Checklist" languagecode="1046" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1046" />
+  </Descriptions>
+  <options>
+    <option value="124400000" ExternalValue="">
+      <labels>
+        <label description="Bom" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400001" ExternalValue="">
+      <labels>
+        <label description="Ruim" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400002" ExternalValue="">
+      <labels>
+        <label description="Faltante / Não funciona" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

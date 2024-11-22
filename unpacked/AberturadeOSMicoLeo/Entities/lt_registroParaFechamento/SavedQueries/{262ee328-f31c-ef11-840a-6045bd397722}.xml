@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{262ee328-f31c-ef11-840a-6045bd397722}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_idregistroparafechamento" select="1" icon="1" preview="1">
+        <row name="result" id="lt_registroparafechamentoid">
+          <cell name="lt_idregistroparafechamento" width="200" />
+          <cell name="lt_maquina" width="100" />
+          <cell name="lt_tipocartao" width="149" />
+          <cell name="lt_datahoratransacao" width="159" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="lt_registroparafechamento">
+          <attribute name="lt_idregistroparafechamento" />
+          <attribute name="lt_registroparafechamentoid" />
+          <attribute name="lt_maquina" />
+          <attribute name="lt_tipocartao" />
+          <attribute name="lt_datahoratransacao" />
+          <filter type="and">
+            <condition attribute="lt_datahoratransacao" operator="last-seven-days" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.89</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Faturamento Últimos 7 dias" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

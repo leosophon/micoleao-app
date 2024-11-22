@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{ecb47a53-647c-4e4d-a9e3-4354811a09ff}</savedqueryid>
+    <layoutxml>
+      <grid name="crb76_conferenciasangrialojas" jump="crb76_nomeconferenciasangrialoja" select="1" icon="1" preview="1">
+        <row name="crb76_conferenciasangrialoja" id="crb76_conferenciasangrialojaid">
+          <cell name="crb76_nomeconferenciasangrialoja" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_conferenciasangrialoja">
+          <attribute name="crb76_conferenciasangrialojaid" />
+          <attribute name="crb76_nomeconferenciasangrialoja" />
+          <attribute name="createdon" />
+          <order attribute="crb76_nomeconferenciasangrialoja" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição Associada de Conferencia Sangria Loja" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

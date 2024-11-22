@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{1672cc9f-09d4-44d0-8c18-65a70686f148}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nomeordemproducaoproduto" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_ordemproducaoprodutoid">
+          <cell name="lt_nomeordemproducaoproduto" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_ordemproducaoproduto">
+          <attribute name="crb76_ordemproducaoprodutoid" />
+          <attribute name="lt_nomeordemproducaoproduto" />
+          <attribute name="createdon" />
+          <order attribute="lt_nomeordemproducaoproduto" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Ordens Producao Produtos Inativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,126 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedoffice365_e0fca"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "540a3894-ac6f-4539-a696-5a664ea2a3e4"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "lt_emailsmkt",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Listar_linhas": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "6a247b66-8b99-4ea9-8cd7-5b8a24885ab6"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "contacts"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Aplicar_a_cada_2": {
+          "foreach": "@outputs('Listar_linhas')?['body/value']",
+          "actions": {
+            "Aplicar_a_cada": {
+              "foreach": "@outputs('Listar_linhas')?['body/value']",
+              "actions": {
+                "Enviar_um_email_(V2)": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "7fb4edd6-a395-4793-b28c-bf5dcc86fe57"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_office365",
+                      "operationId": "SendEmailV2",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                    },
+                    "parameters": {
+                      "emailMessage/To": "@items('Aplicar_a_cada')?['emailaddress1']",
+                      "emailMessage/Subject": "Teste",
+                      "emailMessage/Body": "<p>Teste</p>",
+                      "emailMessage/Importance": "Normal"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "7cf48963-e20d-46de-a835-b9ff4b272fcb"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Listar_linhas": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5242defb-1669-48be-895c-4018892fd342"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

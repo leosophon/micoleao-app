@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{858582b7-b1c3-ee11-9079-6045bd3a2553}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="cre0a_vistoriaid" select="1" icon="1" preview="1">
+        <row name="result" id="cre0a_vistoriasid">
+          <cell name="lt_lojamaquina" width="100" />
+          <cell name="lt_datahorainicioabastecimento" width="222" />
+          <cell name="lt_datahorafinalabastecimento1" width="229" />
+          <cell name="lt_algoreportar" width="136" />
+          <cell name="createdby" width="101" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="cre0a_vistorias">
+          <attribute name="cre0a_vistoriasid" />
+          <filter type="and">
+            <condition attribute="createdon" operator="today" />
+          </filter>
+          <attribute name="lt_lojamaquina" />
+          <attribute name="lt_algoreportar" />
+          <attribute name="createdby" />
+          <attribute name="lt_datahorainicioabastecimento" />
+          <attribute name="lt_datahorafinalabastecimento1" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.2</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Criadas hoje" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Visualize as vistorias que você realizou hoje" languagecode="1046" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

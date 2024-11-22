@@ -1,0 +1,425 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "3bf1a766-bf49-4457-aaa7-357153bdcb5a"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "crb76_produtovendido",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condição": {
+          "actions": {
+            "ID_Venda": {
+              "runAfter": {
+                "Obtendo_Venda": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "206afea8-520e-4834-be03-039187b245ad"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Venda')?['body/lt_idregistroparafechamento']"
+            },
+            "Valor_Total_da_Venda": {
+              "runAfter": {
+                "ID_Venda": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "79188e25-97b7-49e1-b9c6-f7811b992182"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Venda')?['body/lt_valortotaldavenda']"
+            },
+            "Atualizando_Produto_Vendido": {
+              "runAfter": {
+                "Valor_Total_da_Venda": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e41ded07-4be7-4da1-bb4c-449a7388bb6d"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "crb76_produtovendidos",
+                  "recordId": "@triggerOutputs()?['body/crb76_produtovendidoid']",
+                  "item/lt_datahoratransacao": "@outputs('Obtendo_Venda')?['body/lt_datahoratransacao']",
+                  "item/lt_valortotalvendaprodutovendido": "@outputs('Valor_Total_da_Venda')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Filter_array": {
+              "runAfter": {
+                "Listando_Lojas": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "905734ba-90ad-4470-9fbc-b0369afaa67e"
+              },
+              "type": "Query",
+              "inputs": {
+                "from": "@outputs('Listando_Lojas')?['body/value']",
+                "where": "@equals(item()?['cre0a_lojaid'], outputs('Obtendo_Venda')?['body/_lt_loja_value'])"
+              }
+            },
+            "Listando_Lojas": {
+              "runAfter": {
+                "Atualizando_Produto_Vendido": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "9f36cf91-1f82-4340-abc5-46cdd8e599f8"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cre0a_lojas"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Parse_JSON": {
+              "runAfter": {
+                "Filter_array": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2baf5311-54c4-4f20-8521-b4a5e50d39cb"
+              },
+              "type": "ParseJson",
+              "inputs": {
+                "content": "@body('Filter_array')",
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "cre0a_lojaid": {
+                        "type": "string"
+                      },
+                      "cre0a_nomeloja": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "cre0a_lojaid",
+                      "cre0a_nomeloja"
+                    ]
+                  }
+                }
+              }
+            },
+            "Apply_to_each": {
+              "foreach": "@body('Parse_JSON')",
+              "actions": {
+                "Obtendo_Loja": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "06e283e6-8bf8-4b65-b7f3-20bc48e3f249"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "cre0a_lojas",
+                      "recordId": "@items('Apply_to_each')['cre0a_lojaid']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Loja": {
+                  "runAfter": {
+                    "Obtendo_Loja": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "48a6cf43-1f48-46f0-8bcb-74b6be3131ce"
+                  },
+                  "type": "Compose",
+                  "inputs": "@outputs('Obtendo_Loja')?['body/@odata.id']"
+                },
+                "Atualizando_Produto_com_a_Loja": {
+                  "runAfter": {
+                    "Loja": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f040661d-966f-4316-9e5f-2636102a7aed"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "UpdateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "crb76_produtovendidos",
+                      "recordId": "@triggerOutputs()?['body/crb76_produtovendidoid']",
+                      "item/lt_loja@odata.bind": "@outputs('Loja')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Parse_JSON": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5d9b52ef-aa32-4660-a49e-c8db4d8784e4"
+              },
+              "type": "Foreach"
+            },
+            "List_rows": {
+              "runAfter": {
+                "Apply_to_each": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f6971488-930f-44ac-b76d-0846d5131e20"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "crb76_moedases"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Compose": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "66dc367f-2854-4937-b49a-d4caef22694b"
+              },
+              "type": "Compose",
+              "inputs": "@triggerOutputs()?['body/_lt_vendaid_value']"
+            },
+            "Obtendo_Venda": {
+              "runAfter": {
+                "Compose": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "fde1fcb9-aff5-4c11-9327-101415918e48"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "lt_registroparafechamentos",
+                  "recordId": "@outputs('Compose')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Filter_array_2": {
+              "runAfter": {
+                "List_rows": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "a9ac6c19-4b68-4123-806a-955e8ab73f4e"
+              },
+              "type": "Query",
+              "inputs": {
+                "from": "@outputs('List_rows')?['body/value']",
+                "where": "@equals(item()?['crb76_nomedamoeda'], 'Real Brasileiro')"
+              }
+            },
+            "Parse_JSON_2": {
+              "runAfter": {
+                "Filter_array_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ec3d0447-d5ae-4fcc-aa19-8bb44a684d2f"
+              },
+              "type": "ParseJson",
+              "inputs": {
+                "content": "@body('Filter_array_2')",
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "crb76_nomedamoeda": {
+                        "type": "string"
+                      },
+                      "crb76_moedasid": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "crb76_nomedamoeda",
+                      "crb76_moedasid"
+                    ]
+                  }
+                }
+              }
+            },
+            "Apply_to_each_2": {
+              "foreach": "@body('Parse_JSON_2')",
+              "actions": {
+                "Get_a_row_by_ID": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "56e4be66-8f97-493f-a92a-4be1127af355"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "crb76_moedases",
+                      "recordId": "@items('Apply_to_each_2')['crb76_moedasid']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Compose_2": {
+                  "runAfter": {
+                    "Get_a_row_by_ID": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "7e07b24b-62ab-4e7a-bf06-2d482c5f02ae"
+                  },
+                  "type": "Compose",
+                  "inputs": "@outputs('Get_a_row_by_ID')?['body/@odata.id']"
+                },
+                "Update_a_row": {
+                  "runAfter": {
+                    "Compose_2": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "40bdc112-21a3-4b04-925e-c9fc235e62c1"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "UpdateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "crb76_produtovendidos",
+                      "recordId": "@triggerOutputs()?['body/crb76_produtovendidoid']",
+                      "item/lt_moedas@odata.bind": "@outputs('Compose_2')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Parse_JSON_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d1548a8f-af73-4ce9-9864-72f9109945e9"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {},
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/lt_criacaovendadevido1']",
+              124400002
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "3e873346-7ed5-483c-acca-c955cee4e662"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

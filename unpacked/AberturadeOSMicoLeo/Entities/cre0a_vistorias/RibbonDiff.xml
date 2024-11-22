@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="crb76.Mscrm.Form.cre0a_vistorias.NewRecord.Hide" Location="Mscrm.Form.cre0a_vistorias.NewRecord" />
+    <HideCustomAction HideActionId="crb76.Mscrm.Form.cre0a_vistorias.NewRecordForBPFEntity.Hide" Location="Mscrm.Form.cre0a_vistorias.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_vistorias.Flows.RefreshCommandBar.Hide" Location="Mscrm.HomepageGrid.cre0a_vistorias.Flows.RefreshCommandBar" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_vistorias.MainTab.QuickPowerBI.Button.Hide" Location="Mscrm.HomepageGrid.cre0a_vistorias.MainTab.QuickPowerBI.Button" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_vistorias.NewRecord.Hide" Location="Mscrm.HomepageGrid.cre0a_vistorias.NewRecord" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_vistorias.NewRecordForBPFEntity.Hide" Location="Mscrm.HomepageGrid.cre0a_vistorias.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_vistorias.RunReport.Hide" Location="Mscrm.HomepageGrid.cre0a_vistorias.RunReport" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_vistorias.RunWorkflow.Hide" Location="Mscrm.HomepageGrid.cre0a_vistorias.RunWorkflow" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_vistorias.Send.Hide" Location="Mscrm.HomepageGrid.cre0a_vistorias.Send" />
+    <HideCustomAction HideActionId="crb76.Mscrm.SubGrid.cre0a_vistorias.NewRecord.Hide" Location="Mscrm.SubGrid.cre0a_vistorias.NewRecord" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions />
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

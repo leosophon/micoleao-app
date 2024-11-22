@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{549a8aa3-c349-4ab9-8bac-4873fa9a7a5c}</formid>
+    <IntroducedVersion>6.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" solutionaction="Modified">
+      <tabs>
+        <tab name="appointment" id="{2A2A5AC4-581A-4131-BA0B-8A34943B19FC}" IsUserDefined="0" showlabel="false" expanded="true" ordinalvalue="0">
+          <columns>
+            <column width="100%" id="0" solutionaction="Modified">
+              <sections>
+                <section name="general information" showlabel="false" showbar="false" locklevel="0" id="{846F5D88-C043-4E1F-9BF3-90CD9093C1D7}" IsUserDefined="0" layout="varwidth" columns="2" labelwidth="115" celllabelposition="Left" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell auto="false" showlabel="true" locklevel="1" rowspan="1" colspan="2" id="{8901DF19-82EB-4BD3-B96B-CD3D4F5710D4}" visible="false" ordinalvalue="10000" solutionaction="Modified" />
+                    </row>
+                    <row>
+                      <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{3953269C-ABD1-4B75-8DDB-23D5BC088D64}" ordinalvalue="10001" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{9BF8162D-95A7-4390-86E1-8305ACF475B0}" ordinalvalue="10001" solutionaction="Modified">
+                        <labels>
+                          <label description="Assunto" languagecode="1046" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell colspan="2" id="{E15ACF1F-BA3E-4BC5-8AE5-AA3A290E7769}" ordinalvalue="10003" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{32a30c13-1750-b89e-a057-e02b7bc06626}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10004" solutionaction="Removed" />
+                      <cell id="{8c27eba6-c83a-400d-b81b-40abbf5e6baf}" ordinalvalue="20005" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{4c798716-37ee-dc9d-8853-90337291ed9e}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10006" solutionaction="Removed" />
+                      <cell id="{c17ec1ee-5093-4c1b-b269-e37d7ae79eaa}" ordinalvalue="20007" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell auto="false" showlabel="true" locklevel="1" rowspan="1" colspan="2" id="{5D06EDBF-8D54-4710-8C6A-81483D6F41F4}" ordinalvalue="10003" solutionaction="Modified">
+                        <labels>
+                          <label description="Referente a" languagecode="1046" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6041ac6c-901e-48cd-b307-4c49aee1772a}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10002" solutionaction="Added">
+                        <labels>
+                          <label description="Loja" languagecode="1046" />
+                        </labels>
+                        <control id="lt_loja" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_loja" disabled="false">
+                          <parameters>
+                            <DefaultViewId>{A65DE54B-4576-4E67-9D9B-5859D6B63DDE}</DefaultViewId>
+                            <AvailableViewIds>{65036B5B-B7C0-4DA0-AFA3-AA716DCBBCC3},{CD0C2D8B-DAD1-4F18-AB50-49F266F7B2BA},{A65DE54B-4576-4E67-9D9B-5859D6B63DDE},{6EE7B519-36CF-EE11-904D-000D3A888E51},{F8123666-F2E6-EE11-A203-002248DED485},{2BA1FC70-F7D7-EE11-904C-00224835D1DD},{B8132C59-EED0-EE11-904D-000D3A888E51}</AvailableViewIds>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="scheduling information" showlabel="false" showbar="false" locklevel="1" id="{A83EF0B4-92A2-4442-AF94-DC43BA1C31D3}" IsUserDefined="0" layout="varwidth" columns="1" ordinalvalue="2">
+                  <rows>
+                    <row>
+                      <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{B4D87035-7744-4AE7-AFB5-AC85CA81642C}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Hora de Início" languagecode="1046" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{0BF43F88-DA02-4A74-823F-1EF5014867A9}" ordinalvalue="10001">
+                        <labels>
+                          <label description="Hora de Término" languagecode="1046" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{4899B6A9-00DC-46BF-B6C6-4809D6EAAA67}" ordinalvalue="10002">
+                        <labels>
+                          <label description="O Dia Inteiro" languagecode="1046" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{ECDDF39D-1393-4C80-941A-4F8FE486305F}" ordinalvalue="10003">
+                        <labels>
+                          <label description="Duração" languagecode="1046" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="appointment description" showlabel="true" showbar="false" locklevel="0" id="{299BE158-E0A5-423D-9B70-BC82B5BC26B9}" IsUserDefined="0" layout="varwidth" columns="11" height="auto" ordinalvalue="3">
+                  <rows>
+                    <row>
+                      <cell auto="true" showlabel="false" locklevel="0" rowspan="14" colspan="2" id="{EA609D20-9CD9-4988-86B7-0F0C367ADD10}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Descrição" languagecode="1046" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%" id="1" solutionaction="Removed" />
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{42B31823-0752-4F96-83F8-0F3AC9C24E31}" columns="111" celllabelposition="Top" labelwidth="115">
+        <rows>
+          <row>
+            <cell id="{BD0D7CAA-7581-4BC8-9FBC-906A16BA4881}" ordinalvalue="10000">
+              <labels>
+                <label description="Prioridade" languagecode="1046" solutionaction="Modified" />
+              </labels>
+            </cell>
+            <cell id="{FDE00F70-5571-47E9-B6BC-275E779B5269}" showlabel="true" ordinalvalue="20001">
+              <labels>
+                <label description="Status" languagecode="1046" solutionaction="Modified" />
+              </labels>
+            </cell>
+            <cell id="{83C1A8F6-E296-402C-836D-E41758053C08}" showlabel="true" locklevel="1" ordinalvalue="30002">
+              <labels>
+                <label description="Proprietário" languagecode="1046" solutionaction="Modified" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <controlDescriptions>
+        <controlDescription forControl="{5b7da1d6-e65e-a356-2d63-e4414175ea30}" solutionaction="Removed" />
+      </controlDescriptions>
+      <footer id="{c8d65573-9671-495d-a068-a17c855a1131}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left" solutionaction="Added">
+        <rows>
+          <row>
+            <cell id="{ef5c3f3c-668e-4d31-b0cd-37c0c7c72a00}" showlabel="false" ordinalvalue="10000">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{de8ef349-948b-47b2-972c-9ec8c1c0311f}" showlabel="false" ordinalvalue="20001">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{438ff489-3d6d-4d75-a228-e1d9ead564b4}" showlabel="false" ordinalvalue="30002">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Compromisso" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Updated default Appointment form." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

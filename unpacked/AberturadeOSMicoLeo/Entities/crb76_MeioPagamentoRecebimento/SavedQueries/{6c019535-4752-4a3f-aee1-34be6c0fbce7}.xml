@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{6c019535-4752-4a3f-aee1-34be6c0fbce7}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crb76_nomemeiopagamentorecebimento" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_meiopagamentorecebimentoid">
+          <cell name="crb76_nomemeiopagamentorecebimento" width="300" />
+          <cell name="crb76_recebimento" width="150" />
+          <cell name="crb76_pagamento" width="150" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_meiopagamentorecebimento">
+          <attribute name="crb76_meiopagamentorecebimentoid" />
+          <attribute name="crb76_nomemeiopagamentorecebimento" />
+          <attribute name="createdon" />
+          <order attribute="crb76_nomemeiopagamentorecebimento" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="crb76_pagamento" />
+          <attribute name="crb76_recebimento" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Meio Pagamento Recebimento Ativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

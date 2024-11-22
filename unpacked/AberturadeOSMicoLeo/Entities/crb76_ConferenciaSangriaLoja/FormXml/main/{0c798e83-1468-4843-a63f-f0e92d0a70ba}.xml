@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{0c798e83-1468-4843-a63f-f0e92d0a70ba}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{25e808d8-b045-43c1-be0b-161b5f313b65}" IsUserDefined="1">
+          <labels>
+            <label description="Geral" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{bae0f740-f0a4-4241-857f-e0444f089bc6}">
+                  <labels>
+                    <label description="Geral" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{144a576c-f3ea-430a-9f64-efaa8761e418}">
+                        <labels>
+                          <label description="Nome Conferencia Sangria Loja" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_nomeconferenciasangrialoja" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="crb76_nomeconferenciasangrialoja" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e815d1e6-90c3-4ef5-8669-9abc1fed9f6d}" visible="false">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{411c7312-0287-4304-ac68-09bb05126283}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Número Conferência Sangria Loja" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_numeroconferenciasangrialoja" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="crb76_numeroconferenciasangrialoja" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{af88ecb6-723e-48cd-b18a-0b59c0499bc5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_data" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crb76_data" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_4" id="30d3d6bf-8834-4a66-9851-c95a8d76028d" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Unidades Negócio" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{3332fd54-acfa-4eed-868c-e569a5a57bd1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Loja" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_loja" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crb76_loja" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_5" id="d7df2c57-ff24-47cb-90e5-7be635d5e98e" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Responsavel conferencia" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{d79f8601-b1a0-4637-ad3a-5f9121e950f2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Colaborador" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_colaborador" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crb76_colaborador" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_6" id="279d8614-f623-4cca-9bfb-160afbc0a719" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Sangria Conferida" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{9e2cc3f8-baab-4b1e-9b56-d0de9c218c0b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Numero Malote Sangria" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_numeromalotesangria" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crb76_numeromalotesangria" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_7" id="f5f37f44-5ea6-4c68-b42f-1eba544f7d19" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Valores" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{e129b829-8c0c-4814-bc4c-55c93c1148e4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor Moedas" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_valormoedas" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="crb76_valormoedas" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d3b15e21-cf71-4778-ae5f-f59919a20b39}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor Cedulas" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_valorcedulas" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="crb76_valorcedulas" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{aaae22eb-0d6a-4098-b339-c96016866c67}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor Total Sangria Conferida" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_valortotalsangriaconferida" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="crb76_valortotalsangriaconferida" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_8" id="fc6ea52d-1730-4dd3-a29e-03976ad0976e" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Local de guarda do numerário" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{486ad848-6085-4f8b-b8b0-056525cb16da}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Destino Numerario" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_destinonumerario" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crb76_destinonumerario" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="f9e56a25-bff0-40a5-b962-81bdcec705ad" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Registro Sistema" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{ff423d9e-c88a-4f6a-96db-eb407c217dc0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status" languagecode="1046" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{93fd572b-bc6f-4643-81fc-e661ae1e7891}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data de Criação" languagecode="1046" />
+                        </labels>
+                        <control id="createdon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4abb9ccf-6fcc-43f6-8bf0-6d2a47f46335}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Criada Por" languagecode="1046" />
+                        </labels>
+                        <control id="createdby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d4c301b4-a743-4aee-8d43-1f9e6f564559}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data de Modificação" languagecode="1046" />
+                        </labels>
+                        <control id="modifiedon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="modifiedon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{81c94397-13cb-4c92-a065-446bbf3d84c3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Modificado Por" languagecode="1046" />
+                        </labels>
+                        <control id="modifiedby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="modifiedby" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{ff2182c4-1470-4269-8c95-4e20570c958d}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{48d4ed1d-3ccb-4cd6-8a2b-35956d73e2ad}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{863625d6-6daa-402e-8e4e-f49796c579ce}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{d2a8cd6a-e625-43df-ad85-284b7938e1f2}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{611eef5d-df50-48f9-b230-8d2109b93f23}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{9e27e6f9-35c6-4581-8923-f89098d883f3}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{374d9c9f-6cdd-4ef0-a03c-497c52ec1e96}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{5f420510-5b7e-4265-95bc-694f5fb4ef74}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModuleSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteMapUniqueName>cre0a_AppAberturadeOSMicoLeao</SiteMapUniqueName>
+  <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+  <ShowHome>False</ShowHome>
+  <ShowPinned>True</ShowPinned>
+  <ShowRecents>True</ShowRecents>
+  <SiteMap IntroducedVersion="7.0.0.0">
+    <Area Id="area_4e7c3087" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" VectorIcon="/WebResources/Activities/Images/Teams_color.svg" Icon="/WebResources/Activities/Images/Teams_color.svg" ShowGroups="true" IntroducedVersion="7.0.0.0">
+      <Titles>
+        <Title LCID="1046" Title="Principal" />
+      </Titles>
+      <Group Id="group_60b94e7b" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1046" Title="Início" />
+        </Titles>
+        <SubArea Id="subarea_0f12aa03" VectorIcon="/WebResources/lt_ico_svg_house" Icon="/WebResources/lt_ico_svg_house" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="lt_home_5667f">
+          <Titles>
+            <Title LCID="1046" Title="Home" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_4a055b4c" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1046" Title="Cadastros" />
+        </Titles>
+        <SubArea Id="subarea_7229edc1" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="contact" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1046" Title="Clientes" />
+          </Titles>
+          <Privilege Entity="lt_tabmapadosite" Privilege="Create,AppendTo" />
+        </SubArea>
+        <SubArea Id="subarea_7e66c797" VectorIcon="/WebResources/lt_ico_svg_loja" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="cre0a_loja" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="lt_tabmapadosite" Privilege="Write" />
+        </SubArea>
+        <SubArea Id="subarea_01c49e10" VectorIcon="/WebResources/lt_ico_svgmaquina" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="cre0a_maquina" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_56088372" VectorIcon="/WebResources/lt_icoTipo" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="lt_tiposmaquinas" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
+      <Group Id="NewGroup_e6fcc46b" ResourceId="SitemapDesigner.NewGroup" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1046" Title="Operação" />
+        </Titles>
+        <SubArea Id="subarea_9074ad46" VectorIcon="/WebResources/lt_iconFerramentas" Icon="/WebResources/lt_iconFerramentas" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="crb76_lojas_1713c">
+          <Titles>
+            <Title LCID="1046" Title="Operação" />
+          </Titles>
+          <Privilege Entity="lt_tabmapadosite" Privilege="Write" />
+        </SubArea>
+        <SubArea Id="subarea_c71e0db9" VectorIcon="/WebResources/lt_auditoriaSvgIco" Icon="/WebResources/lt_auditoriaSvgIco" Entity="crb76_auditoriamaquina" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_a3b1c4ec" VectorIcon="/WebResources/lt_recolhimentoSvgIco" Icon="/WebResources/lt_recolhimentoSvgIco" Entity="lt_recolhimento" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_fffd2bf5" VectorIcon="/WebResources/lt_taskOs" Icon="/WebResources/lt_taskOs" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="lt_ordensdeservio_c4f68">
+          <Titles>
+            <Title LCID="1046" Title="Ordens de Serviço" />
+          </Titles>
+          <Privilege Entity="lt_tabmapadosite" Privilege="Write" />
+        </SubArea>
+        <SubArea Id="subarea_57947c4b" VectorIcon="/WebResources/lt_icoTec" Icon="/WebResources/lt_icoTec" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="lt_osportecnico_7b4ed">
+          <Titles>
+            <Title LCID="1046" Title="Trabalho por Técnico" />
+          </Titles>
+          <Privilege Entity="lt_tabmapadosite" Privilege="Create,Read,Write,Append,AppendTo" />
+        </SubArea>
+      </Group>
+      <Group Id="NewGroup_5350b204" ResourceId="SitemapDesigner.NewGroup" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1046" Title="Insights" />
+        </Titles>
+        <SubArea Id="subarea_671662c5" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="21741a37-bee7-ee11-a203-002248379b1f" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1046" Title="Dashboard Gerencial" />
+          </Titles>
+          <Privilege Entity="lt_tabmapadosite" Privilege="Create,Delete,Append,AppendTo,Read,Write" />
+        </SubArea>
+        <SubArea Id="subarea_d463895a" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="e9ac2423-ef19-ef11-840a-6045bd397722" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ToolTipResourseId="DashboardTooltip">
+          <Titles>
+            <Title LCID="1046" Title="Dashboard Faturamento" />
+          </Titles>
+        </SubArea>
+      </Group>
+    </Area>
+    <Area Id="NewArea_22693d26" ResourceId="SitemapDesigner.NewArea" ShowGroups="false">
+      <Titles>
+        <Title LCID="1046" Title="Meus itens" />
+      </Titles>
+      <Group Id="group_cfa02a04" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1046" Title="Meus itens" />
+        </Titles>
+        <SubArea Id="subarea_775c1bcf" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="appointment" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
+    </Area>
+  </SiteMap>
+  <LocalizedNames>
+    <LocalizedName description="App Abertura de OS (Mico Leão)" languagecode="1046" />
+  </LocalizedNames>
+</AppModuleSiteMap>

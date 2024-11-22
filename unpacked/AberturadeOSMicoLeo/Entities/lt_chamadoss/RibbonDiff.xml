@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.lt_chamadoss.NewRecord.Hide" Location="Mscrm.HomepageGrid.lt_chamadoss.NewRecord" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.lt_chamadoss.NewRecordForBPFEntity.Hide" Location="Mscrm.HomepageGrid.lt_chamadoss.NewRecordForBPFEntity" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions />
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

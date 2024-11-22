@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{29258d0e-0e03-ef11-9f89-000d3a894c56}</WebResourceId>
+  <Name>lt_recolhimentoSvgIco</Name>
+  <DisplayName>RecolhimentoSvgIco</DisplayName>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0.0.79</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/lt_recolhimentoSvgIco29258D0E-0E03-EF11-9F89-000D3A894C56</FileName>
+</WebResource>

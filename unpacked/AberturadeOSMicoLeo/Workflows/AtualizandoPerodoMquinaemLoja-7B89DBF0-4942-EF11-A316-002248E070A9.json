@@ -1,0 +1,458 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "7cb027fe-f724-410a-90b6-c7a7033de1af"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "cre0a_maquina",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "cre0a_loja"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condição": {
+          "actions": {
+            "Listar_linhas": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "93a1e229-1a3e-476f-aebd-d8c0118eaf5d"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "lt_periodomaquinalojas"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Matriz_do_filtro": {
+              "runAfter": {
+                "Listar_linhas": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f6afcdce-2275-48c6-8130-ade36431a999"
+              },
+              "type": "Query",
+              "inputs": {
+                "from": "@outputs('Listar_linhas')?['body/value']",
+                "where": "@and(equals(triggerOutputs()?['body/cre0a_maquinaid'], item()?['_lt_maquina_value']), equals(item()?['lt_datafim'], null))"
+              }
+            },
+            "Condição_2": {
+              "actions": {
+                "Obtendo_Loja": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "ea9e4b22-5e99-4cc3-8a6e-7175ad73960a"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "cre0a_lojas",
+                      "recordId": "@triggerOutputs()?['body/_cre0a_loja_value']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Loja": {
+                  "runAfter": {
+                    "Obtendo_Loja": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "ee1b0673-5c1f-431e-891f-b7eb3336e9f4"
+                  },
+                  "type": "Compose",
+                  "inputs": "@outputs('Obtendo_Loja')?['body/@odata.id']"
+                },
+                "Obtendo_Máquina": {
+                  "runAfter": {
+                    "Loja": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "7dc2493b-9eae-4a4c-a3f1-4b6f4ce851ef"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "cre0a_maquinas",
+                      "recordId": "@triggerOutputs()?['body/cre0a_maquinaid']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Máquina": {
+                  "runAfter": {
+                    "Obtendo_Máquina": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d0767974-da9f-4d38-b3d3-bb20b947a0ba"
+                  },
+                  "type": "Compose",
+                  "inputs": "@outputs('Obtendo_Máquina')?['body/@odata.id']"
+                },
+                "Adicionar_uma_nova_linha": {
+                  "runAfter": {
+                    "Máquina": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "95374314-4e67-4f6d-be79-c0c11ed64900"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "CreateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "lt_periodomaquinalojas",
+                      "item/lt_datainicio": "@formatDateTime(addDays(utcNow(), 1), 'yyyy-MM-dd')",
+                      "item/lt_loja@odata.bind": "@outputs('Loja')",
+                      "item/lt_maquina@odata.bind": "@outputs('Máquina')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Matriz_do_filtro": [
+                  "Succeeded"
+                ]
+              },
+              "else": {
+                "actions": {
+                  "Aplicar_a_cada": {
+                    "foreach": "@outputs('Listar_linhas')?['body/value']",
+                    "actions": {
+                      "Condição_3": {
+                        "actions": {
+                          "Atualizar_uma_linha": {
+                            "runAfter": {},
+                            "metadata": {
+                              "operationMetadataId": "8ecc4376-29df-4f17-97ca-787d425acdc0"
+                            },
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "host": {
+                                "connectionName": "shared_commondataserviceforapps",
+                                "operationId": "UpdateRecord",
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                              },
+                              "parameters": {
+                                "entityName": "lt_periodomaquinalojas",
+                                "recordId": "@items('Aplicar_a_cada')?['lt_periodomaquinalojaid']",
+                                "item/lt_datafim": "@formatDateTime(utcNow(), 'yyyy-MM-dd')"
+                              },
+                              "authentication": "@parameters('$authentication')"
+                            }
+                          },
+                          "Obtendo_Loja_2": {
+                            "runAfter": {
+                              "Atualizar_uma_linha": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "b3aebcf1-9bc9-4c50-8f7d-066a6955ca87"
+                            },
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "host": {
+                                "connectionName": "shared_commondataserviceforapps",
+                                "operationId": "GetItem",
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                              },
+                              "parameters": {
+                                "entityName": "cre0a_lojas",
+                                "recordId": "@triggerOutputs()?['body/_cre0a_loja_value']"
+                              },
+                              "authentication": "@parameters('$authentication')"
+                            }
+                          },
+                          "Loja_2": {
+                            "runAfter": {
+                              "Obtendo_Loja_2": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "47f317a3-b9bc-4731-9f9f-c16da9432319"
+                            },
+                            "type": "Compose",
+                            "inputs": "@outputs('Obtendo_Loja_2')?['body/@odata.id']"
+                          },
+                          "Obtendo_Máquina_2": {
+                            "runAfter": {
+                              "Loja_2": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "2f847f4d-c83d-48dd-9814-70e092a834f1"
+                            },
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "host": {
+                                "connectionName": "shared_commondataserviceforapps",
+                                "operationId": "GetItem",
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                              },
+                              "parameters": {
+                                "entityName": "cre0a_maquinas",
+                                "recordId": "@triggerOutputs()?['body/cre0a_maquinaid']"
+                              },
+                              "authentication": "@parameters('$authentication')"
+                            }
+                          },
+                          "Máquina_2": {
+                            "runAfter": {
+                              "Obtendo_Máquina_2": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "a51f622c-3302-4b77-824d-8be7a2f2f2e2"
+                            },
+                            "type": "Compose",
+                            "inputs": "@outputs('Obtendo_Máquina_2')?['body/@odata.id']"
+                          },
+                          "Adicionar_uma_nova_linha_2": {
+                            "runAfter": {
+                              "Máquina_2": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "2ccccc28-e301-4ef9-9e1c-786f0695be9d"
+                            },
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "host": {
+                                "connectionName": "shared_commondataserviceforapps",
+                                "operationId": "CreateRecord",
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                              },
+                              "parameters": {
+                                "entityName": "lt_periodomaquinalojas",
+                                "item/lt_datainicio": "@formatDateTime(addDays(utcNow(), 1), 'yyyy-MM-dd')",
+                                "item/lt_loja@odata.bind": "@outputs('Loja_2')",
+                                "item/lt_maquina@odata.bind": "@outputs('Máquina_2')"
+                              },
+                              "authentication": "@parameters('$authentication')"
+                            }
+                          }
+                        },
+                        "runAfter": {},
+                        "expression": {
+                          "and": [
+                            {
+                              "equals": [
+                                "@triggerOutputs()?['body/cre0a_maquinaid']",
+                                "@items('Aplicar_a_cada')?['_lt_maquina_value']"
+                              ]
+                            },
+                            {
+                              "equals": [
+                                "@items('Aplicar_a_cada')?['lt_datafim']",
+                                "@null"
+                              ]
+                            },
+                            {
+                              "not": {
+                                "equals": [
+                                  "@triggerOutputs()?['body/_cre0a_loja_value']",
+                                  "@items('Aplicar_a_cada')?['_lt_loja_value']"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "13b4e6f5-087f-407d-a696-32806084d472"
+                        },
+                        "type": "If"
+                      }
+                    },
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "b5b8716c-d0a6-42ea-a5dd-ebb69b07fac9"
+                    },
+                    "type": "Foreach"
+                  }
+                }
+              },
+              "expression": {
+                "equals": [
+                  "@length(body('Matriz_do_filtro'))",
+                  0
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ba99bf58-4e39-4a54-8ba8-90288e630c70"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {},
+          "else": {
+            "actions": {
+              "List_rows": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "a719603d-4af0-49e8-9200-68170efd763e"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "lt_periodomaquinalojas"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Apply_to_each": {
+                "foreach": "@outputs('List_rows')?['body/value']",
+                "actions": {
+                  "Condition": {
+                    "actions": {
+                      "Update_a_row": {
+                        "runAfter": {},
+                        "metadata": {
+                          "operationMetadataId": "bf5ac2ba-4d2e-49fb-b9ad-74215bc36131"
+                        },
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "host": {
+                            "connectionName": "shared_commondataserviceforapps",
+                            "operationId": "UpdateRecord",
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                          },
+                          "parameters": {
+                            "entityName": "lt_periodomaquinalojas",
+                            "recordId": "@items('Apply_to_each')?['lt_periodomaquinalojaid']",
+                            "item/lt_datafim": "@formatDateTime(utcNow(), 'yyyy-MM-dd')"
+                          },
+                          "authentication": "@parameters('$authentication')"
+                        }
+                      }
+                    },
+                    "runAfter": {},
+                    "expression": {
+                      "and": [
+                        {
+                          "equals": [
+                            "@triggerOutputs()?['body/cre0a_maquinaid']",
+                            "@items('Apply_to_each')?['_lt_maquina_value']"
+                          ]
+                        },
+                        {
+                          "equals": [
+                            "@items('Apply_to_each')?['lt_datafim']",
+                            "@null"
+                          ]
+                        }
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "b64b5144-4082-4adc-ad6e-26ad98702a06"
+                    },
+                    "type": "If"
+                  }
+                },
+                "runAfter": {
+                  "List_rows": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "3e9b9f2d-6a7b-4ea4-9ad6-ac1caef8ad8a"
+                },
+                "type": "Foreach"
+              }
+            }
+          },
+          "expression": {
+            "not": {
+              "equals": [
+                "@triggerOutputs()?['body/_cre0a_loja_value']",
+                "@null"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "0094d724-e858-45e4-8e70-b48773007eca"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

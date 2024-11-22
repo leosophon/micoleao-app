@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{4ad84987-e77e-4e7c-a6ac-89d9c27c0156}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{3ec1c79b-64dd-4acd-89c2-33f2d1342be3}" name="StageStep4" locklevel="0" expanded="true" visible="false" labelid="{c9ca9a42-8c56-46ec-a0f7-66faff5f2682}">
+          <labels>
+            <label description="Iniciar Abastecimento" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{620266f7-a417-35c3-667e-08e9d45c2b77}" name="StageStep4_section1" labelid="{8e80c4eb-47c1-4a60-8de4-9c356c464285}">
+                  <labels>
+                    <label description="Iniciar Abastecimento" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a09ff1b0-4409-4f09-b4a4-a3d4f187da36}" showlabel="true" visible="true" labelid="{426699fe-a52d-4b53-adf8-1f6f7446311e}">
+                        <labels>
+                          <label description="Selecione a Loja" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_vistorias_lt_vistoria:lt_lojamaquina" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="lt_lojamaquina" disabled="false" relationship="bpf_cre0a_vistorias_lt_vistoria" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8ca97c06-492f-429f-8a56-b2973b03d102}" showlabel="true" visible="true" labelid="{5d476880-3238-4e8e-a126-26655c44fe4c}">
+                        <labels>
+                          <label description="Iniciar o abastecimento das máquinas ?" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_vistorias_lt_vistoria:lt_abastecimentodasmaquinas" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="lt_abastecimentodasmaquinas" disabled="false" relationship="bpf_cre0a_vistorias_lt_vistoria" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{822832d0-030d-43a1-9ecd-d5b0c4870da5}" name="StageStep10" locklevel="0" expanded="true" visible="false" labelid="{1ab24db5-774d-4cfd-a1ce-ba8a08323cc6}">
+          <labels>
+            <label description="Finalizar O Abastecimento" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{3bd67825-1ee7-1d2f-7dae-669014faee89}" name="StageStep10_section1" labelid="{01f191be-a7c5-4658-a3f3-99862c49220f}">
+                  <labels>
+                    <label description="Finalizar O Abastecimento" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6777959b-8a5a-40f6-aee8-8fe0fbbbd170}" showlabel="true" visible="true" labelid="{a2773c18-9b35-4235-a74f-cf13df8c85d3}">
+                        <labels>
+                          <label description="Finalizar o abastecimento das máquinas ?" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_vistorias_lt_vistoria:lt_finalizarabastecimentomaquinas" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="lt_finalizarabastecimentomaquinas" disabled="false" relationship="bpf_cre0a_vistorias_lt_vistoria" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d4bf7f55-4960-4c41-adad-1a9bdf081cff}" showlabel="true" visible="true" labelid="{bffdc621-49e6-4631-a151-6fc779f301f0}">
+                        <labels>
+                          <label description="Algo para reportar ?" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_vistorias_lt_vistoria:lt_algoparareportar" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="lt_algoparareportar" disabled="false" relationship="bpf_cre0a_vistorias_lt_vistoria" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{cca469c1-a7a5-46d4-82ab-05f48ea5d2aa}" name="StageStep16" locklevel="0" expanded="true" visible="false" labelid="{21d60918-6672-4028-916d-68d9fa8f00d6}">
+          <labels>
+            <label description="Ordem De Serviço" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{3f6e8e80-79fd-6cde-0bf6-508907e8f40b}" name="StageStep16_section1" labelid="{026cf412-43bb-4421-82cb-e2f31a196a3a}">
+                  <labels>
+                    <label description="Ordem De Serviço" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4d788bf3-4800-4658-b9b9-238bad0e22b3}" showlabel="true" visible="true" labelid="{d5a63d7c-2917-4cd8-84aa-9d277e714a8a}">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_ordservicoos_lt_vistoria:ownerid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ownerid" disabled="false" relationship="bpf_cre0a_ordservicoos_lt_vistoria" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{cff60da1-dad9-4c8d-9ac5-a1edabc6d8c1}" name="StageStep20" locklevel="0" expanded="true" visible="false" labelid="{767c5883-3cb4-4ad2-b658-019fdc8eca6d}">
+          <labels>
+            <label description="Avaliação Inicial OS" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{5af5d244-ab77-4ec9-7ae6-7fe18ff6f188}" name="StageStep20_section1" labelid="{18340325-268b-403e-b0d6-b597a0fddfa0}">
+                  <labels>
+                    <label description="Avaliação Inicial OS" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{94f86404-2df4-4e58-bbeb-b99afc2a0174}" showlabel="true" visible="true" labelid="{22620464-4044-426c-9f67-39a989c772ad}">
+                        <labels>
+                          <label description="Avaliação Inicial OS" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_ordservicoos_lt_vistoria:lt_avaliacaoinicialos" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="lt_avaliacaoinicialos" disabled="false" relationship="bpf_cre0a_ordservicoos_lt_vistoria" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{8431d25b-18b2-49e4-b451-4752f558d988}" name="StageStep24" locklevel="0" expanded="true" visible="false" labelid="{427aa5a1-bbd4-4466-9b54-5c88df726a28}">
+          <labels>
+            <label description="Parecer Final OS" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{e6110f91-5c27-4fc6-77bb-472123fa4879}" name="StageStep24_section1" labelid="{489fa39d-7752-4dca-bae1-7c4c2ba37b19}">
+                  <labels>
+                    <label description="Parecer Final OS" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0b6c322d-616c-452c-b22f-ace0d4a103c5}" showlabel="true" visible="true" labelid="{37f22514-8c41-4646-aa16-1117bc3f19ef}">
+                        <labels>
+                          <label description="Parecer Final OS" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_ordservicoos_lt_vistoria:lt_parecerfinalos" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="lt_parecerfinalos" disabled="false" relationship="bpf_cre0a_ordservicoos_lt_vistoria" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{7ea486f7-75be-40e1-96b2-38744bb76688}" name="StageStep28" locklevel="0" expanded="true" visible="false" labelid="{0fc44da8-b064-4eee-a5da-80bf539fc71b}">
+          <labels>
+            <label description="Finalizar Vistoria Preventiva" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{8fb328cf-196e-f661-f3b7-9d699bf862f2}" name="StageStep28_section1" labelid="{6fdcdce0-d4a1-4d10-8279-4a39b4822bc1}">
+                  <labels>
+                    <label description="Finalizar Vistoria Preventiva" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b79a3eaf-3802-4772-934f-3cde7c41ce87}" showlabel="true" visible="true" labelid="{8e91114c-2e3c-4729-a128-77e930482a3c}">
+                        <labels>
+                          <label description="Finalizar o abastecimento das máquinas ?" languagecode="1046" />
+                        </labels>
+                        <control id="bpf_cre0a_vistorias_lt_vistoria:lt_finalizarabastecimentomaquinas" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="lt_finalizarabastecimentomaquinas" disabled="false" relationship="bpf_cre0a_vistorias_lt_vistoria" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

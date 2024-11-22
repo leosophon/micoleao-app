@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{8ca28358-aba8-482e-b315-aba1f5d434c8}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{5ebdc6fb-69f5-4248-a4e0-ca425801ffee}" IsUserDefined="1">
+          <labels>
+            <label description="Geral" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{6484bbd4-8b40-4d94-8900-bd04e3b856e1}">
+                  <labels>
+                    <label description="Geral" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2fbec3e0-7625-473e-996d-d4e159c24b5f}">
+                        <labels>
+                          <label description="Nome" languagecode="1046" />
+                        </labels>
+                        <control id="cre0a_nome" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="cre0a_nome" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{20f8db51-40d2-45ee-a385-2be3f6275e87}" visible="false">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9289755f-7647-4a17-8ea0-9121fd2b4957}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="CPF" languagecode="1046" />
+                        </labels>
+                        <control id="cre0a_cpf" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="cre0a_cpf" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a191c5d5-6540-4581-89be-07814b999221}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="E-mail" languagecode="1046" />
+                        </labels>
+                        <control id="cre0a_email" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="cre0a_email" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d82060f6-d120-42dc-a260-8fb2575303cd}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Tipo do Perfil para o Usuário" languagecode="1046" />
+                        </labels>
+                        <control id="cre0a_tipodoperfilparaousuario" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="cre0a_tipodoperfilparaousuario" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{e958ab47-08bb-4ac1-a6b7-258f0f9d1352}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{e3e64f47-a381-403f-8f17-409bb0830c27}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{b1e95733-8a64-485a-9ff7-1f748dfb5d77}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{d055db69-8e9b-442c-bf73-1128e924251f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{9bf50e1b-f630-4ed8-bfea-ad0593249cc5}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{323bcd21-8d4c-4313-b2ae-0212e74ad8cd}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{437c27f0-fb25-4f88-8984-47c4e02d0acf}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{ce92c3a4-6a53-4901-ac62-0b8fbc9a9f58}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

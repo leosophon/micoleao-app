@@ -1,0 +1,150 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "f922f1e0-e616-4642-98e7-efd5538d58c2"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "cre0a_maquina",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "lt_regadoradereceita"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Listar_linhas": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "6db5f748-150a-4b11-8b77-ad55cb32027f"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "lt_periodomaquinalojas"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Matriz_do_filtro": {
+          "runAfter": {
+            "Listar_linhas": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ca84417e-6d5b-444b-bf5b-8b45af3268b1"
+          },
+          "type": "Query",
+          "inputs": {
+            "from": "@outputs('Listar_linhas')?['body/value']",
+            "where": "@equals(item()?['_lt_maquina_value'], triggerOutputs()?['body/cre0a_maquinaid'])"
+          }
+        },
+        "Parse_JSON": {
+          "runAfter": {
+            "Matriz_do_filtro": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b6d2aa0c-ab82-4436-879c-57dc13aa474d"
+          },
+          "type": "ParseJson",
+          "inputs": {
+            "content": "@body('Matriz_do_filtro')",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "lt_periodomaquinalojaid": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "lt_periodomaquinalojaid"
+                ]
+              }
+            }
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@body('Parse_JSON')",
+          "actions": {
+            "Update_a_row": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "d07e5a63-67f9-4f1c-a050-118e304c5220"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "lt_periodomaquinalojas",
+                  "recordId": "@items('Apply_to_each')['lt_periodomaquinalojaid']",
+                  "item/lt_maquinageradorareceita": "@triggerOutputs()?['body/lt_regadoradereceita']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Parse_JSON": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a3ee0710-3b10-47d5-811e-638f644ff30d"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

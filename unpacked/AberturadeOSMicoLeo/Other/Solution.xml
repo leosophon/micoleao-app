@@ -1,0 +1,1151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.24112.170" SolutionPackageVersion="9.2" languagecode="1046" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24112.170" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.24112.00170">
+  <SolutionManifest>
+    <UniqueName>AberturadeOSMicoLeo</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Mico Leão" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.189</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>LTechSP</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="ltech" languagecode="1046" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>lt</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>12440</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="appnotification" behavior="0" />
+      <RootComponent type="1" schemaName="appointment" behavior="0" />
+      <RootComponent type="1" schemaName="contact" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_auditoriamaquina" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_cliente" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_clientegrupo" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_conferenciasangrialoja" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_estoqueminimoproduto" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_grupocliente" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_localempresa" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_localestoque" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_lote" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_malote" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_meiopagamentorecebimento" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_moedas" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_ordemproducao" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_ordemproducaoproduto" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_parametroestoqueloja" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_pedidoentrega" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_pedidoentregaproduto" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_preco" behavior="2" />
+      <RootComponent type="1" schemaName="crb76_produto" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_produtocusto" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_produtovendido" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_promocaovenda" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_revistainterna" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_servicousuario" behavior="0" />
+      <RootComponent type="1" schemaName="crb76_vaga" behavior="0" />
+      <RootComponent type="1" schemaName="cre0a_comentarioos" behavior="0" />
+      <RootComponent type="1" schemaName="cre0a_loja" behavior="0" />
+      <RootComponent type="1" schemaName="cre0a_maquina" behavior="0" />
+      <RootComponent type="1" schemaName="cre0a_ordservicoos" behavior="0" />
+      <RootComponent type="1" schemaName="cre0a_perfilusuario" behavior="0" />
+      <RootComponent type="1" schemaName="cre0a_usuarioos" behavior="0" />
+      <RootComponent type="1" schemaName="cre0a_vistorias" behavior="0" />
+      <RootComponent type="1" schemaName="lt_chamadoss" behavior="0" />
+      <RootComponent type="1" schemaName="lt_controledeveiculos" behavior="0" />
+      <RootComponent type="1" schemaName="lt_emailsmkt" behavior="0" />
+      <RootComponent type="1" schemaName="lt_funcionarios" behavior="0" />
+      <RootComponent type="1" schemaName="lt_metaloja" behavior="0" />
+      <RootComponent type="1" schemaName="lt_metamaquina" behavior="0" />
+      <RootComponent type="1" schemaName="lt_notificarclientes" behavior="0" />
+      <RootComponent type="1" schemaName="lt_ordemdeservico" behavior="0" />
+      <RootComponent type="1" schemaName="lt_periodomaquinaloja" behavior="0" />
+      <RootComponent type="1" schemaName="lt_recolhimento" behavior="0" />
+      <RootComponent type="1" schemaName="lt_registroiniciofim" behavior="0" />
+      <RootComponent type="1" schemaName="lt_registroparafechamento" behavior="0" />
+      <RootComponent type="1" schemaName="lt_registrosbling" behavior="0" />
+      <RootComponent type="1" schemaName="lt_registrotransacoesmaquinas" behavior="0" />
+      <RootComponent type="1" schemaName="lt_tabmapadosite" behavior="0" />
+      <RootComponent type="1" schemaName="lt_teste" behavior="0" />
+      <RootComponent type="1" schemaName="lt_testeintegracaobudibase" behavior="0" />
+      <RootComponent type="1" schemaName="lt_tickets" behavior="0" />
+      <RootComponent type="1" schemaName="lt_tiposmaquinas" behavior="0" />
+      <RootComponent type="1" schemaName="lt_veiculos" behavior="0" />
+      <RootComponent type="1" schemaName="lt_vistoria" behavior="0" />
+      <RootComponent type="1" schemaName="powerpagessiteaifeedback" behavior="0" />
+      <RootComponent type="1" schemaName="role" behavior="0" />
+      <RootComponent type="1" schemaName="systemuser" behavior="0" />
+      <RootComponent type="20" id="{08fd2e79-0fcc-ee11-9079-000d3a888e51}" behavior="0" />
+      <RootComponent type="20" id="{3378a6ef-0dcc-ee11-9079-000d3a888e51}" behavior="0" />
+      <RootComponent type="20" id="{8baa588b-28da-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="20" id="{a0cfe166-ff02-ef11-9f89-000d3a894c56}" behavior="0" />
+      <RootComponent type="20" id="{cf706fa5-03cc-ee11-9079-000d3a888e51}" behavior="0" />
+      <RootComponent type="20" id="{eb5edeca-efc5-ee11-9079-000d3a888e51}" behavior="0" />
+      <RootComponent type="20" id="{f891e58b-836f-ef11-a670-6045bd38275d}" behavior="0" />
+      <RootComponent type="29" id="{00fbc268-8976-ef11-ac20-002248e073b7}" behavior="0" />
+      <RootComponent type="29" id="{07d93822-79e0-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{09efea9a-15d8-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{0c38d673-60cb-ee11-9079-000d3a888e51}" behavior="0" />
+      <RootComponent type="29" id="{0fbe16ed-f4f0-ee11-a1fd-000d3a8904ee}" behavior="0" />
+      <RootComponent type="29" id="{143fbc34-3dcb-ee11-9079-000d3a888e51}" behavior="0" />
+      <RootComponent type="29" id="{1897066d-e0d0-ee11-904d-000d3a888e51}" behavior="0" />
+      <RootComponent type="29" id="{1f42ff83-463e-ef11-a316-00224836e995}" behavior="0" />
+      <RootComponent type="29" id="{25a9ee72-64cb-ee11-9079-000d3a888e51}" behavior="0" />
+      <RootComponent type="29" id="{2f26fbae-c46a-ef11-a670-000d3a886bca}" behavior="0" />
+      <RootComponent type="29" id="{31c9ebfa-e4cf-ee11-904d-000d3a888e51}" behavior="0" />
+      <RootComponent type="29" id="{34652ced-07d8-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{42c55e1d-7177-ef11-ac20-002248e073b7}" behavior="0" />
+      <RootComponent type="29" id="{46c32d0f-59cb-ee11-9079-000d3a888e51}" behavior="0" />
+      <RootComponent type="29" id="{48c3ac50-5002-ef11-9f89-000d3a894c56}" behavior="0" />
+      <RootComponent type="29" id="{4ffc79bc-f0d7-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{536391a5-b8e0-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{5dc54b85-e966-ef11-a670-000d3a886bca}" behavior="0" />
+      <RootComponent type="29" id="{65b23ccc-f4d7-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{682ea724-db71-ef11-a670-002248e073b7}" behavior="0" />
+      <RootComponent type="29" id="{68498209-e097-ef11-8a6a-6045bd38f029}" behavior="0" />
+      <RootComponent type="29" id="{7b89dbf0-4942-ef11-a316-002248e070a9}" behavior="0" />
+      <RootComponent type="29" id="{80932aa6-a12c-ef11-8e4f-00224838230e}" behavior="0" />
+      <RootComponent type="29" id="{8235e0a2-aa38-ef11-a316-6045bd3b2e17}" behavior="0" />
+      <RootComponent type="29" id="{83af74b7-d063-ef11-a670-000d3a88ebaa}" behavior="0" />
+      <RootComponent type="29" id="{87d4204b-10d8-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{8e2f1df6-2edb-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{92725485-f6d7-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{94bb58a1-de97-ef11-8a6a-6045bd38f029}" behavior="0" />
+      <RootComponent type="29" id="{9be62e07-d3e6-ee11-a203-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{a04d8f30-1ad8-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{a11fa047-c66a-ef11-a670-000d3a886bca}" behavior="0" />
+      <RootComponent type="29" id="{aca54691-3ccf-ee11-904d-000d3a888e51}" behavior="0" />
+      <RootComponent type="29" id="{b1533491-dee6-ee11-a203-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{b5ba1878-efd7-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{b63a5fce-1966-ef11-a670-000d3a88ebaa}" behavior="0" />
+      <RootComponent type="29" id="{be45bb36-30db-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{cf4b6fee-827b-ef11-ac20-6045bd38f029}" behavior="0" />
+      <RootComponent type="29" id="{d51c3062-5bcb-ee11-9079-000d3a888e51}" behavior="0" />
+      <RootComponent type="29" id="{d6f82018-c242-ef11-a316-002248e070a9}" behavior="0" />
+      <RootComponent type="29" id="{d779aa18-285e-ef11-bfe4-6045bd3c58b6}" behavior="0" />
+      <RootComponent type="29" id="{db421bf3-7bd2-ee11-904c-6045bd3c0eae}" behavior="0" />
+      <RootComponent type="29" id="{dd799173-403e-ef11-a316-00224836e995}" behavior="0" />
+      <RootComponent type="29" id="{ddbc405d-2166-ef11-a670-000d3a88ebaa}" behavior="0" />
+      <RootComponent type="29" id="{ddccd7fe-2f92-ef11-8a69-6045bd38f029}" behavior="0" />
+      <RootComponent type="29" id="{e3f17572-f5f0-ee11-a1fd-000d3a8904ee}" behavior="0" />
+      <RootComponent type="29" id="{e5b4227b-3850-ef11-bfe3-6045bd3c58b6}" behavior="0" />
+      <RootComponent type="29" id="{edefed5c-877b-ef11-ac20-6045bd38f029}" behavior="0" />
+      <RootComponent type="29" id="{ee84c681-6318-ef11-840a-6045bd397722}" behavior="0" />
+      <RootComponent type="29" id="{ef035e9e-2475-ef11-ac20-002248e073b7}" behavior="0" />
+      <RootComponent type="29" id="{f1f9cc17-96c2-ee11-9079-6045bd3a2553}" behavior="0" />
+      <RootComponent type="29" id="{fb97dbac-07d8-ee11-904c-00224835d1dd}" behavior="0" />
+      <RootComponent type="29" id="{fbb4e7c5-4906-ef11-9f89-000d3a894c56}" behavior="0" />
+      <RootComponent type="300" schemaName="crb76_lojas_1713c" behavior="0" />
+      <RootComponent type="300" schemaName="lt_abastecimento_41c6f" behavior="0" />
+      <RootComponent type="300" schemaName="lt_analisarabastecimento_3d050" behavior="0" />
+      <RootComponent type="300" schemaName="lt_analisaros_5a779" behavior="0" />
+      <RootComponent type="300" schemaName="lt_appaberturadeosmicoleaodefaultcommandlibrary_02278" behavior="0" />
+      <RootComponent type="300" schemaName="lt_atribuiraotcnico_0761b" behavior="0" />
+      <RootComponent type="300" schemaName="lt_home_5667f" behavior="0" />
+      <RootComponent type="300" schemaName="lt_notificarclientes_96780" behavior="0" />
+      <RootComponent type="300" schemaName="lt_novaauditoria_f3c3d" behavior="0" />
+      <RootComponent type="300" schemaName="lt_novaos_524d0" behavior="0" />
+      <RootComponent type="300" schemaName="lt_novochamado_ecd62" behavior="0" />
+      <RootComponent type="300" schemaName="lt_novorecolhimento_0dffb" behavior="0" />
+      <RootComponent type="300" schemaName="lt_ordemservio_2d44a" behavior="0" />
+      <RootComponent type="300" schemaName="lt_ordensdeservio_c4f68" behavior="0" />
+      <RootComponent type="300" schemaName="lt_osportecnico_7b4ed" behavior="0" />
+      <RootComponent type="300" schemaName="lt_transaotickets_fce66" behavior="0" />
+      <RootComponent type="300" schemaName="lt_vistoriapreventiva_16b34" behavior="0" />
+      <RootComponent type="431" schemaName="crb76_auditoriamaquina lt_foto" behavior="0" />
+      <RootComponent type="431" schemaName="cre0a_loja cre0a_fotoloja" behavior="0" />
+      <RootComponent type="431" schemaName="cre0a_maquina cre0a_fotomaquina" behavior="0" />
+      <RootComponent type="431" schemaName="cre0a_ordservicoos cre0a_fotosos" behavior="0" />
+      <RootComponent type="431" schemaName="cre0a_ordservicoos lt_fotoaberturaos" behavior="0" />
+      <RootComponent type="431" schemaName="cre0a_vistorias cre0a_fotosvistorias" behavior="0" />
+      <RootComponent type="431" schemaName="lt_recolhimento lt_foto" behavior="0" />
+      <RootComponent type="432" schemaName="cre0a_loja" behavior="0" />
+      <RootComponent type="432" schemaName="cre0a_maquina" behavior="0" />
+      <RootComponent type="432" schemaName="cre0a_ordservicoos" behavior="0" />
+      <RootComponent type="432" schemaName="cre0a_vistorias" behavior="0" />
+      <RootComponent type="432" schemaName="lt_recolhimento" behavior="0" />
+      <RootComponent type="60" id="{21741a37-bee7-ee11-a203-002248379b1f}" behavior="0" />
+      <RootComponent type="60" id="{4a0931b5-abf2-ee11-a1fd-000d3a8904ee}" behavior="0" />
+      <RootComponent type="60" id="{cce4a048-2506-ef11-9f89-000d3a894c56}" behavior="0" />
+      <RootComponent type="60" id="{e9ac2423-ef19-ef11-840a-6045bd397722}" behavior="0" />
+      <RootComponent type="61" schemaName="lt_auditoriaSvgIco" behavior="0" />
+      <RootComponent type="61" schemaName="lt_cores" behavior="0" />
+      <RootComponent type="61" schemaName="lt_ico_svg_house" behavior="0" />
+      <RootComponent type="61" schemaName="lt_ico_svg_loja" behavior="0" />
+      <RootComponent type="61" schemaName="lt_ico_svg_ordermservico" behavior="0" />
+      <RootComponent type="61" schemaName="lt_ico_svgmaquina" behavior="0" />
+      <RootComponent type="61" schemaName="lt_ico_svgvistoria" behavior="0" />
+      <RootComponent type="61" schemaName="lt_iconFerramentas" behavior="0" />
+      <RootComponent type="61" schemaName="lt_icoTec" behavior="0" />
+      <RootComponent type="61" schemaName="lt_icoTipo" behavior="0" />
+      <RootComponent type="61" schemaName="lt_img_micoLeaoProfile" behavior="0" />
+      <RootComponent type="61" schemaName="lt_recolhimentoSvgIco" behavior="0" />
+      <RootComponent type="61" schemaName="lt_taskOs" behavior="0" />
+      <RootComponent type="61" schemaName="lt_tickets" behavior="0" />
+      <RootComponent type="61" schemaName="lt_validarCpf" behavior="0" />
+      <RootComponent type="62" schemaName="cre0a_AppAberturadeOSMicoLeao" behavior="0" />
+      <RootComponent type="70" id="{e9b4e509-b538-ef11-a316-6045bd3b2e17}" behavior="0" />
+      <RootComponent type="70" id="{f938a4fc-b838-ef11-a316-6045bd3b2e17}" behavior="0" />
+      <RootComponent type="80" schemaName="cre0a_AppAberturadeOSMicoLeao" behavior="0" />
+      <RootComponent type="9" schemaName="crb76_periodicidade" behavior="0" />
+      <RootComponent type="9" schemaName="cre0a_tipodepelucia" behavior="0" />
+      <RootComponent type="9" schemaName="cre0a_tipopelucia" behavior="0" />
+      <RootComponent type="9" schemaName="lt_checklist" behavior="0" />
+      <RootComponent type="9" schemaName="lt_situacaoordemproducao" behavior="0" />
+      <RootComponent type="9" schemaName="lt_situacaovaga" behavior="0" />
+      <RootComponent type="9" schemaName="lt_tipopedidoentrega" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_externalidentity" displayName="Identidade Externa" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="contact" displayName="Contato" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_externalidentity" displayName="Identidade Externa" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_invitation" displayName="Convite" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="contact" displayName="Contato" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_webformsession" displayName="Sessão de Formulário de Várias Etapas" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="contact" displayName="Contato" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="adx_webformsession" displayName="Sessão de Formulário de Várias Etapas" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="applicationuser" displayName="ApplicationUser" solution="ApplicationUserSolution (1.0.1.4)">
+          <package>MicrosoftS2SApplicationIdentitiesCoreTst (1.0.1.25)</package>
+        </Required>
+        <Dependent type="300" schemaName="lt_osportecnico_7b4ed" displayName="OsPorTecnico" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="applicationuser" displayName="ApplicationUser" solution="ApplicationUserSolution (1.0.1.4)">
+          <package>MicrosoftS2SApplicationIdentitiesCoreTst (1.0.1.25)</package>
+        </Required>
+        <Dependent type="80" schemaName="cre0a_AppAberturadeOSMicoLeao" displayName="Mico Leao | PRODUÇÃO" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="1" schemaName="appnotification" displayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="2" schemaName="createdby" displayName="Criação por" parentSchemaName="appnotification" parentDisplayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="2" schemaName="createdonbehalfby" displayName="Criação por (Delegado)" parentSchemaName="appnotification" parentDisplayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="2" schemaName="modifiedby" displayName="Modificação por" parentSchemaName="appnotification" parentDisplayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="2" schemaName="modifiedonbehalfby" displayName="Modificação por (Delegado)" parentSchemaName="appnotification" parentDisplayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="2" schemaName="ownerid" displayName="Proprietário" parentSchemaName="appnotification" parentDisplayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="2" schemaName="owningbusinessunit" displayName="Unidade de Negócios Proprietária" parentSchemaName="appnotification" parentDisplayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="2" schemaName="owningteam" displayName="Equipe Proprietária" parentSchemaName="appnotification" parentDisplayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="2" schemaName="owninguser" displayName="Usuário Proprietário" parentSchemaName="appnotification" parentDisplayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notificação" solution="AppNotifications (10.0.0.16)">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="2" schemaName="versionnumber" displayName="Version Number" parentSchemaName="appnotification" parentDisplayName="Notificação" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="appusersetting" displayName="Configuração do Usuário do Aplicativo Baseado em Modelo" solution="AppModule (9.2.2409.2409161)">
+          <package>AppModuleSolutionAnchor (9.2.2409.2409161)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="bot" displayName="Copiloto" solution="PowerVirtualAgents (2024.7.4.15123626)">
+          <package>msdynce_CustomerCareIntelligenceBots_Anchor (2024.7.4.15123626)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="componentversion" displayName="Versão do Componente" solution="msdyn_ComponentVersioning (9.1.0.196)">
+          <package>ComponentVersioning_Anchor (9.1.0.196)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_acrescimofolha" displayName="Acrescimo Folha" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_agenda" displayName="Agenda " solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_avisos" displayName="Avisos" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_avisos" displayName="Avisos" solution="Active" />
+        <Dependent type="300" schemaName="lt_home_5667f" displayName="Home" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_componenteproduto" displayName="Componente Produto" solution="Active" />
+        <Dependent type="1" schemaName="crb76_produto" displayName="Produto" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_componenteproduto" displayName="Componente Produto" solution="Active" />
+        <Dependent type="60" displayName="Informações" parentDisplayName="Produto" id="{97ced47d-7897-417c-a4ef-a94aae0ec184}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_compras" displayName="Compras" solution="Active" />
+        <Dependent type="1" schemaName="crb76_meiopagamentorecebimento" displayName="Meio Pagamento Recebimento" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_concorrenciacompra" displayName="Concorrencia Compra" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_conferencianumerario" displayName="Conferência Numerário" solution="Active" />
+        <Dependent type="1" schemaName="crb76_malote" displayName="Malote" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_conferencianumerario" displayName="Conferência Numerário" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_conferencianumerario" displayName="Conferência Numerário" solution="Active" />
+        <Dependent type="1" schemaName="lt_recolhimento" displayName="Recolhimento" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_conferencianumerario" displayName="Conferência Numerário" solution="Active" />
+        <Dependent type="29" displayName="DESATIVADO - Auditoria / Recolhimento / Conferência de Numerário" id="{d6f82018-c242-ef11-a316-002248e070a9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_conferencianumerario" displayName="Conferência Numerário" solution="Active" />
+        <Dependent type="29" displayName="Venda - Conferência de Numerário" id="{d779aa18-285e-ef11-bfe4-6045bd3c58b6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_contaempresafinanceira" displayName="Conta Empresa Financeira" solution="Active" />
+        <Dependent type="1" schemaName="contact" displayName="Contato" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_contaspagar" displayName="Contas Pagar" solution="Active" />
+        <Dependent type="1" schemaName="crb76_meiopagamentorecebimento" displayName="Meio Pagamento Recebimento" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_contaspagar" displayName="Contas Pagar" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_contaspagar" displayName="Contas Pagar" solution="Active" />
+        <Dependent type="1" schemaName="lt_registroparafechamento" displayName="Vendas Oficial" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_contasreceber" displayName="Contas Receber" solution="Active" />
+        <Dependent type="1" schemaName="crb76_meiopagamentorecebimento" displayName="Meio Pagamento Recebimento" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_deficiencia" displayName="Deficiência" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_deparaauttarimportacaovendameiorecebimento" displayName="De/Para Auttar Importacao Venda Meio Recebimento" solution="Active" />
+        <Dependent type="1" schemaName="crb76_meiopagamentorecebimento" displayName="Meio Pagamento Recebimento" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_dependentecolaborador" displayName="Dependente Colaborador" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_descontosfolha" displayName="Descontos Folha" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_emprestimo" displayName="Emprestimo" solution="Active" />
+        <Dependent type="1" schemaName="crb76_meiopagamentorecebimento" displayName="Meio Pagamento Recebimento" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_estoquesaldo" displayName="Estoque Saldo" solution="Active" />
+        <Dependent type="1" schemaName="crb76_localempresa" displayName="Local Empresa" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_folhapagamento" displayName="Folha Pagamento" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_franquia" displayName="Franquia" solution="Active" />
+        <Dependent type="1" schemaName="contact" displayName="Contato" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_imobilizado" displayName="Imobilizado" solution="Active" />
+        <Dependent type="1" schemaName="crb76_localempresa" displayName="Local Empresa" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_imobilizado" displayName="Imobilizado" solution="Active" />
+        <Dependent type="1" schemaName="cre0a_maquina" displayName="Máquina" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_importacaovendas" displayName="Importacao Vendas " solution="Active" />
+        <Dependent type="1" schemaName="crb76_produto" displayName="Produto" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_importacaovendas" displayName="Importacao Vendas " solution="Active" />
+        <Dependent type="1" schemaName="cre0a_loja" displayName="Loja" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_movimentacaoestoque" displayName="Movimentacao Estoque" solution="Active" />
+        <Dependent type="1" schemaName="crb76_localempresa" displayName="Local Empresa" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_movimentacaoestoque" displayName="Movimentacao Estoque" solution="Active" />
+        <Dependent type="1" schemaName="crb76_localestoque" displayName="Local Estoque" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_preco" displayName="Preço" solution="Active" />
+        <Dependent type="1" schemaName="crb76_preco" displayName="Preço" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_processo" displayName="Processo Gestao" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_projeto" displayName="Projeto" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_recepcaocompras" displayName="Recepcao Compras" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_salario" displayName="Salario" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_servicocontratado" displayName="Serviço Contratado" solution="Active" />
+        <Dependent type="1" schemaName="crb76_meiopagamentorecebimento" displayName="Meio Pagamento Recebimento" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_tarefa" displayName="Tarefa" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="crb76_valorpulsomaquina" displayName="Valor Pulso Maquina" solution="Active" />
+        <Dependent type="1" schemaName="cre0a_maquina" displayName="Máquina" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="lt_necessidadedecompra" displayName="Necessidade de Compra" solution="Active" />
+        <Dependent type="1" schemaName="lt_funcionarios" displayName="Colaboradores" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="lt_necessidadedecompra" displayName="Necessidade de Compra" solution="Active" />
+        <Dependent type="80" schemaName="cre0a_AppAberturadeOSMicoLeao" displayName="Mico Leao | PRODUÇÃO" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msfp_survey" displayName="Pesquisa do Customer Voice" solution="MicrosoftFormsPro (2.0.0.50)">
+          <package>MicrosoftFormsPro (2.0.0.50)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_adplacement" displayName="Posicionamento do Anúncio" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_columnpermission" displayName="Permissão da Coluna" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_columnpermissionprofile" displayName="Perfil de Permissão da Coluna" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_contentsnippet" displayName="Trecho de Conteúdo" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_entityform" displayName="Formulário Básico" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_entityformmetadata" displayName="Metadados do Formulário Básico" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_entitylist" displayName="Lista" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_entitypermission" displayName="Permissão de Tabela" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_pagetemplate" displayName="Modelo de Página" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_pollplacement" displayName="Posicionamento de Votação" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_publishingstate" displayName="Estado de Publicação" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_publishingstatetransitionrule" displayName="Regra de Transição de Estado de Publicação" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_redirect" displayName="Redirecionar" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_shortcut" displayName="Atalho" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_sitemarker" displayName="Marcador de Site" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_sitesetting" displayName="Configuração do Site" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_webfile" displayName="Arquivo da Web" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_webform" displayName="Formulário de Várias Etapas" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_webformmetadata" displayName="Metadados de Formulário de Várias Etapas" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_webformstep" displayName="Etapa do Formulário" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_weblink" displayName="Link da Web" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_weblinkset" displayName="Conjunto de Links da Web" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_webpage" displayName="Página da Web" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_webpageaccesscontrolrule" displayName="Regra de Controle de Acesso da Página da Web" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_webrole" displayName="Função da Web" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_webrole" displayName="Função da Web" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_website" displayName="Site" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_websiteaccess" displayName="Acesso ao Site" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_websitelanguage" displayName="Idioma do Site" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="mspp_webtemplate" displayName="Modelo da Web" solution="PowerPages_Apps (1.0.2407.8)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="2" schemaName="createdby" displayName="Criado(a) por" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="2" schemaName="createdonbehalfby" displayName="Criado(a) por (Delegado)" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="2" schemaName="modifiedby" displayName="Modificado(a) por" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="2" schemaName="modifiedonbehalfby" displayName="Modificado(a) por (Delegado)" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="2" schemaName="ownerid" displayName="Proprietário" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="2" schemaName="owningbusinessunit" displayName="Unidade de Negócio Proprietária" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="2" schemaName="owningteam" displayName="Equipe Proprietária" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="2" schemaName="owninguser" displayName="Usuário Proprietário" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="powerpagessiteaifeedback" displayName="Comentários da IA do Site do Power Pages" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="2" schemaName="versionnumber" displayName="Version Number" parentSchemaName="powerpagessiteaifeedback" parentDisplayName="Comentários da IA do Site do Power Pages" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="usermobileofflineprofilemembership" displayName="UserMobileOfflineProfileMembership" solution="MobileOfflineMembership (1.0.0.3)">
+          <package>MobileOfflineExtensionApp_Anchor (1.0.0.0)</package>
+        </Required>
+        <Dependent type="1" schemaName="systemuser" displayName="Usuário" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="adx_contact_externalidentity" displayName="adx_contact_externalidentity" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="adx_invitation_invitecontacts" displayName="adx_invitation_invitecontacts" parentSchemaName="adx_invitation" parentDisplayName="Convite" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="10" schemaName="adx_invitation_invitecontacts" displayName="adx_invitation_invitecontacts" parentSchemaName="adx_invitation" parentDisplayName="Convite" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="adx_invitation_redeemedcontacts" displayName="adx_invitation_redeemedcontacts" parentSchemaName="adx_invitation" parentDisplayName="Convite" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="10" schemaName="adx_invitation_redeemedcontacts" displayName="adx_invitation_redeemedcontacts" parentSchemaName="adx_invitation" parentDisplayName="Convite" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="lt_crb76_componenteproduto_Produto_crb76_produto" displayName="lt_crb76_componenteproduto_Produto_crb76_produto" parentSchemaName="crb76_produto" parentDisplayName="Produto" solution="Active" />
+        <Dependent type="60" displayName="Informações" parentDisplayName="Produto" id="{97ced47d-7897-417c-a4ef-a94aae0ec184}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msa_contact_managingpartner" displayName="msa_contact_managingpartner" parentSchemaName="account" parentDisplayName="Conta" solution="PowerPages_RuntimeCoreDependencies (1.0.2305.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="10" schemaName="msa_contact_managingpartner" displayName="msa_contact_managingpartner" parentSchemaName="account" parentDisplayName="Conta" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="powerpagecomponent_mspp_webrole_contact" displayName="powerpagecomponent_mspp_webrole_contact" parentSchemaName="powerpagecomponent" parentDisplayName="Componente de site" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="10" schemaName="powerpagecomponent_mspp_webrole_contact" displayName="powerpagecomponent_mspp_webrole_contact" parentSchemaName="powerpagecomponent" parentDisplayName="Componente de site" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_accessfailedcount" displayName="Contagem de Falhas de Acesso" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_emailaddress1confirmed" displayName="Email Confirmado" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_locallogindisabled" displayName="Logon Local Desabilitado" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_lockoutenabled" displayName="Bloqueio Habilitado" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_lockoutenddate" displayName="Data de Término do Bloqueio" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_logonenabled" displayName="Logon Habilitado" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_mobilephoneconfirmed" displayName="Número de Celular Confirmado" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_securitystamp" displayName="Selo de Segurança" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_twofactorenabled" displayName="Dois Fatores Habilitado" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_identity_username" displayName="Nome de Usuário" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_organizationname" displayName="Organization Name" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCoreDependencies (1.0.2305.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced) - Japanese" parentDisplayName="Contato" id="{01124dd8-9bff-4cc0-bb33-ea9d943c3f9f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_organizationname" displayName="Organization Name" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCoreDependencies (1.0.2305.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced)" parentDisplayName="Contato" id="{bddc0100-0dbe-4562-aafe-31d08c8ab506}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_publicprofilecopy" displayName="Cópia do Perfil Público" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced) - Japanese" parentDisplayName="Contato" id="{01124dd8-9bff-4cc0-bb33-ea9d943c3f9f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_publicprofilecopy" displayName="Cópia do Perfil Público" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced)" parentDisplayName="Contato" id="{bddc0100-0dbe-4562-aafe-31d08c8ab506}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="adx_timezone" displayName="Time Zone" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeCoreDependencies (1.0.2305.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="crb76_nome" displayName="Nome" parentSchemaName="crb76_tipocontratacaofuncionario" parentDisplayName="Tipo Contratação Colaborador" solution="Active" />
+        <Dependent type="10" schemaName="lt_funcionarios_TipoContratacao_crb76_tipoco" displayName="lt_funcionarios_TipoContratacao_crb76_tipoco" parentSchemaName="crb76_tipocontratacaofuncionario" parentDisplayName="Tipo Contratação Colaborador" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="crb76_nomedaconta" displayName="Nome da Conta" parentSchemaName="crb76_contaempresafinanceira" parentDisplayName="Conta Empresa Financeira" solution="Active" />
+        <Dependent type="10" schemaName="lt_crb76_meiopagamentorecebimento_ContaEmpre" displayName="lt_crb76_meiopagamentorecebimento_ContaEmpre" parentSchemaName="crb76_contaempresafinanceira" parentDisplayName="Conta Empresa Financeira" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="crb76_nomegrupo" displayName="Nome Grupo" parentSchemaName="crb76_gruposegurancaacesso" parentDisplayName="Grupo Seguranca Acesso" solution="Active" />
+        <Dependent type="10" schemaName="crb76_servicousuario_GrupoSegurancaAcesso_crb76_gruposegurancaacesso" displayName="crb76_servicousuario_GrupoSegurancaAcesso_crb76_gruposegurancaacesso" parentSchemaName="crb76_gruposegurancaacesso" parentDisplayName="Grupo Seguranca Acesso" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="crb76_nomegrupo" displayName="Nome Grupo" parentSchemaName="crb76_gruposegurancaacesso" parentDisplayName="Grupo Seguranca Acesso" solution="Active" />
+        <Dependent type="10" schemaName="lt_funcionarios_GrupoSeguranca_crb76_gruposegurancaacesso" displayName="lt_funcionarios_GrupoSeguranca_crb76_gruposegurancaacesso" parentSchemaName="crb76_gruposegurancaacesso" parentDisplayName="Grupo Seguranca Acesso" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="crb76_nomemunicipio" displayName="Nome Municipio" parentSchemaName="crb76_municipios" parentDisplayName="Municipios" solution="Active" />
+        <Dependent type="10" schemaName="crb76_lt_funcionarios_Municipio_crb76_municipios" displayName="crb76_lt_funcionarios_Municipio_crb76_municipios" parentSchemaName="crb76_municipios" parentDisplayName="Municipios" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_name" displayName="Name" parentSchemaName="lt_empresa" parentDisplayName="Empresa" solution="Active" />
+        <Dependent type="10" schemaName="lt_funcionarios_Empresa_lt_empresa" displayName="lt_funcionarios_Empresa_lt_empresa" parentSchemaName="lt_empresa" parentDisplayName="Empresa" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_name" displayName="Nome Estado" parentSchemaName="lt_estado" parentDisplayName="Estado" solution="Active" />
+        <Dependent type="10" schemaName="crb76_lt_funcionarios_Estado_lt_estado" displayName="crb76_lt_funcionarios_Estado_lt_estado" parentSchemaName="lt_estado" parentDisplayName="Estado" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_name" displayName="Name" parentSchemaName="lt_fornecedor" parentDisplayName="Fornecedor" solution="Active" />
+        <Dependent type="10" schemaName="lt_crb76_produto_FornecedorEspecifico_lt_fornecedor" displayName="lt_crb76_produto_FornecedorEspecifico_lt_fornecedor" parentSchemaName="lt_fornecedor" parentDisplayName="Fornecedor" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_name" displayName="Nome Pais" parentSchemaName="lt_pais" parentDisplayName="Pais" solution="Active" />
+        <Dependent type="10" schemaName="crb76_lt_funcionarios_Pais_lt_pais" displayName="crb76_lt_funcionarios_Pais_lt_pais" parentSchemaName="lt_pais" parentDisplayName="Pais" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_name" displayName="Name" parentSchemaName="lt_periodicidadepagamento" parentDisplayName="Periodicidade Pagamento" solution="Active" />
+        <Dependent type="10" schemaName="lt_crb76_estoqueminimoproduto_Periodicidade_lt_periodicidadepagamento" displayName="lt_crb76_estoqueminimoproduto_Periodicidade_lt_periodicidadepagamento" parentSchemaName="lt_periodicidadepagamento" parentDisplayName="Periodicidade Pagamento" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_name" displayName="Nome Tipo Pagamento" parentSchemaName="lt_tipopagamento" parentDisplayName="Tipo Pagamento" solution="Active" />
+        <Dependent type="10" schemaName="lt_crb76_meiopagamentorecebimento_TipoPagame" displayName="lt_crb76_meiopagamentorecebimento_TipoPagame" parentSchemaName="lt_tipopagamento" parentDisplayName="Tipo Pagamento" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_nome" displayName="Nome" parentSchemaName="crb76_bandeira" parentDisplayName="Bandeira" solution="Active" />
+        <Dependent type="10" schemaName="lt_crb76_meiopagamentorecebimento_Bandeira_c" displayName="lt_crb76_meiopagamentorecebimento_Bandeira_c" parentSchemaName="crb76_bandeira" parentDisplayName="Bandeira" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_nomecargo" displayName="Nome Cargo" parentSchemaName="crb76_cargos" parentDisplayName="Cargos" solution="Active" />
+        <Dependent type="10" schemaName="lt_crb76_vaga_Cargo_crb76_cargos" displayName="lt_crb76_vaga_Cargo_crb76_cargos" parentSchemaName="crb76_cargos" parentDisplayName="Cargos" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_nomecargo" displayName="Nome Cargo" parentSchemaName="crb76_cargos" parentDisplayName="Cargos" solution="Active" />
+        <Dependent type="10" schemaName="lt_funcionarios_Cargo_crb76_cargos" displayName="lt_funcionarios_Cargo_crb76_cargos" parentSchemaName="crb76_cargos" parentDisplayName="Cargos" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_nomedaempresa" displayName="Nome da empresa" parentSchemaName="crb76_empresafinanceira" parentDisplayName="Empresa Financeira" solution="Active" />
+        <Dependent type="10" schemaName="crb76_conferenciasangrialoja_DestinoNumerario_crb76_empresafinanceira" displayName="crb76_conferenciasangrialoja_DestinoNumerario_crb76_empresafinanceira" parentSchemaName="crb76_empresafinanceira" parentDisplayName="Empresa Financeira" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_nomedaempresa" displayName="Nome da empresa" parentSchemaName="crb76_empresafinanceira" parentDisplayName="Empresa Financeira" solution="Active" />
+        <Dependent type="10" schemaName="crb76_meiopagamentorecebimento_EmpresaFinanceir" displayName="crb76_meiopagamentorecebimento_EmpresaFinanceir" parentSchemaName="crb76_empresafinanceira" parentDisplayName="Empresa Financeira" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="lt_nomepinpad" displayName="Nome Pin Pad" parentSchemaName="crb76_pinpad" parentDisplayName="Pin Pad" solution="Active" />
+        <Dependent type="10" schemaName="lt_cre0a_maquina_PinPad_crb76_pinpad" displayName="lt_cre0a_maquina_PinPad_crb76_pinpad" parentSchemaName="crb76_pinpad" parentDisplayName="Pin Pad" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="mspp_userpreferredlcid" displayName="Idioma Preferido" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced) - Japanese" parentDisplayName="Contato" id="{01124dd8-9bff-4cc0-bb33-ea9d943c3f9f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="mspp_userpreferredlcid" displayName="Idioma Preferido" parentSchemaName="contact" parentDisplayName="Contato" solution="PowerPages_RuntimeExtensions (1.0.2408.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced)" parentDisplayName="Contato" id="{bddc0100-0dbe-4562-aafe-31d08c8ab506}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="onlinemeetingjoinurl" displayName="URL de Ingresso na Reunião Online" parentSchemaName="appointment" parentDisplayName="Compromisso" solution="msft_ActivitiesInfra_Extensions (9.2.0.61)">
+          <package>msdynce_EnableUCIByDefault (9.0.24105.241031000)</package>
+          <package>msft_ActivitiesInfra_Anchor (1.0.0.0)</package>
+        </Required>
+        <Dependent type="60" displayName="Compromisso" parentDisplayName="Compromisso" id="{549a8aa3-c349-4ab9-8bac-4873fa9a7a5c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Componentes Produtos Ativos(as)" displayName="Componentes Produtos Ativos(as)" parentSchemaName="crb76_componenteproduto" parentDisplayName="Componente Produto" solution="Active" id="{ecea67ca-caeb-4e53-bb36-cc8df3a4696e}" />
+        <Dependent type="60" displayName="Informações" parentDisplayName="Produto" id="{97ced47d-7897-417c-a4ef-a94aae0ec184}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Funções da Web Ativas" displayName="Funções da Web Ativas" parentSchemaName="mspp_webrole" parentDisplayName="Função da Web" solution="PowerPages_Apps (1.0.2407.8)" id="{735de4f0-c287-42eb-b5e6-2f01a75a40fb}">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Identidades Externas Ativas" displayName="Identidades Externas Ativas" parentSchemaName="adx_externalidentity" parentDisplayName="Identidade Externa" solution="PowerPages_RuntimeCore (1.0.2407.1)" id="{93fe9ed1-cabf-4755-9f63-4f3f989084e6}">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Todos os Clientes" displayName="Todos os Clientes" parentSchemaName="contact" parentDisplayName="Contato" solution="msdynce_AppCommon (9.0.4.0066)" id="{0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105}">
+          <package>msdynce_AppCommonAnchor (9.0.24082.10001)</package>
+        </Required>
+        <Dependent type="26" schemaName="Todos os Clientes" displayName="Todos os Clientes" parentSchemaName="contact" parentDisplayName="Contato" id="{0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="300" schemaName="cat_keyboardshortcuts_5ca22" displayName="Keyboard shortcuts" solution="CreatorKitReferencesMDA (1.0.20230727.2)">
+          <package>CreatorKitCore (1.0.20240529.1)</package>
+        </Required>
+        <Dependent type="AppElement" displayName="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_cat_keyboardshortcuts_5ca22" id.uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_cat_keyboardshortcuts_5ca22" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Profile Web Form (Enhanced) - Japanese" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)" id="{01124dd8-9bff-4cc0-bb33-ea9d943c3f9f}">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced) - Japanese" parentDisplayName="Contato" id="{01124dd8-9bff-4cc0-bb33-ea9d943c3f9f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Contato" parentDisplayName="Contato" solution="msdynce_AppCommon (9.0.4.0066)" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}">
+          <package>msdynce_AppCommonAnchor (9.0.24082.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Contato" parentDisplayName="Contato" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Compromisso" parentDisplayName="Compromisso" solution="msdynce_Activities (9.0.1.2033)" id="{549a8aa3-c349-4ab9-8bac-4873fa9a7a5c}">
+          <package>msdynce_EnableUCIByDefault (9.0.24105.241031000)</package>
+        </Required>
+        <Dependent type="60" displayName="Compromisso" parentDisplayName="Compromisso" id="{549a8aa3-c349-4ab9-8bac-4873fa9a7a5c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Informações" parentDisplayName="Contato" solution="msdynce_AppCommon (9.0.4.0066)" id="{894cc46a-b0cb-4ab0-8bf6-200544e46a2d}">
+          <package>msdynce_AppCommonAnchor (9.0.24082.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Informações" parentDisplayName="Contato" id="{894cc46a-b0cb-4ab0-8bf6-200544e46a2d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Profile Web Form (Enhanced)" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)" id="{bddc0100-0dbe-4562-aafe-31d08c8ab506}">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced)" parentDisplayName="Contato" id="{bddc0100-0dbe-4562-aafe-31d08c8ab506}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Invite Web Form" parentDisplayName="Contato" solution="PowerPages_RuntimeCore (1.0.2407.1)" id="{d6190b35-9474-4098-9698-33f6627eb3bf}">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Invite Web Form" parentDisplayName="Contato" id="{d6190b35-9474-4098-9698-33f6627eb3bf}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Contact/Contact_main_system_library.js" displayName="AppCommon/Contact/Contact_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.24082.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced) - Japanese" parentDisplayName="Contato" id="{01124dd8-9bff-4cc0-bb33-ea9d943c3f9f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Contact/Contact_main_system_library.js" displayName="AppCommon/Contact/Contact_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.24082.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Contato" parentDisplayName="Contato" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Contact/Contact_main_system_library.js" displayName="AppCommon/Contact/Contact_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.24082.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Profile Web Form (Enhanced)" parentDisplayName="Contato" id="{bddc0100-0dbe-4562-aafe-31d08c8ab506}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Contact/Contact_main_system_library.js" displayName="AppCommon/Contact/Contact_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.24082.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Contact/Contact_main_system_library.js" displayName="AppCommon/Contact/Contact_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.24082.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Invite Web Form" parentDisplayName="Contato" id="{d6190b35-9474-4098-9698-33f6627eb3bf}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_entities/subgrid_filtering.js" displayName="mspp_entities/subgrid_filtering.js" solution="PowerPages_AppResources (1.0.2407.1)">
+          <package>PowerPages_Core (1.0.2408.119)</package>
+        </Required>
+        <Dependent type="60" displayName="Portal Contact (Enhanced)" parentDisplayName="Contato" id="{c1c97961-2d42-4103-abf8-2fe2bdf38224}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Activity.HyperlinkControlWithImage" displayName="MscrmControls.Activity.HyperlinkControlWithImage" solution="msdynce_ActivitiesPatch (9.0.24105.241031000)">
+          <package>msdynce_EnableUCIByDefault (9.0.24105.241031000)</package>
+        </Required>
+        <Dependent type="60" displayName="Compromisso" parentDisplayName="Compromisso" id="{549a8aa3-c349-4ab9-8bac-4873fa9a7a5c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.RichTextEditor.RichTextEditorControl" displayName="MscrmControls.RichTextEditor.RichTextEditorControl" solution="msdyn_RichTextEditor (1.0.0.4160)">
+          <package>msdyn_TimelineExtended (1.0.0.1589)</package>
+          <package>msdynce_EnableUCIByDefault (9.0.24105.241031000)</package>
+        </Required>
+        <Dependent type="60" displayName="Compromisso" parentDisplayName="Compromisso" id="{549a8aa3-c349-4ab9-8bac-4873fa9a7a5c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AllowNotificationsEarlyAccess" solution="AppNotifications (10.0.0.16)" id.uniquename="AllowNotificationsEarlyAccess">
+          <package>msft_PowerAppsUnifiedClientInfraExtensions (1.0.0.62)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=cre0a_AppAberturadeOSMicoLeao,settingdefinitionid.uniquename=AllowNotificationsEarlyAccess" id.parentappmoduleid.uniquename="cre0a_AppAberturadeOSMicoLeao" id.settingdefinitionid.uniquename="AllowNotificationsEarlyAccess" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.12)" id.uniquename="AppChannel">
+          <package>PowerAppsAppFramework_Anchor (1.0.0.16)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=cre0a_AppAberturadeOSMicoLeao,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="cre0a_AppAberturadeOSMicoLeao" id.settingdefinitionid.uniquename="AppChannel" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="EnableLockTabsOnMobile2022" solution="msdyn_FormsInfraSettings (1.0.0.3)" id.uniquename="EnableLockTabsOnMobile2022">
+          <package>msdyn_FormsInsightSettings (1.0.0.2)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=cre0a_AppAberturadeOSMicoLeao,settingdefinitionid.uniquename=EnableLockTabsOnMobile2022" id.parentappmoduleid.uniquename="cre0a_AppAberturadeOSMicoLeao" id.settingdefinitionid.uniquename="EnableLockTabsOnMobile2022" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

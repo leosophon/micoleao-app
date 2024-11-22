@@ -1,0 +1,309 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "impersonation": {},
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "5b73259c-a422-48a4-9611-546dd2162339"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "cre0a_ordservicoos",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condição": {
+          "actions": {
+            "Atualizar_uma_linha_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "d936e4e2-9fcf-41f4-aa61-e384ac64b2fb"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cre0a_lojas",
+                  "recordId": "@triggerOutputs()?['body/_lt_lojaos_value']",
+                  "item/lt_statusatualizado": 124400000
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {},
+          "expression": {
+            "not": {
+              "equals": [
+                "@triggerOutputs()?['body/lt_statusdaordemdeservico']",
+                "Em Progresso"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "efbf3567-f20c-46fc-9264-a2360db4c024"
+          },
+          "type": "If"
+        },
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída_2": {
+          "runAfter": {
+            "Condição_4": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7102b807-a795-4f0d-b7d1-90d24e2d0630"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "cre0a_ordservicoos",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condição_2": {
+          "actions": {
+            "Atualizar_uma_linha": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "71072abf-5640-42be-b0d4-32d6bb749889"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cre0a_lojas",
+                  "recordId": "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_2')?['body/_lt_lojaos_value']",
+                  "item/lt_statusatualizado": 124400001
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Quando_uma_linha_é_adicionada,_modificada_ou_excluída_2": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "not": {
+              "equals": [
+                "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_2')?['body/_ownerid_value']",
+                "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_2')?['body/_createdby_value']"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "a5a46ec4-07a9-42e4-9f90-4cc8e91b2729"
+          },
+          "type": "If"
+        },
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída_3": {
+          "runAfter": {
+            "Condição_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9b17c714-bba8-48ea-a4c9-81116976024e"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "cre0a_ordservicoos",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condição_3": {
+          "actions": {
+            "Atualizar_uma_linha_3": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "79ead813-b0c8-46ff-9d74-ee660ef31d7c"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cre0a_lojas",
+                  "recordId": "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_3')?['body/_lt_lojaos_value']",
+                  "item/lt_statusatualizado": 124400002
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Quando_uma_linha_é_adicionada,_modificada_ou_excluída_3": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Atualizar_uma_linha_4": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "ecf2fe57-fd5d-4ebb-9bcf-36de3293aa7b"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "UpdateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "cre0a_lojas",
+                    "recordId": "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_3')?['body/_lt_lojaos_value']",
+                    "item/lt_statusatualizado": 124400003
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "not": {
+              "equals": [
+                "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_3')?['body/_modifiedby_value']",
+                "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_3')?['body/_createdby_value']"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "c36fc682-3cd6-4705-9e57-26dc09cc5fb9"
+          },
+          "type": "If"
+        },
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída_4": {
+          "runAfter": {
+            "Condição": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5e5baee1-86f7-4290-b158-485471c04e51"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "cre0a_ordservicoos",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condição_4": {
+          "actions": {
+            "Atualizar_uma_linha_5": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "955814c0-719a-433c-9e74-ba468b0055bc"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cre0a_lojas",
+                  "recordId": "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_4')?['body/_lt_lojaos_value']",
+                  "item/lt_statusatualizado": 124400000
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Quando_uma_linha_é_adicionada,_modificada_ou_excluída_4": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "equals": [
+              "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_4')?['body/_createdby_value']",
+              "@outputs('Quando_uma_linha_é_adicionada,_modificada_ou_excluída_4')?['body/_modifiedby_value']"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "bc53550a-bdf4-47b8-9315-330434d30b5a"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

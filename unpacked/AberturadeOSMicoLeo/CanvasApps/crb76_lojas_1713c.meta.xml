@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>crb76_lojas_1713c</Name>
+  <AppVersion>2024-09-02T15:54:32Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24083.14.0</CreatedByClientVersion>
+  <MinClientVersion>3.24083.14.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.24083.14","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","offlineLargeFilesSupport":"false","sienaVersion":"20240801T143249Z-3.24074.14.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>Operação</DisplayName>
+  <Description>Adicionado perfil de Inspetor Plus</Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"Lojas":{"entitySetName":"cre0a_lojas","logicalName":"cre0a_loja"},"Ordem de Serviço":{"entitySetName":"cre0a_ordservicooses","logicalName":"cre0a_ordservicoos"},"Abastecimentos":{"entitySetName":"cre0a_vistoriases","logicalName":"cre0a_vistorias"},"Usuários":{"entitySetName":"systemusers","logicalName":"systemuser"},"Direitos de Acesso":{"entitySetName":"roles","logicalName":"role"},"Chamados":{"entitySetName":"lt_chamadosses","logicalName":"lt_chamadoss"},"Registro de Início e Fim":{"entitySetName":"lt_registroiniciofims","logicalName":"lt_registroiniciofim"},"Máquina":{"entitySetName":"cre0a_maquinas","logicalName":"cre0a_maquina"},"Auditoria Máquina":{"entitySetName":"crb76_auditoriamaquinas","logicalName":"crb76_auditoriamaquina"},"Recolhimento_1":{"entitySetName":"lt_recolhimentos","logicalName":"lt_recolhimento"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>0</CanConsumeAppPass>
+  <CanvasAppType>2</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"cre0a_loja","componenttype":1},{"logicalname":"cre0a_ordservicoos","componenttype":1},{"logicalname":"cre0a_vistorias","componenttype":1},{"logicalname":"systemuser","componenttype":1},{"logicalname":"role","componenttype":1},{"logicalname":"lt_chamadoss","componenttype":1},{"logicalname":"lt_registroiniciofim","componenttype":1},{"logicalname":"cre0a_maquina","componenttype":1},{"logicalname":"crb76_auditoriamaquina","componenttype":1},{"logicalname":"lt_recolhimento","componenttype":1}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/crb76_lojas_1713c_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/crb76_lojas_1713c_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/crb76_lojas_1713c_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

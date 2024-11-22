@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{f2f73a15-efc0-4975-be27-7fe15a84cc01}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{150e561a-5294-4f38-b2a9-ebbb0f4a7024}" IsUserDefined="1">
+          <labels>
+            <label description="Geral" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{ec56be7d-e5d1-4269-9035-0ae48a710745}">
+                  <labels>
+                    <label description="Geral" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e5e0f5d8-4feb-406f-b118-c1d7b5cc1618}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Usuário" languagecode="1046" />
+                        </labels>
+                        <control id="cre0a_usuarios" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="cre0a_usuarios" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ff8978aa-2fa1-4096-ae2a-82cd290e2b98}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Comentário" languagecode="1046" />
+                        </labels>
+                        <control id="cre0a_comentario" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="cre0a_comentario" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{50c9b8d5-ba6a-4346-8d32-ff5f832057b6}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{6aaf1299-2610-421f-a699-b2badb89f300}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{1c23b345-d136-407e-af41-df9c2594d8dd}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{b7dd6d8d-7790-4af3-8626-a23ef90870ed}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{ed176c74-4387-4c56-98c7-bb32f1eb1aa6}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{142d4963-fcf7-4c76-8347-ec36c17d7f0e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{c2f4e7ff-0f27-4f73-9705-83c6481e730f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{8f67763d-52d5-46be-b1a9-806064bac8f6}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

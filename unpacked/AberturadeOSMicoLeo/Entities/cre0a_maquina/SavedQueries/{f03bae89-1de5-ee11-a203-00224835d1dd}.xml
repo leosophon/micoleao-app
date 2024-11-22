@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{f03bae89-1de5-ee11-a203-00224835d1dd}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="cre0a_nomemaq" select="1" icon="1" preview="1">
+        <row name="result" id="cre0a_maquinaid">
+          <cell name="cre0a_maquinasid" width="109" />
+          <cell name="cre0a_nomemaq" width="200" />
+          <cell name="lt_tipo" width="100" />
+          <cell name="cre0a_loja" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="cre0a_maquina">
+          <attribute name="cre0a_nomemaq" />
+          <attribute name="cre0a_maquinaid" />
+          <attribute name="cre0a_maquinasid" />
+          <attribute name="lt_tipo" />
+          <attribute name="cre0a_loja" />
+          <filter type="and">
+            <condition attribute="crb76_problemaativo" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.58</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Máquina com Problema" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

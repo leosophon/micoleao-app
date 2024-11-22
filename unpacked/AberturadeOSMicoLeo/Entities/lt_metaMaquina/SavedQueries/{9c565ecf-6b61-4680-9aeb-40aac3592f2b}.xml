@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{9c565ecf-6b61-4680-9aeb-40aac3592f2b}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_idmetamaquina" select="1" icon="1" preview="1">
+        <row name="result" id="lt_metamaquinaid">
+          <cell name="lt_maquina" width="100" />
+          <cell name="lt_ano" width="100" />
+          <cell name="lt_janeiro" width="100" />
+          <cell name="lt_fevereiro" width="100" />
+          <cell name="lt_marco" width="100" />
+          <cell name="lt_abril" width="100" />
+          <cell name="lt_maio" width="100" />
+          <cell name="lt_junho" width="100" />
+          <cell name="lt_julho" width="100" />
+          <cell name="lt_agosto" width="100" />
+          <cell name="lt_setembro" width="100" />
+          <cell name="lt_outubro" width="100" />
+          <cell name="lt_novembro" width="100" />
+          <cell name="lt_dezembro" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_metamaquina">
+          <attribute name="lt_metamaquinaid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="lt_idmetamaquina" operator="like" value="{0}" />
+          </filter>
+          <attribute name="lt_maquina" />
+          <attribute name="lt_ano" />
+          <attribute name="lt_janeiro" />
+          <attribute name="lt_fevereiro" />
+          <attribute name="lt_marco" />
+          <attribute name="lt_abril" />
+          <attribute name="lt_maio" />
+          <attribute name="lt_junho" />
+          <attribute name="lt_julho" />
+          <attribute name="lt_agosto" />
+          <attribute name="lt_setembro" />
+          <attribute name="lt_outubro" />
+          <attribute name="lt_novembro" />
+          <attribute name="lt_dezembro" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Localização Rápida de Meta Máquina Ativo(a)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

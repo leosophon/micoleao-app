@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{15a85b2c-2efd-452d-b992-f9f469bd27ca}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{362cad98-139e-4ed1-964b-bcb7b7fb636e}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{97b24bb4-e31d-4c83-97b7-c367d659f2e6}">
+                  <labels>
+                    <label description="GERAL" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a871d3b0-b239-41e0-a99d-f5ca9fe4989d}" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Vistoria ID" languagecode="1046" />
+                        </labels>
+                        <control id="cre0a_vistoriaid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="cre0a_vistoriaid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{da3ca212-c630-4d3b-8595-bb36613cad0b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Loja" languagecode="1046" />
+                        </labels>
+                        <control id="lt_lojamaquina" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_lojamaquina" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                            <DefaultViewId>{B8132C59-EED0-EE11-904D-000D3A888E51}</DefaultViewId>
+                            <AvailableViewIds>{B8132C59-EED0-EE11-904D-000D3A888E51}</AvailableViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ed20aed8-f630-4eb0-8545-4b2228996ffa}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Iniciar o abastecimento das máquinas ?" languagecode="1046" />
+                        </labels>
+                        <control id="lt_abastecimentodasmaquinas" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="lt_abastecimentodasmaquinas" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f25b141a-1e2d-4060-8bf0-3bd9b892b455}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Finalizar o abastecimento das máquinas ?" languagecode="1046" />
+                        </labels>
+                        <control id="lt_finalizarabastecimentomaquinas" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="lt_finalizarabastecimentomaquinas" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{85c0d734-5ba2-4185-9ba1-9d10bb66263f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Algo para reportar ?" languagecode="1046" />
+                        </labels>
+                        <control id="lt_algoparareportar" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_algoparareportar" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cc3df6bd-da38-4b0a-a8ed-d244d5d0c0b1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Qual será o problema para reportar ?" languagecode="1046" />
+                        </labels>
+                        <control id="lt_qualseraproblemaparareportar" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_qualseraproblemaparareportar" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c6e12470-5b8d-480b-8739-c2cf52d123a6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Máquina" languagecode="1046" />
+                        </labels>
+                        <control id="lt_maquina" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_maquina" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                            <DependentAttributeName>cre0a_vistorias.lt_lojamaquina</DependentAttributeName>
+                            <DependentAttributeType>cre0a_loja</DependentAttributeType>
+                            <FilterRelationshipName>cre0a_maquina_loja_cre0a_loja</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{40c37d45-bdac-4f10-9225-c10400d11317}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Condição da Máquina" languagecode="1046" />
+                        </labels>
+                        <control id="lt_condicaodamaquina" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_condicaodamaquina" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a7d18c12-851a-4cf3-986e-2db38f4eba6d}" visible="false">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+  </systemform>
+</forms>

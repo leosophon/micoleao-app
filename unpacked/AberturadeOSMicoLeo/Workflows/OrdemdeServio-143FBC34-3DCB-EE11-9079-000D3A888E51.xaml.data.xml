@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{143fbc34-3dcb-ee11-9079-000d3a888e51}" Name="Ordem de Serviço" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/OrdemdeServio-143FBC34-3DCB-EE11-9079-000D3A888E51.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>0</StateCode>
+  <StatusCode>1</StatusCode>
+  <processorder>0</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>lt_ordemdeservico</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.24</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>cre0a_ordServicoOs</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1046" description="Ordem de Serviço" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{c5a61daa-c86d-4ac5-92e4-f674ac183724}">
+      <label languagecode="1046" description="Nova Solicitação" />
+    </steplabels>
+    <steplabels id="{101a248b-95ba-4e92-9564-c4ad7cafa181}">
+      <label languagecode="1046" description="Loja" />
+    </steplabels>
+    <steplabels id="{4ed7e9f9-c1da-4963-9a9d-dd0088d9db7d}">
+      <label languagecode="1046" description="Qual será o problema para reportar ?" />
+    </steplabels>
+    <steplabels id="{217190e7-db53-4fe2-858e-eaa297d57f72}">
+      <label languagecode="1046" description="Técnico Responsável" />
+    </steplabels>
+    <steplabels id="{15a57beb-a683-426a-a2a1-0769c48cf5e2}">
+      <label languagecode="1046" description="Proprietário" />
+    </steplabels>
+    <steplabels id="{4ec04ccb-39ed-4940-930a-9b58b88f6cdb}">
+      <label languagecode="1046" description="Avaliação Inicial OS" />
+    </steplabels>
+    <steplabels id="{d52a7a48-e9a3-4f01-bc2b-6cdea64f3f8a}">
+      <label languagecode="1046" description="Avaliação Inicial OS" />
+    </steplabels>
+    <steplabels id="{16633a91-17d5-474a-a8e6-e95c6a3b5ab4}">
+      <label languagecode="1046" description="Parecer Final OS" />
+    </steplabels>
+    <steplabels id="{3391c4e7-6574-4010-8346-2365bc179b52}">
+      <label languagecode="1046" description="Parecer Final OS" />
+    </steplabels>
+  </labels>
+</Workflow>

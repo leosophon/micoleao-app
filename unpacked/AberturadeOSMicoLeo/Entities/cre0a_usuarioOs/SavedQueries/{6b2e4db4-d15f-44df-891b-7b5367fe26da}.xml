@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{6b2e4db4-d15f-44df-891b-7b5367fe26da}</savedqueryid>
+    <layoutxml>
+      <grid name="cre0a_usuariooses" jump="cre0a_nome" select="1" icon="1" preview="0">
+        <row name="cre0a_usuarioos" id="cre0a_usuarioosid">
+          <cell name="cre0a_nome" width="300" />
+          <cell name="cre0a_cpf" width="100" />
+          <cell name="cre0a_email" width="100" />
+          <cell name="cre0a_tipodoperfilparaousuario" width="204" />
+          <cell name="cre0a_usuarioid" width="103" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="cre0a_usuarioos">
+          <attribute name="cre0a_usuarioosid" />
+          <attribute name="cre0a_nome" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="cre0a_usuarioid" />
+          <attribute name="cre0a_cpf" />
+          <attribute name="cre0a_email" />
+          <attribute name="cre0a_tipodoperfilparaousuario" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Consulta de Usuário" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

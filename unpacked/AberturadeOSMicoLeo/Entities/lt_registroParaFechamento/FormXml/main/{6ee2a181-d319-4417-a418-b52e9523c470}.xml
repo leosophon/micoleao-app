@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{6ee2a181-d319-4417-a418-b52e9523c470}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{80d740dd-8410-43fa-8f8c-f333428340de}" IsUserDefined="1">
+          <labels>
+            <label description="Geral" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{e1e04e5b-0f42-40eb-9771-c19f2ff57732}">
+                  <labels>
+                    <label description="Geral" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{92d094c6-993a-48ea-9c29-8ee75e2264d3}" locklevel="0">
+                        <labels>
+                          <label description="ID Venda" languagecode="1046" />
+                        </labels>
+                        <control id="lt_idregistroparafechamento" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="lt_idregistroparafechamento" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8f4aadc2-c13d-45b5-aec5-9c6168befb29}" visible="false">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_7" id="e1f4dae9-11e0-4fd7-b55b-5eb1cabf7844" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Local da Venda" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{182df881-8bb3-40c5-9741-585a1b813072}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Loja" languagecode="1046" />
+                        </labels>
+                        <control id="lt_loja" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_loja" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c78e1f56-e693-4ff7-85ab-44e622e37a36}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Máquina" languagecode="1046" />
+                        </labels>
+                        <control id="lt_maquina" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_maquina" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_4" id="41ff412b-9a5e-43fb-b193-d6d9634758dd" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Cliente" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{2e05a6a2-d6ab-49bc-8e29-c10f031bf3a1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Cliente" languagecode="1046" />
+                        </labels>
+                        <control id="lt_cliente" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_cliente" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_8" id="c9e99bad-92b5-4122-9199-6c80c21244f3" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Valores Venda" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{2b352efb-78a8-41be-8647-c0e1d4411f4d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor da Venda" languagecode="1046" />
+                        </labels>
+                        <control id="lt_valor" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_valor" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a487c64d-4019-4074-97af-65d68a7e4162}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor do Desconto" languagecode="1046" />
+                        </labels>
+                        <control id="lt_valordescontoof" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_valordescontoof" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{92b55bae-f41f-4a96-b65d-615d391c5708}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor Frete" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_valorfrete" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="crb76_valorfrete" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{73bf30e1-675d-4b93-a695-82b2c7e5258b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Outros Valores Vendas" languagecode="1046" />
+                        </labels>
+                        <control id="lt_outrosvaloresvendas" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="lt_outrosvaloresvendas" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b85e8e3e-45a7-4277-ba16-5081cfff3624}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor Total Da Venda" languagecode="1046" />
+                        </labels>
+                        <control id="lt_valortotaldavenda" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="lt_valortotaldavenda" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6cb0ad07-8661-41a0-b0da-034ea8e9abb4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Moedas" languagecode="1046" />
+                        </labels>
+                        <control id="lt_moedas" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_moedas" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_14" id="7bf8d8ba-79ce-48d4-9bf9-e01caeaaf298" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Informações Pagamento Entrada" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{42b01bc8-5475-45b2-9150-d727da360c77}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data Entrada" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_dataentrada" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crb76_dataentrada" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a1ab32d2-ab2f-4378-8754-99647f011c57}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor Entrada" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_valorentrada" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="crb76_valorentrada" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c8dd5b1f-667b-4a6f-861e-fa9b53fe52ce}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Meio Recebimento" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_meiorecebimento" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crb76_meiorecebimento" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_15" id="8194c85a-64d1-4a16-91a8-365424b9ffac" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Informações Financiamento" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{781e47fb-ace1-4a20-a39d-a50524b91e05}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data Primeira Parcela" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_dataprimeiraparcela" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crb76_dataprimeiraparcela" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{28228470-c7c2-4474-9b88-c96115d94148}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Quantidade de Parcelas" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_quantidadedeparcelas" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="crb76_quantidadedeparcelas" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ad971651-e572-459c-b0a9-cd6e8390895a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Periodicidade" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_periodicidade" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="crb76_periodicidade" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{823f87e5-7c1c-4412-ab39-c1b80d026499}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Meio Recebimento Financiamento" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_meiorecebimentofinanciamento" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crb76_meiorecebimentofinanciamento" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4b8c90f9-0058-4477-bcc4-c609387b7b37}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Outros Valores Financiamento" languagecode="1046" />
+                        </labels>
+                        <control id="lt_outrosvaloresfinanciamento" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="lt_outrosvaloresfinanciamento" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{77e6bd06-b67c-4cd2-b863-35e503542897}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor Total Financiado" languagecode="1046" />
+                        </labels>
+                        <control id="lt_valortotalfinanciado" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="lt_valortotalfinanciado" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_16" id="aa60dd9b-d4a4-4ef9-a9aa-9724bc301f67" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Totalizador" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+                <section name="null_section_6" id="230dbd9e-ceae-40fe-96fd-b27364ef4c35" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Informações Recebimento VLLink / Vend Pago" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{9bc9c5d3-e4f1-4bf7-b14e-964927172350}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Autorização / NSU" languagecode="1046" />
+                        </labels>
+                        <control id="lt_idautorizacao" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="lt_idautorizacao" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{84925c95-7591-40be-9c09-29ea37771eab}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Bandeira" languagecode="1046" />
+                        </labels>
+                        <control id="lt_bandeira" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="lt_bandeira" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{51b23b93-b446-497b-8dab-b79513a230c9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data/Hora Transação" languagecode="1046" />
+                        </labels>
+                        <control id="lt_datahoratransacao" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="lt_datahoratransacao" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2ce9bc20-7f06-43cc-b272-561e9410418a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Valor Recebido" languagecode="1046" />
+                        </labels>
+                        <control id="lt_valorrecebido" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="lt_valorrecebido" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_12" id="3889c571-6cd0-433d-8da8-dfaff548b5c4" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Unidades Negócio" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{8bc5fe28-2bdc-456b-bf9f-704ef0a9aca4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Unidade de Negócio Vendedora" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_unidadedenegociovendedora" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crb76_unidadedenegociovendedora" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_11" id="87041348-9412-48c5-abc4-301d5494f91b" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Rateios" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+                <section name="null_section_10" id="aa5df643-80b8-48aa-b618-6f3a44c3ae26" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Classificação Receitas" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+                <section name="null_section_9" id="726ac6d6-9641-43b6-abfd-5b3f1b199142" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Entrega" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{5ebedb62-a887-4014-bc3a-252c5c8982c5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Entrega produtos efetuada" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_entregaprodutosefetuada" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="crb76_entregaprodutosefetuada" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{84fd44cc-e84a-4aa3-901f-f94cbdf59469}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data Entrega ou Previsão" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_dataentregaouprevisao" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crb76_dataentregaouprevisao" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9b3a1cba-ef42-430a-aa3b-5b5030b43692}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Modalidade Transporte" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_modalidadetransporte" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="crb76_modalidadetransporte" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{00b2e891-db7e-4f65-9c04-17d26d4d2eb6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Informações Entrega" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_informacoesentrega" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="crb76_informacoesentrega" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_5" id="3d0dd370-837f-42c5-b344-a30caec2f5fc" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Produtos Vendidos" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{2c00259e-0e93-4aae-8908-517fb4ef977f}" rowspan="4" colspan="1" auto="false">
+                        <labels>
+                          <label description="Produtos Vendidos" languagecode="1046" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>crb76_produtovendido</TargetEntityType>
+                            <ViewId>{1FBD006C-5AA0-4B64-A51C-9167543CBDDF}</ViewId>
+                            <ViewIds>{1FBD006C-5AA0-4B64-A51C-9167543CBDDF}</ViewIds>
+                            <RelationshipName>lt_crb76_produtovendido_vendaId_lt_registroparafechamento</RelationshipName>
+                            <VisualizationId>{AB378635-7423-EF11-840A-00224838230E}</VisualizationId>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="null_section_13" id="5970ecb3-a9be-49a9-b33a-b8f9e90cae71" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Anexos" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{ca3d1d88-1c64-4b79-acbe-da1acd19acd9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Anexo" languagecode="1046" />
+                        </labels>
+                        <control id="crb76_anexo" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="crb76_anexo" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="d1180ab3-f366-40ab-98cd-ce3ff708059b" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Registro Sistema" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{0a208118-ac4e-4961-9d56-224432a7f8ba}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status" languagecode="1046" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9b75021a-abdb-40de-9803-b3620e099b0b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data de Criação" languagecode="1046" />
+                        </labels>
+                        <control id="createdon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1e341d74-3df3-454e-97b1-4865f570eddf}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Criada Por" languagecode="1046" />
+                        </labels>
+                        <control id="createdby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{82c6c321-4ebb-4baf-a7e2-57dbdba78324}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data de Modificação" languagecode="1046" />
+                        </labels>
+                        <control id="modifiedon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="modifiedon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dd9e54b3-87a8-45b8-9aa6-e7c53986aecb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Modificado Por" languagecode="1046" />
+                        </labels>
+                        <control id="modifiedby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="modifiedby" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{da82a8ce-bd6c-456c-8189-e27367c96022}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{82a1b268-f016-4e9d-a7a8-33dc162d6290}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{3f5b5978-6f5a-41d3-8967-78014bead91d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{bce6283e-9a68-4f6d-a833-13bf0f489bbe}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{c5b0d1ee-3ab8-4541-ab77-9149e663b633}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{bf8ca7ba-e3d3-4eb0-a5d9-c57cb25e0c38}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{40c3e05f-329f-4579-8572-d280e2bfd29f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{2106f984-ae24-48d5-b33b-21900804c864}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

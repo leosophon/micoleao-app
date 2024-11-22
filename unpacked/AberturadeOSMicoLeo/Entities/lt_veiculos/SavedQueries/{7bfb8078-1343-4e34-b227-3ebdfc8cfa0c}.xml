@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{7bfb8078-1343-4e34-b227-3ebdfc8cfa0c}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nome" select="1" icon="1" preview="1">
+        <row name="result" id="lt_veiculosid">
+          <cell name="lt_nome" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_veiculos">
+          <attribute name="lt_veiculosid" />
+          <attribute name="lt_nome" />
+          <attribute name="createdon" />
+          <order attribute="lt_nome" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="lt_nome" operator="like" value="{0}" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Localização Rápida de Veículos Ativo(a)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{5db3ff76-1d95-4c4d-90a7-d3d0c379ffcd}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crb76_nomedoproduto" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_produtoid">
+          <cell name="lt_numeroproduto" width="134" />
+          <cell name="crb76_nomedoproduto" width="300" />
+          <cell name="crb76_produtoservico" width="150" />
+          <cell name="lt_producaoterceiros" width="149" />
+          <cell name="statecode" width="100" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_produto">
+          <attribute name="crb76_produtoid" />
+          <attribute name="crb76_nomedoproduto" />
+          <attribute name="createdon" />
+          <order attribute="crb76_nomedoproduto" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="crb76_produtoservico" />
+          <attribute name="statecode" />
+          <attribute name="lt_numeroproduto" />
+          <attribute name="lt_producaoterceiros" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Produtos Ativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

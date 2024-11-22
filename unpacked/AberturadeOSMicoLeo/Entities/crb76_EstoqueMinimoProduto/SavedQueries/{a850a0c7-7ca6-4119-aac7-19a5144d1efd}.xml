@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{a850a0c7-7ca6-4119-aac7-19a5144d1efd}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nomeestoqueminimoproduto" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_estoqueminimoprodutoid">
+          <cell name="lt_nomeestoqueminimoproduto" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_estoqueminimoproduto">
+          <attribute name="crb76_estoqueminimoprodutoid" />
+          <attribute name="lt_nomeestoqueminimoproduto" />
+          <attribute name="createdon" />
+          <order attribute="lt_nomeestoqueminimoproduto" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Localização Avançada de Estoque Minimo Produto" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

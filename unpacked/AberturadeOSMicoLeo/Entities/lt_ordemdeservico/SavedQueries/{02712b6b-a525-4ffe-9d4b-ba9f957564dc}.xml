@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{02712b6b-a525-4ffe-9d4b-ba9f957564dc}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="result" id="businessprocessflowinstanceid">
+          <cell name="createdby" width="101" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_ordemdeservico">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="bpf_name" operator="like" value="{0}" />
+          </filter>
+          <attribute name="createdby" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Localização Rápida de Ordem de Serviço Ativo(a)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

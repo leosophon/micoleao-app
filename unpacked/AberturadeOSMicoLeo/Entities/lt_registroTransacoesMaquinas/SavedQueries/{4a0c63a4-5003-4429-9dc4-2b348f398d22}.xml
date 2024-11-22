@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{4a0c63a4-5003-4429-9dc4-2b348f398d22}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_idregistrotransacoesmaquinas" select="1" icon="1" preview="1">
+        <row name="result" id="lt_registrotransacoesmaquinasid">
+          <cell name="lt_idregistrotransacoesmaquinas" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_registrotransacoesmaquinas">
+          <attribute name="lt_registrotransacoesmaquinasid" />
+          <attribute name="lt_idregistrotransacoesmaquinas" />
+          <attribute name="createdon" />
+          <order attribute="lt_idregistrotransacoesmaquinas" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="lt_idregistrotransacoesmaquinas" operator="like" value="{0}" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Localização Rápida de Registro Transações Máquinas Ativo(a)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

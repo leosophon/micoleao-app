@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{a49dcd24-7244-ef11-a316-6045bd3c58b6}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="cre0a_nomemaq" select="1" icon="1" preview="1">
+        <row name="result" id="cre0a_maquinaid">
+          <cell name="cre0a_nomemaq" width="200" />
+          <cell name="cre0a_loja" width="100" />
+          <cell name="lt_regadoradereceita" width="155" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="cre0a_maquina">
+          <attribute name="cre0a_nomemaq" />
+          <attribute name="cre0a_maquinaid" />
+          <attribute name="cre0a_loja" />
+          <filter type="and">
+            <condition attribute="lt_regadoradereceita" operator="eq" value="1" />
+          </filter>
+          <link-entity name="lt_periodomaquinaloja" alias="aa" link-type="inner" from="lt_maquina" to="cre0a_maquinaid">
+            <filter type="and">
+              <condition attribute="lt_maquina" operator="not-null" />
+              <condition attribute="lt_loja" operator="not-null" />
+            </filter>
+          </link-entity>
+          <attribute name="lt_regadoradereceita" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.127</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Período Máquina em Loja" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

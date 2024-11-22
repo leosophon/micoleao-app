@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{7500f240-8411-49eb-9174-6b90ae5645b4}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_idrecolhimento" select="1" icon="1" preview="1">
+        <row name="result" id="lt_recolhimentoid">
+          <cell name="lt_idrecolhimento" width="300" />
+          <cell name="lt_loja" width="100" />
+          <cell name="lt_maquina" width="100" />
+          <cell name="lt_data" width="100" />
+          <cell name="lt_malotelook" width="113" />
+          <cell name="lt_lacre" width="100" />
+          <cell name="ownerid" width="110" />
+          <cell name="createdon" width="131" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_recolhimento">
+          <attribute name="lt_recolhimentoid" />
+          <attribute name="lt_idrecolhimento" />
+          <order attribute="lt_idrecolhimento" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+          <attribute name="lt_loja" />
+          <attribute name="lt_maquina" />
+          <attribute name="lt_data" />
+          <attribute name="lt_lacre" />
+          <attribute name="ownerid" />
+          <attribute name="createdon" />
+          <attribute name="lt_malotelook" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Recolhimento Inativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

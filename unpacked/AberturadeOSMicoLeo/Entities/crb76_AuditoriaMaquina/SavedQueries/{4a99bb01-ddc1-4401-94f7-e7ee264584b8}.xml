@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{4a99bb01-ddc1-4401-94f7-e7ee264584b8}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crb76_novacoluna" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_auditoriamaquinaid">
+          <cell name="crb76_novacoluna" width="300" />
+          <cell name="lt_loja" width="100" />
+          <cell name="lt_maquina" width="100" />
+          <cell name="lt_datahoraauditoria" width="159" />
+          <cell name="lt_quantidadepremios" width="154" />
+          <cell name="lt_quantidadedecredito" width="167" />
+          <cell name="ownerid" width="110" />
+          <cell name="createdon" width="131" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_auditoriamaquina">
+          <attribute name="crb76_auditoriamaquinaid" />
+          <attribute name="crb76_novacoluna" />
+          <order attribute="crb76_novacoluna" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+          <attribute name="lt_loja" />
+          <attribute name="lt_maquina" />
+          <attribute name="lt_datahoraauditoria" />
+          <attribute name="lt_quantidadepremios" />
+          <attribute name="lt_quantidadedecredito" />
+          <attribute name="ownerid" />
+          <attribute name="createdon" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Auditoria Maquina Inativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

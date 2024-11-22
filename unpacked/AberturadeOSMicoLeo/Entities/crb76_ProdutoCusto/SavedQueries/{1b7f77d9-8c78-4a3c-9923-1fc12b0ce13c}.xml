@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{1b7f77d9-8c78-4a3c-9923-1fc12b0ce13c}</savedqueryid>
+    <layoutxml>
+      <grid name="crb76_produtocustos" jump="lt_nomeprodutocusto" select="1" icon="1" preview="1">
+        <row name="crb76_produtocusto" id="crb76_produtocustoid">
+          <cell name="lt_nomeprodutocusto" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_produtocusto">
+          <attribute name="crb76_produtocustoid" />
+          <attribute name="lt_nomeprodutocusto" />
+          <attribute name="createdon" />
+          <order attribute="lt_nomeprodutocusto" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição Associada de Produto Custo" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

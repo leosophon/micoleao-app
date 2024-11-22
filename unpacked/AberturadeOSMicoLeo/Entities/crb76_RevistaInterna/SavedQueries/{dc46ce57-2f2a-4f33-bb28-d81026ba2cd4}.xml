@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{dc46ce57-2f2a-4f33-bb28-d81026ba2cd4}</savedqueryid>
+    <layoutxml>
+      <grid name="crb76_revistainternas" jump="crb76_nomemateria" select="1" icon="1" preview="0">
+        <row name="crb76_revistainterna" id="crb76_revistainternaid">
+          <cell name="crb76_nomemateria" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_revistainterna">
+          <attribute name="crb76_revistainternaid" />
+          <attribute name="crb76_nomemateria" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Consulta de Revista Interna" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="cre0a_tipodepelucia" localizedName="Tipo de Pelúcia" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Tipo de Pelúcia" languagecode="1046" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1046" />
+  </Descriptions>
+  <options>
+    <option value="653740000" ExternalValue="">
+      <labels>
+        <label description="Animais de Pelúcia" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="653740001" ExternalValue="">
+      <labels>
+        <label description="Super-Heróis" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="653740002" ExternalValue="">
+      <labels>
+        <label description="Bonecos de Pelúcia Temáticos" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>lt_osportecnico_7b4ed</Name>
+  <AppVersion>2024-04-16T19:30:41Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24042.21.0</CreatedByClientVersion>
+  <MinClientVersion>3.24042.21.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.24042.21","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","offlineLargeFilesSupport":"false","sienaVersion":"20240416T191009Z-3.24042.21.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>OsPorTecnico</DisplayName>
+  <Description>Ajuste de detalhes</Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"Usuários":{"entitySetName":"systemusers","logicalName":"systemuser"},"Direitos de Acesso":{"entitySetName":"roles","logicalName":"role"},"Perfil de Usuário":{"entitySetName":"cre0a_perfilusuarios","logicalName":"cre0a_perfilusuario"},"ApplicationUsers":{"entitySetName":"applicationusers","logicalName":"applicationuser"},"Ordem de Serviço":{"entitySetName":"cre0a_ordservicooses","logicalName":"cre0a_ordservicoos"},"Lojas":{"entitySetName":"cre0a_lojas","logicalName":"cre0a_loja"},"Máquina":{"entitySetName":"cre0a_maquinas","logicalName":"cre0a_maquina"},"Usuários_1":{"entitySetName":"cre0a_usuariooses","logicalName":"cre0a_usuarioos"},"Abastecimentos":{"entitySetName":"cre0a_vistoriases","logicalName":"cre0a_vistorias"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>0</CanConsumeAppPass>
+  <CanvasAppType>2</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"systemuser","componenttype":1},{"logicalname":"role","componenttype":1},{"logicalname":"cre0a_perfilusuario","componenttype":1},{"logicalname":"applicationuser","componenttype":1},{"logicalname":"cre0a_ordservicoos","componenttype":1},{"logicalname":"cre0a_loja","componenttype":1},{"logicalname":"cre0a_maquina","componenttype":1},{"logicalname":"cre0a_usuarioos","componenttype":1},{"logicalname":"cre0a_vistorias","componenttype":1}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/lt_osportecnico_7b4ed_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/lt_osportecnico_7b4ed_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/lt_osportecnico_7b4ed_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{3e9038d0-7c6c-4bf0-8ac4-25a5a1792d5f}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nomepedidoentrega" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_pedidoentregaid">
+          <cell name="lt_nomepedidoentrega" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_pedidoentrega">
+          <attribute name="crb76_pedidoentregaid" />
+          <attribute name="lt_nomepedidoentrega" />
+          <attribute name="createdon" />
+          <order attribute="lt_nomepedidoentrega" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Pedido Entrega Inativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

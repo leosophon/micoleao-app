@@ -1,0 +1,172 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "286e14d7-4bb9-4d65-85d1-c65d421ce83f"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "lt_registroparafechamento",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condição": {
+          "actions": {
+            "Obtendo_Venda": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "8528714a-d168-4d6f-b0fa-dfa243f72ea0"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "lt_registroparafechamentos",
+                  "recordId": "@triggerOutputs()?['body/lt_registroparafechamentoid']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Atualizar_uma_linha": {
+              "runAfter": {
+                "ValorTotalDaVenda": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e8c20d2d-72ea-4541-92aa-992c74daf9e2"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "lt_registroparafechamentos",
+                  "recordId": "@triggerOutputs()?['body/lt_registroparafechamentoid']",
+                  "item/lt_valortotaldavenda": "@outputs('ValorTotalDaVenda')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "ValorVenda": {
+              "runAfter": {
+                "Obtendo_Venda": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "21d0e626-6955-49ec-a533-c0ecd47a4468"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Venda')?['body/lt_valor']"
+            },
+            "ValorFrete": {
+              "runAfter": {
+                "ValorVenda": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e09a0f43-8b55-4794-abf6-e1a62e6d1580"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Venda')?['body/crb76_valorfrete']"
+            },
+            "OutrosValoresVendas": {
+              "runAfter": {
+                "ValorFrete": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f5d6aa35-ed51-4250-a642-d2b43dda834c"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Venda')?['body/lt_outrosvaloresvendas']"
+            },
+            "Desconto": {
+              "runAfter": {
+                "OutrosValoresVendas": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e125fc29-9847-4ae0-9a4b-07e88984ae1e"
+              },
+              "type": "Compose",
+              "inputs": "@outputs('Obtendo_Venda')?['body/lt_valordescontoof']"
+            },
+            "ValorTotalDaVenda": {
+              "runAfter": {
+                "Desconto": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "0e5c90d2-ef3b-480d-9138-a821b6136119"
+              },
+              "type": "Compose",
+              "inputs": "@sub(add(add(outputs('ValorVenda'), outputs('ValorFrete')), outputs('OutrosValoresVendas')), outputs('Desconto'))"
+            }
+          },
+          "runAfter": {},
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/lt_criacaovendadevido']",
+              124400002
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "afc654ec-e52d-46f2-9983-96d22b629148"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{4ad71780-e766-ef11-a670-000d3a886bca}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_name" select="1" icon="1" preview="1">
+        <row name="result" id="lt_funcionariosid">
+          <cell name="lt_empresa" width="100" />
+          <cell name="lt_matricula" width="100" />
+          <cell name="lt_name" width="200" />
+          <cell name="lt_areadocolaborador" width="159" />
+          <cell name="crb76_dataentrada" width="114" />
+          <cell name="lt_recolhedor" width="105" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="lt_funcionarios">
+          <attribute name="lt_name" />
+          <attribute name="lt_funcionariosid" />
+          <attribute name="lt_empresa" />
+          <attribute name="lt_matricula" />
+          <attribute name="lt_areadocolaborador" />
+          <attribute name="crb76_dataentrada" />
+          <filter type="and">
+            <condition attribute="lt_recolhedor" operator="eq" value="1" />
+          </filter>
+          <attribute name="lt_recolhedor" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.153</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Colaborador Recolhedor" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>cre0a_AppAberturadeOSMicoLeao</UniqueName>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <WebResourceId>70bf66d2-afc3-ee11-9079-6045bd3a2553</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="1" schemaName="actioncard" />
+    <AppModuleComponent type="1" schemaName="applicationuser" />
+    <AppModuleComponent type="1" schemaName="appointment" />
+    <AppModuleComponent type="1" schemaName="contact" />
+    <AppModuleComponent type="1" schemaName="crb76_auditoriamaquina" />
+    <AppModuleComponent type="1" schemaName="cre0a_comentarioos" />
+    <AppModuleComponent type="1" schemaName="cre0a_loja" />
+    <AppModuleComponent type="1" schemaName="cre0a_maquina" />
+    <AppModuleComponent type="1" schemaName="cre0a_ordservicoos" />
+    <AppModuleComponent type="1" schemaName="cre0a_perfilusuario" />
+    <AppModuleComponent type="1" schemaName="cre0a_usuarioos" />
+    <AppModuleComponent type="1" schemaName="cre0a_vistorias" />
+    <AppModuleComponent type="1" schemaName="entity" />
+    <AppModuleComponent type="1" schemaName="expiredprocess" />
+    <AppModuleComponent type="1" schemaName="knowledgearticle" />
+    <AppModuleComponent type="1" schemaName="lt_chamadoss" />
+    <AppModuleComponent type="1" schemaName="lt_necessidadedecompra" />
+    <AppModuleComponent type="1" schemaName="lt_recolhimento" />
+    <AppModuleComponent type="1" schemaName="lt_registroparafechamento" />
+    <AppModuleComponent type="1" schemaName="lt_tickets" />
+    <AppModuleComponent type="1" schemaName="lt_tiposmaquinas" />
+    <AppModuleComponent type="1" schemaName="lt_vistoria" />
+    <AppModuleComponent type="1" schemaName="newprocess" />
+    <AppModuleComponent type="1" schemaName="task" />
+    <AppModuleComponent type="1" schemaName="translationprocess" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001004}" />
+    <AppModuleComponent type="26" id="{00000000-0000-0000-00aa-000010001033}" />
+    <AppModuleComponent type="26" id="{6ee7b519-36cf-ee11-904d-000d3a888e51}" />
+    <AppModuleComponent type="26" id="{2ba1fc70-f7d7-ee11-904c-00224835d1dd}" />
+    <AppModuleComponent type="26" id="{94272787-d2db-ee11-904c-00224835d1dd}" />
+    <AppModuleComponent type="26" id="{7ebcb571-b4e0-ee11-904c-00224835d1dd}" />
+    <AppModuleComponent type="26" id="{0681f0a9-f0e6-ee11-a203-002248ded485}" />
+    <AppModuleComponent type="26" id="{f8123666-f2e6-ee11-a203-002248ded485}" />
+    <AppModuleComponent type="26" id="{7e0cdcc2-6acb-4296-aeef-00eb7062ac65}" />
+    <AppModuleComponent type="26" id="{25ac3cce-c1e7-4523-88d8-2ba9876a294d}" />
+    <AppModuleComponent type="26" id="{56339419-5fae-4048-80b5-3278e420d375}" />
+    <AppModuleComponent type="26" id="{a3f148a1-3f53-42ca-bd87-45983f1d3863}" />
+    <AppModuleComponent type="26" id="{de2e5182-841c-43bf-8d21-46cfff36f706}" />
+    <AppModuleComponent type="26" id="{cd0c2d8b-dad1-4f18-ab50-49f266f7b2ba}" />
+    <AppModuleComponent type="26" id="{4797b84c-5cf3-431e-b4cb-4e585f5b1332}" />
+    <AppModuleComponent type="26" id="{512c7ec8-5997-431f-870e-549b4429b74a}" />
+    <AppModuleComponent type="26" id="{45d8c2ab-577e-407d-8387-549f9a60c24d}" />
+    <AppModuleComponent type="26" id="{d0479533-05a4-4bd3-affc-5767379a344d}" />
+    <AppModuleComponent type="26" id="{a65de54b-4576-4e67-9d9b-5859d6b63dde}" />
+    <AppModuleComponent type="26" id="{262ee328-f31c-ef11-840a-6045bd397722}" />
+    <AppModuleComponent type="26" id="{439779a9-f71c-ef11-840a-6045bd397722}" />
+    <AppModuleComponent type="26" id="{339c6df2-f81c-ef11-840a-6045bd397722}" />
+    <AppModuleComponent type="26" id="{91ae5dd5-a4c3-ee11-9079-6045bd3a2553}" />
+    <AppModuleComponent type="26" id="{749ba12b-a5c3-ee11-9079-6045bd3a2553}" />
+    <AppModuleComponent type="26" id="{858582b7-b1c3-ee11-9079-6045bd3a2553}" />
+    <AppModuleComponent type="26" id="{09c2b1aa-b6c3-ee11-9079-6045bd3a2553}" />
+    <AppModuleComponent type="26" id="{2aeb5a3e-cb75-4734-8d0c-6873fa8d5126}" />
+    <AppModuleComponent type="26" id="{414f015f-cf5a-454c-9835-7b48fa794f3d}" />
+    <AppModuleComponent type="26" id="{a1d356d5-3c7a-413a-b0b1-85bb3acf6482}" />
+    <AppModuleComponent type="26" id="{6215f37b-e07f-4409-883b-a0d354f49b96}" />
+    <AppModuleComponent type="26" id="{0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105}" />
+    <AppModuleComponent type="26" id="{65036b5b-b7c0-4da0-afa3-aa716dcbbcc3}" />
+    <AppModuleComponent type="26" id="{5b5f75f6-b585-4212-952a-b4cbb64e2627}" />
+    <AppModuleComponent type="26" id="{606eea12-0c33-47d3-96e1-ba1529ee8205}" />
+    <AppModuleComponent type="26" id="{6ce987c8-d1f3-4754-b472-c6afb5bbb6d7}" />
+    <AppModuleComponent type="26" id="{e5213278-dd30-4e70-9564-c797605f9920}" />
+    <AppModuleComponent type="26" id="{27736dc3-3521-4daf-ad87-c8b8353ddb03}" />
+    <AppModuleComponent type="26" id="{939d9171-7353-4dc7-804e-cbb31a2b2448}" />
+    <AppModuleComponent type="26" id="{64cfe4e1-3a80-4ca6-b578-d125706eea70}" />
+    <AppModuleComponent type="26" id="{66119664-0758-444d-947b-f480256791e5}" />
+    <AppModuleComponent type="26" id="{bb83d819-11ed-46ab-9d19-f7ae2bbcb84a}" />
+    <AppModuleComponent type="29" id="{f1f9cc17-96c2-ee11-9079-6045bd3a2553}" />
+    <AppModuleComponent type="59" id="{82c60c79-eec2-ee11-9079-6045bd3a2553}" />
+    <AppModuleComponent type="59" id="{9d97a904-acc3-ee11-9079-6045bd3a2553}" />
+    <AppModuleComponent type="60" id="{4a0931b5-abf2-ee11-a1fd-000d3a8904ee}" />
+    <AppModuleComponent type="60" id="{21741a37-bee7-ee11-a203-002248379b1f}" />
+    <AppModuleComponent type="60" id="{e9ac2423-ef19-ef11-840a-6045bd397722}" />
+    <AppModuleComponent type="60" id="{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}" />
+    <AppModuleComponent type="62" schemaName="cre0a_AppAberturadeOSMicoLeao" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="Mico Leao | PRODUÇÃO" languagecode="1046" />
+  </LocalizedNames>
+  <appelements>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_cat_keyboardshortcuts_5ca22">
+      <canvasappid>
+        <name>cat_keyboardshortcuts_5ca22</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_cat_keyboardshortcuts_5ca22</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_crb76_lojas_1713c">
+      <canvasappid>
+        <name>crb76_lojas_1713c</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_crb76_lojas_1713c</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_abastecimento_41c6f">
+      <canvasappid>
+        <name>lt_abastecimento_41c6f</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_abastecimento_41c6f</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_analisarabastecimento_3d050">
+      <canvasappid>
+        <name>lt_analisarabastecimento_3d050</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_analisarabastecimento_3d050</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_analisaros_5a779">
+      <canvasappid>
+        <name>lt_analisaros_5a779</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_analisaros_5a779</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_appaberturadeosmicoleaodefaultcommandlibrary_02278">
+      <canvasappid>
+        <name>lt_appaberturadeosmicoleaodefaultcommandlibrary_02278</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_appaberturadeosmicoleaodefaultcommandlibrary_02278</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_atribuiraotcnico_0761b">
+      <canvasappid>
+        <name>lt_atribuiraotcnico_0761b</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_atribuiraotcnico_0761b</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_home_5667f">
+      <canvasappid>
+        <name>lt_home_5667f</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_home_5667f</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_notificarclientes_96780">
+      <canvasappid>
+        <name>lt_notificarclientes_96780</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_notificarclientes_96780</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_novaauditoria_f3c3d">
+      <canvasappid>
+        <name>lt_novaauditoria_f3c3d</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_novaauditoria_f3c3d</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_novaos_524d0">
+      <canvasappid>
+        <name>lt_novaos_524d0</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_novaos_524d0</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_novochamado_ecd62">
+      <canvasappid>
+        <name>lt_novochamado_ecd62</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_novochamado_ecd62</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_novorecolhimento_0dffb">
+      <canvasappid>
+        <name>lt_novorecolhimento_0dffb</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_novorecolhimento_0dffb</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_ordensdeservio_c4f68">
+      <canvasappid>
+        <name>lt_ordensdeservio_c4f68</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_ordensdeservio_c4f68</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_osportecnico_7b4ed">
+      <canvasappid>
+        <name>lt_osportecnico_7b4ed</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_osportecnico_7b4ed</name>
+    </appelement>
+    <appelement uniquename="lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_transaotickets_fce66">
+      <canvasappid>
+        <name>lt_transaotickets_fce66</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>lt_cre0a_AppAberturadeOSMicoLeao_canvasappid_lt_transaotickets_fce66</name>
+    </appelement>
+  </appelements>
+  <appsettings>
+    <appsetting settingdefinitionid.uniquename="AllowNotificationsEarlyAccess">
+      <iscustomizable>1</iscustomizable>
+      <value>true</value>
+    </appsetting>
+    <appsetting settingdefinitionid.uniquename="AppChannel">
+      <iscustomizable>1</iscustomizable>
+      <value>1</value>
+    </appsetting>
+    <appsetting settingdefinitionid.uniquename="EnableLockTabsOnMobile2022">
+      <iscustomizable>1</iscustomizable>
+      <value>true</value>
+    </appsetting>
+  </appsettings>
+</AppModule>

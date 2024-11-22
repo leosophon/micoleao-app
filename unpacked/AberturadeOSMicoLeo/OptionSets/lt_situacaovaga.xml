@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="lt_situacaovaga" localizedName="Situação Vaga" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.201</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Situação Vaga" languagecode="1046" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1046" />
+  </Descriptions>
+  <options>
+    <option value="124400000" ExternalValue="">
+      <labels>
+        <label description="1 - Solicitada" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400001" ExternalValue="">
+      <labels>
+        <label description="2 - Aberta" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400002" ExternalValue="">
+      <labels>
+        <label description="3 - Preenchida" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400003" ExternalValue="">
+      <labels>
+        <label description="4 - Cancelada" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400004" ExternalValue="">
+      <labels>
+        <label description="5 - Paralisada" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

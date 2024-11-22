@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="crb76_periodicidade" localizedName="Periodicidade" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Periodicidade" languagecode="1046" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1046" />
+  </Descriptions>
+  <options>
+    <option value="452870003" ExternalValue="">
+      <labels>
+        <label description="Diário" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="452870000" ExternalValue="">
+      <labels>
+        <label description="Mensal" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="452870001" ExternalValue="">
+      <labels>
+        <label description="Quinzenal" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="452870002" ExternalValue="">
+      <labels>
+        <label description="Semanal" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

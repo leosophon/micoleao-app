@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d3096bd2-6b9d-ef11-a72c-002248379ed7}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nome" select="1" icon="1" preview="1">
+        <row name="result" id="lt_controledeveiculosid">
+          <cell name="lt_colaborador" width="110" />
+          <cell name="lt_veiculo" width="100" />
+          <cell name="lt_tipodechecklist" width="140" />
+          <cell name="lt_dataderetirada" width="135" />
+          <cell name="lt_datadedevolucao" width="148" />
+          <cell name="lt_devolucaopendente" width="156" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="lt_controledeveiculos">
+          <attribute name="lt_controledeveiculosid" />
+          <attribute name="lt_colaborador" />
+          <attribute name="lt_veiculo" />
+          <attribute name="lt_tipodechecklist" />
+          <attribute name="lt_dataderetirada" />
+          <attribute name="lt_datadedevolucao" />
+          <attribute name="lt_devolucaopendente" />
+          <filter type="and">
+            <condition attribute="lt_devolucaopendente" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.195</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Controle de Veículos - Devolução Pendente" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

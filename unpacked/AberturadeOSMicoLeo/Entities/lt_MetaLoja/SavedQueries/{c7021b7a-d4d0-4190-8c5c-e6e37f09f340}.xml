@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{c7021b7a-d4d0-4190-8c5c-e6e37f09f340}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_idmeta" select="1" icon="1" preview="1">
+        <row name="result" id="lt_metalojaid">
+          <cell name="lt_loja" width="100" />
+          <cell name="lt_ano" width="100" />
+          <cell name="lt_janeiro" width="100" />
+          <cell name="lt_fevereiro" width="100" />
+          <cell name="lt_marco" width="100" />
+          <cell name="lt_abril" width="100" />
+          <cell name="lt_maio" width="100" />
+          <cell name="lt_junho" width="100" />
+          <cell name="lt_julho" width="100" />
+          <cell name="lt_agosto" width="100" />
+          <cell name="lt_setembro" width="100" />
+          <cell name="lt_outubro" width="100" />
+          <cell name="lt_novembro" width="100" />
+          <cell name="lt_dezembro" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_metaloja">
+          <attribute name="lt_metalojaid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_abril" />
+          <attribute name="lt_ano" />
+          <attribute name="lt_loja" />
+          <attribute name="lt_janeiro" />
+          <attribute name="lt_fevereiro" />
+          <attribute name="lt_marco" />
+          <attribute name="lt_maio" />
+          <attribute name="lt_junho" />
+          <attribute name="lt_julho" />
+          <attribute name="lt_agosto" />
+          <attribute name="lt_setembro" />
+          <attribute name="lt_outubro" />
+          <attribute name="lt_novembro" />
+          <attribute name="lt_dezembro" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Meta Loja Ativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

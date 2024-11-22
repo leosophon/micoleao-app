@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="crb76.Mscrm.Form.appointment.AddEmail.Hide" Location="Mscrm.Form.appointment.AddEmail" />
+    <HideCustomAction HideActionId="crb76.Mscrm.Form.appointment.AddTask.Hide" Location="Mscrm.Form.appointment.AddTask" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.appointment.AddEmail.Hide" Location="Mscrm.HomepageGrid.appointment.AddEmail" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.appointment.AddFax.Hide" Location="Mscrm.HomepageGrid.appointment.AddFax" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.appointment.AddLetter.Hide" Location="Mscrm.HomepageGrid.appointment.AddLetter" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.appointment.AddOtherActivities.Hide" Location="Mscrm.HomepageGrid.appointment.AddOtherActivities" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.appointment.AddPhone.Hide" Location="Mscrm.HomepageGrid.appointment.AddPhone" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.appointment.AddTask.Hide" Location="Mscrm.HomepageGrid.appointment.AddTask" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.appointment.modern.SendDirectEmail.Hide" Location="Mscrm.HomepageGrid.appointment.modern.SendDirectEmail" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.appointment.SendDirectEmail.Hide" Location="Mscrm.HomepageGrid.appointment.SendDirectEmail" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="Mscrm.AddTaskToSelectedRecord">
+      <EnableRules>
+        <EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+        <EnableRule Id="Mscrm.VisualizationPaneNotMaximized" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="Mscrm.AddActivityToSelected" />
+        <DisplayRule Id="Mscrm.HideOnCommandBar" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="XrmCore.Commands.Add.AddActivityFromGrid" Library="$webresource:Main_system_library.js">
+          <StringParameter Value="task" />
+          <StringParameter Value="" />
+          <CrmParameter Value="SelectedControlSelectedItemReferences" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="Mscrm.AddActivityToSelected">
+        <EntityPrivilegeRule PrivilegeType="AppendTo" PrivilegeDepth="Basic" AppliesTo="SelectedEntity" />
+        <EntityPrivilegeRule PrivilegeType="Create" PrivilegeDepth="Basic" EntityName="activitypointer" />
+        <EntityPrivilegeRule PrivilegeType="Append" PrivilegeDepth="Basic" EntityName="activitypointer" />
+        <EntityPropertyRule AppliesTo="SelectedEntity" PropertyName="HasActivities" PropertyValue="true" />
+      </DisplayRule>
+      <DisplayRule Id="Mscrm.HideOnCommandBar">
+        <OrRule>
+          <Or>
+            <CommandClientTypeRule Type="Legacy" />
+          </Or>
+          <Or>
+            <PageRule Address="/userdefined/edit.aspx" />
+          </Or>
+          <Or>
+            <PageRule Address="/advancedfind/advfind.aspx" />
+          </Or>
+          <Or>
+            <PageRule Address="/advancedfind/fetchData.aspx" />
+          </Or>
+          <Or>
+            <PageRule Address="/tools/formeditor/formeditor.aspx" />
+          </Or>
+          <Or>
+            <PageRule Address="/tools/visualizationdesigner/visualizationdesigner.aspx" />
+          </Or>
+        </OrRule>
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules>
+      <EnableRule Id="Mscrm.SelectionCountExactlyOne">
+        <SelectionCountRule AppliesTo="SelectedEntity" Minimum="1" Maximum="1" />
+      </EnableRule>
+      <EnableRule Id="Mscrm.VisualizationPaneNotMaximized">
+        <OrRule>
+          <Or>
+            <CommandClientTypeRule Type="Modern" />
+          </Or>
+          <Or>
+            <CustomRule FunctionName="Mscrm.GridCommandActions.disableButtonsWhenChartMaximized" Library="/_static/_common/scripts/CommandBarActions.js">
+              <CrmParameter Value="SelectedControl" />
+            </CustomRule>
+          </Or>
+        </OrRule>
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

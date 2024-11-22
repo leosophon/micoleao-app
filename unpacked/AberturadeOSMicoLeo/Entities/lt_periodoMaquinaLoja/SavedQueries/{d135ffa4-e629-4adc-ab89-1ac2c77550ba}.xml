@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d135ffa4-e629-4adc-ab89-1ac2c77550ba}</savedqueryid>
+    <layoutxml>
+      <grid name="lt_periodomaquinalojas" jump="lt_idperiodomaquinaloja" select="1" icon="1" preview="0">
+        <row name="lt_periodomaquinaloja" id="lt_periodomaquinalojaid">
+          <cell name="lt_maquina" width="100" />
+          <cell name="lt_idperiodomaquinaloja" width="212" />
+          <cell name="lt_loja" width="100" />
+          <cell name="lt_datainicio" width="103" />
+          <cell name="lt_datafim" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_periodomaquinaloja">
+          <attribute name="lt_periodomaquinalojaid" />
+          <attribute name="lt_idperiodomaquinaloja" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_maquina" />
+          <attribute name="lt_loja" />
+          <attribute name="lt_datainicio" />
+          <attribute name="lt_datafim" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Consulta de Período Máquina em Loja" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="lt_situacaoordemproducao" localizedName="Situacao Ordem Producao" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.196</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Situacao Ordem Producao" languagecode="1046" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1046" />
+  </Descriptions>
+  <options>
+    <option value="124400000" ExternalValue="">
+      <labels>
+        <label description="Solicitado" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400001" ExternalValue="">
+      <labels>
+        <label description="Em planejamento" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400002" ExternalValue="">
+      <labels>
+        <label description="Agendado" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400003" ExternalValue="">
+      <labels>
+        <label description="Em execução" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400004" ExternalValue="">
+      <labels>
+        <label description="Encerrada (no estoque)" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400005" ExternalValue="">
+      <labels>
+        <label description="Paralizada" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+    <option value="124400006" ExternalValue="">
+      <labels>
+        <label description="Cancelada" languagecode="1046" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1046" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

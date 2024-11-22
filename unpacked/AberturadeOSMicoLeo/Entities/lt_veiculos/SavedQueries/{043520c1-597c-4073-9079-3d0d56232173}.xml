@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{043520c1-597c-4073-9079-3d0d56232173}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nome" select="1" icon="1" preview="1">
+        <row name="result" id="lt_veiculosid">
+          <cell name="lt_nome" width="152" />
+          <cell name="lt_marcamodelo" width="80" />
+          <cell name="lt_anodefabricacao" width="79" />
+          <cell name="lt_placa" width="100" />
+          <cell name="lt_combustivel" width="112" />
+          <cell name="lt_tipo" width="100" />
+          <cell name="lt_ultimolicenciamento" width="167" />
+          <cell name="lt_ultimamanutencao" width="152" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_veiculos">
+          <attribute name="lt_veiculosid" />
+          <attribute name="lt_nome" />
+          <order attribute="lt_nome" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_marcamodelo" />
+          <attribute name="lt_anodefabricacao" />
+          <attribute name="lt_placa" />
+          <attribute name="lt_tipo" />
+          <attribute name="lt_ultimolicenciamento" />
+          <attribute name="lt_ultimamanutencao" />
+          <attribute name="lt_combustivel" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Veículos Ativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

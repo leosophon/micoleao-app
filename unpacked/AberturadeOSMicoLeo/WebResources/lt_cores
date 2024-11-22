@@ -1,0 +1,22 @@
+function Cores() {
+    var colors = {
+        "Baixa": {"icon": "CircleShapeSolid", "color": "#00e608"}, 
+        "Média": {"icon": "CircleShapeSolid", "color": "#ffee00"}, 
+        "Alta": {"icon": "CircleShapeSolid", "color": "#ff0000"}
+    };
+    return colors;
+}
+
+// Execute o código quando o documento estiver completamente carregado
+document.addEventListener("DOMContentLoaded", function() {
+    var opcoesSelect = document.getElementById("opcoes");
+    var cores = Cores();
+
+    // Adicione bolinhas coloridas às opções
+    for (var id in cores) {
+        var option = opcoesSelect.querySelector('option[value="' + id + '"]');
+        var cor = cores[id].color;
+        var bolinha = '<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background-color:' + cor + '"></span>';
+        option.innerHTML = bolinha + ' ' + option.innerHTML;
+    }
+});

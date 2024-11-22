@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{dca6789c-c25b-4375-91fd-bc7d42a4d91b}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{39cd6e8a-d542-43ee-bcbd-749e88ddeca3}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{8ea989f3-989b-4b9d-80a3-a5d7f2f21630}">
+                  <labels>
+                    <label description="GERAL" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b77dcb89-ab19-4666-839f-3a0cbfb0d83d}">
+                        <labels>
+                          <label description="ID Registro Transações Máquinas" languagecode="1046" />
+                        </labels>
+                        <control id="lt_idregistrotransacoesmaquinas" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="lt_idregistrotransacoesmaquinas" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bbf48381-e407-4c25-81ba-0c6fe08b96b2}">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+  </systemform>
+</forms>

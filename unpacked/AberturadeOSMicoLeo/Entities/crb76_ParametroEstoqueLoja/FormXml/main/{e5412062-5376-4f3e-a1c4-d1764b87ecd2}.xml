@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e5412062-5376-4f3e-a1c4-d1764b87ecd2}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{ee2c2194-8aa6-4a35-a2c8-ef9028c9dcaa}" IsUserDefined="1">
+          <labels>
+            <label description="Geral" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{b7a47d2f-5078-41dd-906c-4eb7fce8910b}">
+                  <labels>
+                    <label description="Geral" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{486e20ab-32e3-40d5-a554-d31acf319b67}">
+                        <labels>
+                          <label description="Nome Parametro Estoque Loja" languagecode="1046" />
+                        </labels>
+                        <control id="lt_nomeparametroestoqueloja" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="lt_nomeparametroestoqueloja" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{99466fe6-3328-46e0-90d1-3f88f2056381}" visible="false">
+                        <labels>
+                          <label description="Proprietário" languagecode="1046" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1d23d76d-5931-45a6-a8cf-1fc010c7b857}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Numero Parametro Estoque Loja" languagecode="1046" />
+                        </labels>
+                        <control id="lt_numeroparametroestoqueloja" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="lt_numeroparametroestoqueloja" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="9779c95e-adee-4e65-8799-8abc70ae4d21" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Identificação da Loja" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{a300b6be-36db-4187-8e2e-cf03f756150d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Loja" languagecode="1046" />
+                        </labels>
+                        <control id="lt_loja" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_loja" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_4" id="53e157c0-9573-4271-a928-973839c89a36" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Produto" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{df55bfc9-d509-404e-8882-4cfc60677418}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Produto" languagecode="1046" />
+                        </labels>
+                        <control id="lt_produto" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="lt_produto" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_6" id="6e8b2943-1f5c-4ffa-b026-cbfbb8c251c2" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Parametros" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{762dc162-e31b-41c9-9f28-02281acb8bda}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Estoque Mínimo" languagecode="1046" />
+                        </labels>
+                        <control id="lt_estoqueminimo" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="lt_estoqueminimo" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3272eb51-deda-493f-97e7-61fee23f1255}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Quantidade Media Reposicao" languagecode="1046" />
+                        </labels>
+                        <control id="lt_quantidademediareposicao" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="lt_quantidademediareposicao" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{096bff3d-c8bc-4a5f-8eed-f67650110b34}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Periodicidade Reposicao" languagecode="1046" />
+                        </labels>
+                        <control id="lt_periodicidadereposicao" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_periodicidadereposicao" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_7" id="23d48a74-b735-4b9a-8ee8-6a0ad957234d" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Validade" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{0d51cb05-c6b3-46cf-8279-66b97e17f42f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Vigente" languagecode="1046" />
+                        </labels>
+                        <control id="lt_vigente" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="lt_vigente" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e639b4ee-fca2-43cc-8204-e0f76ed09ae2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data Início" languagecode="1046" />
+                        </labels>
+                        <control id="lt_datainicio" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="lt_datainicio" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{95651975-2fe4-429d-bfbf-61717324dfeb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data Fim" languagecode="1046" />
+                        </labels>
+                        <control id="lt_datafim" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="lt_datafim" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_5" id="b7bbf8ef-5648-4f5d-857d-39adc21abfee" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Registro Sistema" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{07e18d03-d26e-408c-b7eb-7bd6ad060f50}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status" languagecode="1046" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4e9d8b3f-6c2d-48f0-98c7-119b6c85c656}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data de Criação" languagecode="1046" />
+                        </labels>
+                        <control id="createdon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b1cf053b-9f60-433b-ba50-96c6a96b5896}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Criada Por" languagecode="1046" />
+                        </labels>
+                        <control id="createdby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5a3d96bf-cfaf-4148-9e29-6c88ec0f3d01}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data de Modificação" languagecode="1046" />
+                        </labels>
+                        <control id="modifiedon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="modifiedon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4b118b80-5153-45e1-b839-70387a84e9f6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Modificado Por" languagecode="1046" />
+                        </labels>
+                        <control id="modifiedby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="modifiedby" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{0622c3e7-a303-4749-9862-cb72f88cc11d}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{9969afdc-5873-4ad8-b16a-7acf6ae68a90}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{1e1be6d8-e3fd-4172-83bd-d4612f2a4bdb}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{2ac208ae-e86f-4129-b947-0e868d06943c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{94b86b29-c4d4-40ab-915a-ae5d741d58d3}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{6c8413a1-5dda-432c-80ea-7450355cdea5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{43edf806-6d62-49d3-8ea6-129fe37b9d24}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{523f94be-d1e8-4506-a225-2df61aac4f06}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Informações" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Um formulário para esta entidade." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

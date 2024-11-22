@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{8d1acf09-35d0-ee11-904d-000d3a888e51}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="cre0a_vistoriaid" select="1" icon="1" preview="1">
+        <row name="result" id="cre0a_vistoriasid">
+          <cell name="a_638f5748210841bc89f4c10ae8d7919c.cre0a_nomeloja" width="113" />
+          <cell name="createdon" width="131" />
+          <cell name="lt_finalizarvistoriapreventiva" width="211" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="cre0a_vistorias">
+          <attribute name="cre0a_vistoriasid" />
+          <filter type="and">
+            <condition attribute="lt_finalizarvistoriapreventiva" operator="ne" value="1" />
+          </filter>
+          <link-entity alias="a_638f5748210841bc89f4c10ae8d7919c" name="cre0a_loja" to="lt_lojamaquina" from="cre0a_lojaid" link-type="outer" visible="false">
+            <attribute name="cre0a_nomeloja" />
+          </link-entity>
+          <attribute name="createdon" />
+          <attribute name="lt_finalizarvistoriapreventiva" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.32</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Loja Relacionada com a Vistoria" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

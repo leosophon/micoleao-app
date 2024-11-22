@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{09c2b1aa-b6c3-ee11-9079-6045bd3a2553}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="cre0a_ordemservicoid" select="1" icon="1" preview="1">
+        <row name="result" id="cre0a_ordservicoosid">
+          <cell name="cre0a_ordemservicoid" width="200" />
+          <cell name="lt_lojaos" width="100" />
+          <cell name="lt_qualproblemaparareportar" width="246" />
+          <cell name="cre0a_maquinaid" width="100" />
+          <cell name="lt_condicaodamaquina" width="164" />
+          <cell name="lt_motivodeabertura" width="152" />
+          <cell name="lt_prioridadeos" width="120" />
+          <cell name="lt_avaliacaoinicialos" width="157" />
+          <cell name="lt_parecerfinalos" width="136" />
+          <cell name="ownerid" width="107" />
+          <cell name="createdby" width="148" />
+          <cell name="createdon" width="131" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="cre0a_ordservicoos">
+          <attribute name="cre0a_ordemservicoid" />
+          <attribute name="cre0a_ordservicoosid" />
+          <attribute name="createdon" />
+          <attribute name="ownerid" />
+          <attribute name="createdby" />
+          <attribute name="lt_motivodeabertura" />
+          <attribute name="lt_avaliacaoinicialos" />
+          <attribute name="lt_parecerfinalos" />
+          <attribute name="lt_lojaos" />
+          <attribute name="cre0a_maquinaid" />
+          <attribute name="lt_condicaodamaquina" />
+          <attribute name="lt_qualproblemaparareportar" />
+          <attribute name="lt_prioridadeos" />
+          <filter type="and">
+            <condition attribute="lt_statusdaordemdeservico" operator="eq" value="3" />
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.2</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Concluídas" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

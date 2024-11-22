@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{8bc23251-44f6-4728-9506-422db57307b0}</savedqueryid>
+    <layoutxml>
+      <grid name="lt_ordemdeservicos" jump="bpf_name" select="1" icon="1" preview="1">
+        <row name="lt_ordemdeservico" id="businessprocessflowinstanceid">
+          <cell name="createdon" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_ordemdeservico">
+          <attribute name="businessprocessflowinstanceid" />
+          <attribute name="bpf_name" />
+          <attribute name="createdon" />
+          <attribute name="statecode" />
+          <attribute name="createdby" />
+          <order attribute="bpf_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição Associada de Ordem de Serviço" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

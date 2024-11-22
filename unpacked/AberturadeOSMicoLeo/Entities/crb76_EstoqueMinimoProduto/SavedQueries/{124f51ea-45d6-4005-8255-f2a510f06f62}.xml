@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{124f51ea-45d6-4005-8255-f2a510f06f62}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nomeestoqueminimoproduto" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_estoqueminimoprodutoid">
+          <cell name="lt_nomeestoqueminimoproduto" width="300" />
+          <cell name="lt_local" width="100" />
+          <cell name="lt_produto" width="100" />
+          <cell name="lt_quantidade" width="150" />
+          <cell name="lt_periodicidade" width="117" />
+          <cell name="lt_datainicio" width="103" />
+          <cell name="lt_datafim" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_estoqueminimoproduto">
+          <attribute name="crb76_estoqueminimoprodutoid" />
+          <attribute name="lt_nomeestoqueminimoproduto" />
+          <order attribute="lt_nomeestoqueminimoproduto" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_quantidade" />
+          <attribute name="lt_datafim" />
+          <attribute name="lt_datainicio" />
+          <attribute name="lt_local" />
+          <attribute name="lt_produto" />
+          <attribute name="lt_periodicidade" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Estoque Minimo Produto Ativos(as)" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

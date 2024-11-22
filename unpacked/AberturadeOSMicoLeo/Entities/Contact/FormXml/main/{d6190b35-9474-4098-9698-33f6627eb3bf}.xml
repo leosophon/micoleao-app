@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{d6190b35-9474-4098-9698-33f6627eb3bf}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>0</FormActivationState>
+    <form></form>
+    <LocalizedNames>
+      <LocalizedName description="Invite Web Form" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Este formulário é usado pelo portal para convidar outros a participarem do portal" languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

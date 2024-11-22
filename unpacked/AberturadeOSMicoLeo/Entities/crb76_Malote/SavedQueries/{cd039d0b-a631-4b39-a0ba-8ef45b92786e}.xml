@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{cd039d0b-a631-4b39-a0ba-8ef45b92786e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_nomemalote" select="1" icon="1" preview="1">
+        <row name="result" id="crb76_maloteid">
+          <cell name="lt_numero" width="100" />
+          <cell name="lt_nomemalote" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb76_malote">
+          <attribute name="crb76_maloteid" />
+          <attribute name="lt_nomemalote" />
+          <attribute name="createdon" />
+          <order attribute="lt_nomemalote" descending="false" />
+          <attribute name="lt_numero" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Exibição de Localização Avançada de Malote" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

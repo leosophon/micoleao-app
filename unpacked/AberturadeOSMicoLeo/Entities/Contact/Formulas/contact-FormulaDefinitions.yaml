@@ -1,0 +1,1 @@
+lt_idadecalc: =DateDiff(lt_datanascimento,Now(),TimeUnit.Years)

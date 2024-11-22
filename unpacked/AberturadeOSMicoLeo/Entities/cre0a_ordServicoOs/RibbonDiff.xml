@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="crb76.Mscrm.Form.cre0a_ordservicoos.NewRecord.Hide" Location="Mscrm.Form.cre0a_ordservicoos.NewRecord" />
+    <HideCustomAction HideActionId="crb76.Mscrm.Form.cre0a_ordservicoos.NewRecordForBPFEntity.Hide" Location="Mscrm.Form.cre0a_ordservicoos.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.AllEntities.VisualizationTab.TopBottom.Clear.Hide" Location="Mscrm.HomepageGrid.AllEntities.VisualizationTab.TopBottom.Clear" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.ChangeDataSetControlButton.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.ChangeDataSetControlButton" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.CustomizeEntity.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.CustomizeEntity" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.CustomizePreviewPane.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.CustomizePreviewPane" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.DesignView.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.DesignView" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.Flows.RefreshCommandBar.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.Flows.RefreshCommandBar" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.MainTab.QuickPowerBI.Button.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.MainTab.QuickPowerBI.Button" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.ManageView.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.ManageView" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.NewRecord.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.NewRecord" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.NewRecordForBPFEntity.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.NewView.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.NewView" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.OpenActiveStage.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.OpenActiveStage" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.RunReport.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.RunReport" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.RunWorkflow.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.RunWorkflow" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.SaveAsDefaultGridView.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.SaveAsDefaultGridView" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.SaveAsNew.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.SaveAsNew" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.SaveFiltersToCurrentSystemView.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.SaveFiltersToCurrentSystemView" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.SaveToCurrent.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.SaveToCurrent" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.Send.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.Send" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.SystemView.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.SystemView" />
+    <HideCustomAction HideActionId="crb76.Mscrm.HomepageGrid.cre0a_ordservicoos.ViewFilters.Hide" Location="Mscrm.HomepageGrid.cre0a_ordservicoos.ViewFilters" />
+    <HideCustomAction HideActionId="crb76.Mscrm.SubGrid.cre0a_ordservicoos.NewRecord.Hide" Location="Mscrm.SubGrid.cre0a_ordservicoos.NewRecord" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions />
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

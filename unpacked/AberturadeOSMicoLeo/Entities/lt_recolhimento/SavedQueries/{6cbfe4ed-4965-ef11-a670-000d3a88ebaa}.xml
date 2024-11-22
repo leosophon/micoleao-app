@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{6cbfe4ed-4965-ef11-a670-000d3a88ebaa}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_idrecolhimento" select="1" icon="1" preview="1">
+        <row name="result" id="lt_recolhimentoid">
+          <cell name="lt_idrecolhimento" width="200" />
+          <cell name="lt_idrecolhimento1" width="137" />
+          <cell name="lt_loja" width="100" />
+          <cell name="lt_maquina" width="100" />
+          <cell name="lt_data" width="100" />
+          <cell name="lt_colaborador" width="110" />
+          <cell name="lt_malotelook" width="113" />
+          <cell name="lt_lacre" width="100" />
+          <cell name="createdon" width="131" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="lt_recolhimento">
+          <attribute name="lt_idrecolhimento" />
+          <attribute name="lt_recolhimentoid" />
+          <attribute name="lt_idrecolhimento1" />
+          <attribute name="lt_loja" />
+          <attribute name="lt_maquina" />
+          <attribute name="lt_data" />
+          <attribute name="lt_colaborador" />
+          <attribute name="lt_lacre" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="lt_recolhimentoligadaconferencianumerario" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_malotelook" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.153</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Recolhimento Já Ligado à Conferência de Numerário" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

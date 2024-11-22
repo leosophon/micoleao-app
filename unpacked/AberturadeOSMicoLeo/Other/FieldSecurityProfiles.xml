@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FieldSecurityProfiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FieldSecurityProfile name="Administração" fieldsecurityprofileid="{e9b4e509-b538-ef11-a316-6045bd3b2e17}">
+    <FieldPermissions>
+      <FieldPermission>
+        <EntityName>crb76_auditoriamaquina</EntityName>
+        <AttributeName>lt_colaborador</AttributeName>
+        <CanRead>4</CanRead>
+        <CanUpdate>4</CanUpdate>
+        <CanCreate>4</CanCreate>
+      </FieldPermission>
+      <FieldPermission>
+        <EntityName>lt_recolhimento</EntityName>
+        <AttributeName>lt_colaborador</AttributeName>
+        <CanRead>4</CanRead>
+        <CanUpdate>4</CanUpdate>
+        <CanCreate>4</CanCreate>
+      </FieldPermission>
+    </FieldPermissions>
+  </FieldSecurityProfile>
+  <FieldSecurityProfile name="Inspetor" fieldsecurityprofileid="{f938a4fc-b838-ef11-a316-6045bd3b2e17}">
+    <FieldPermissions />
+  </FieldSecurityProfile>
+</FieldSecurityProfiles>

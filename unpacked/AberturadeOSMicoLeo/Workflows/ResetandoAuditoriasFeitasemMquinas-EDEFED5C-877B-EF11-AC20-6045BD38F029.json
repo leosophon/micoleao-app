@@ -1,0 +1,99 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "recurrence": {
+            "frequency": "Month",
+            "interval": 1,
+            "timeZone": "E. South America Standard Time",
+            "startTime": "2024-10-01T09:30:00Z"
+          },
+          "metadata": {
+            "operationMetadataId": "a704df0c-d217-40e5-beb9-06ea522e2b81"
+          },
+          "type": "Recurrence"
+        }
+      },
+      "actions": {
+        "Listar_linhas": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "c54229cb-5168-4ebc-a42a-04f4d00f6fcb"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "cre0a_maquinas"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Aplicar_a_cada": {
+          "foreach": "@outputs('Listar_linhas')?['body/value']",
+          "actions": {
+            "Atualizar_uma_linha": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "455bdd37-ef1b-4832-bbe4-875329c8096e"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cre0a_maquinas",
+                  "recordId": "@items('Aplicar_a_cada')?['cre0a_maquinaid']",
+                  "item/lt_auditoriadestemesjafoirealizada": false
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Listar_linhas": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7e6baecb-a8a8-416c-94bf-ccfbdacb227d"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{c9b52509-6cf7-ee11-a1fe-000d3a8904ee}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="cre0a_ordemservicoid" select="1" icon="1" preview="1">
+        <row name="result" id="cre0a_ordservicoosid">
+          <cell name="cre0a_ordemservicoid" width="200" />
+          <cell name="lt_statusdaordemdeservico" width="197" />
+          <cell name="createdon" width="131" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="cre0a_ordservicoos">
+          <attribute name="cre0a_ordemservicoid" />
+          <attribute name="cre0a_ordservicoosid" />
+          <attribute name="lt_statusdaordemdeservico" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="createdon" operator="today" />
+          </filter>
+          <order attribute="createdon" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.72</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Criadas Hoje" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

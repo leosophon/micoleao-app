@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{512c7ec8-5997-431f-870e-549b4429b74a}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="lt_chamadosid" select="1" icon="1" preview="1">
+        <row name="result" id="lt_chamadossid">
+          <cell name="lt_chamadosid" width="131" />
+          <cell name="lt_loja" width="100" />
+          <cell name="lt_nomecliente" width="136" />
+          <cell name="lt_telefonechamado" width="100" />
+          <cell name="lt_descricaoproblema" width="171" />
+          <cell name="lt_necessarioaberturaos" width="189" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="lt_chamadoss">
+          <attribute name="lt_chamadossid" />
+          <attribute name="lt_chamadosid" />
+          <attribute name="createdon" />
+          <order attribute="lt_chamadosid" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="lt_loja" />
+          <attribute name="lt_descricaoproblema" />
+          <attribute name="lt_telefonechamado" />
+          <attribute name="lt_nomecliente" />
+          <attribute name="lt_necessarioaberturaos" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Chamados" languagecode="1046" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{1fed44d1-ae68-4a41-bd2b-f13acac4acfa}</formid>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form showImage="true" headerdensity="HighWithControls" shownavigationbar="false" solutionaction="Modified">
+      <tabs>
+        <tab name="SUMMARY_TAB" id="{15bb2d4b-71da-74ea-3c5b-e497d78a55a2}" IsUserDefined="0" showlabel="true" expanded="true" ordinalvalue="0">
+          <labels>
+            <label description="Informações" languagecode="1046" solutionaction="Modified" />
+          </labels>
+          <columns>
+            <column width="50%" id="0" solutionaction="Modified">
+              <sections>
+                <section name="CONTACT_INFORMATION" showlabel="true" showbar="false" id="{9d943649-0387-1882-caa1-36de40d5a86c}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelposition="Left" ordinalvalue="0">
+                  <labels>
+                    <label description="Dados Pessoais" languagecode="1046" solutionaction="Modified" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{542e581d-cca1-5e40-e6d9-d67a9d1468b4}" showlabel="true" locklevel="0" ordinalvalue="10000" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{07326cde-7529-ddc0-e421-c0bcddd07b8a}" showlabel="true" ordinalvalue="10001" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{a54c19c9-4722-ce25-60c5-2bb9452680d2}" showlabel="true" locklevel="0" ordinalvalue="10002" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{7d538a97-98eb-b438-72de-57a808b9a308}" showlabel="true" ordinalvalue="10003" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{215da2d0-2b64-3481-8d2d-16107d4d7e5b}" showlabel="true" ordinalvalue="10004" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{290b48ba-c0cc-7746-6dda-93e240e4cc78}" showlabel="true" ordinalvalue="10005" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{1b54cdb3-1582-c29e-cc9e-9d4bc2a5700b}" showlabel="true" ordinalvalue="10006" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{408dda0b-48a7-c05c-e29a-56a93eb97172}" showlabel="true" ordinalvalue="10007" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{133d09d6-c374-954a-315b-435e1eeb722c}" showlabel="true" locklevel="0" ordinalvalue="10008" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{00c415a8-5fc6-4c05-a3ec-f61919228b03}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10000" solutionaction="Added">
+                        <labels>
+                          <label description="Nome" languagecode="1046" />
+                        </labels>
+                        <control id="firstname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="firstname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2d90cfb3-df72-4850-b5c3-49a9bdc0c0b7}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10001" solutionaction="Added">
+                        <labels>
+                          <label description="Sobrenome" languagecode="1046" />
+                        </labels>
+                        <control id="lastname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="lastname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{11a9c57e-8a1a-48b8-812a-dab5eca44cc5}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10002" solutionaction="Added">
+                        <labels>
+                          <label description="Data de Nascimento" languagecode="1046" />
+                        </labels>
+                        <control id="lt_datanascimento" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="lt_datanascimento" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bee3e0cf-c735-4cde-b14c-906ad3bb5249}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10003" solutionaction="Added">
+                        <labels>
+                          <label description="Idade" languagecode="1046" />
+                        </labels>
+                        <control id="lt_idadecalc" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="lt_idadecalc" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{765476ea-7111-4c76-83c7-b6b3b30bf362}" locklevel="0" colspan="1" rowspan="1" showlabel="true" ordinalvalue="10004" solutionaction="Added">
+                        <labels>
+                          <label description="CPF" languagecode="1046" />
+                        </labels>
+                        <control id="lt_cpf" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="lt_cpf" disabled="false" uniqueid="{10da7855-2762-a891-4739-c265d73c0757}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ca5d2b6a-6228-4fcc-a68d-241e816d8f3d}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10005" solutionaction="Added">
+                        <labels>
+                          <label description="Sexo" languagecode="1046" />
+                        </labels>
+                        <control id="gendercode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="gendercode" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="MapSection" showlabel="false" showbar="false" id="{e0109668-cb5b-4b6c-8ca6-9d0c4b24f385}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelposition="Left" ordinalvalue="1" solutionaction="Removed" />
+                <section name="SUMMARY_TAB_section_5" id="50424ab8-1255-470d-8f2c-2d7421f1d842" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115" ordinalvalue="1" solutionaction="Added">
+                  <labels>
+                    <label description="Endereço" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a171e7a8-f657-4049-9f9e-0f4fbe35abbc}" ordinalvalue="10000">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                      <cell id="{0d5e85d0-395a-48cf-8cfd-15a29819f6c4}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20001">
+                        <labels>
+                          <label description="Cidade" languagecode="1046" />
+                        </labels>
+                        <control id="address1_city" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="address1_city" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{5a4c9040-ec43-480e-bd75-c40ad1835a3d}" ordinalvalue="10002">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                      <cell id="{19bbc0ee-0834-4648-b6f4-6b650dc7f7d5}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20003">
+                        <labels>
+                          <label description="Nº" languagecode="1046" />
+                        </labels>
+                        <control id="lt_no" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="lt_no" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8abce37c-b37d-47b8-aec6-54d8010e35a1}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10004">
+                        <labels>
+                          <label description="CEP" languagecode="1046" />
+                        </labels>
+                        <control id="address1_postalcode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="address1_postalcode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{374b9138-3af7-40c4-8eb8-173fac2b19ad}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10005">
+                        <labels>
+                          <label description="Rua" languagecode="1046" />
+                        </labels>
+                        <control id="address1_line1" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="address1_line1" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{8352b5b1-9e4f-48d6-ad01-fb4c8ab72ebb}" ordinalvalue="20006">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c4db01a3-dcac-453d-a617-010399909010}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10007">
+                        <labels>
+                          <label description="Estado" languagecode="1046" />
+                        </labels>
+                        <control id="address1_stateorprovince" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="address1_stateorprovince" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{434fac03-31d6-45f3-9883-a2ceabba57ba}" ordinalvalue="20008">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%" id="1" solutionaction="Modified">
+              <sections>
+                <section name="SOCIAL_PANE_TAB" showlabel="false" showbar="false" id="{bea579b8-8901-77b0-1128-351760e68bd4}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelposition="Top" ordinalvalue="0" solutionaction="Removed" />
+                <section name="SUMMARY_TAB_section_4" id="3c8fc3ab-6251-453d-9d91-638b48ff22c7" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="0" solutionaction="Added">
+                  <labels>
+                    <label description="Dados para Contato" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{44d3d1ea-18bf-4c88-a9ba-886ad709040e}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10000">
+                        <labels>
+                          <label description="Preferência de Comunicação" languagecode="1046" />
+                        </labels>
+                        <control id="lt_preferenciadecomunicacao" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="lt_preferenciadecomunicacao" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{290b48ba-c0cc-7746-6dda-93e240e4cc78}" showlabel="true" colspan="1" rowspan="1" ordinalvalue="10001">
+                        <labels>
+                          <label description="Telefone Celular" languagecode="1046" />
+                        </labels>
+                        <control id="mobilephone" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mobilephone" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7d538a97-98eb-b438-72de-57a808b9a308}" showlabel="true" colspan="1" rowspan="1" ordinalvalue="10002">
+                        <labels>
+                          <label description="E-mail" languagecode="1046" />
+                        </labels>
+                        <control id="emailaddress1" classid="{ADA2203E-B4CD-49be-9DDF-234642B43B52}" datafieldname="emailaddress1" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="25%" id="2" solutionaction="Removed" />
+          </columns>
+        </tab>
+        <tab name="DETAILS_TAB" id="{fe1c5c3b-d556-4552-a444-4781214a6d63}" IsUserDefined="0" expanded="true" showlabel="true" ordinalvalue="1" solutionaction="Removed" />
+        <tab name="tab_3" id="616f8969-742f-49a2-8990-3b04fa6ebec0" IsUserDefined="0" locklevel="0" showlabel="true" ordinalvalue="1" solutionaction="Added">
+          <labels>
+            <label description="Tickets" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="tab_3_section_1" id="6435c488-41b7-4e35-aca5-f1c7e8e7939a" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="0">
+                  <labels>
+                    <label description="Quantidade de tickets do cliente" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{5d19acb1-19f5-444e-a2f8-aa2e63ac09a6}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10000">
+                        <labels>
+                          <label description="Tickets" languagecode="1046" />
+                        </labels>
+                        <control id="lt_tickets" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="lt_tickets" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_3_section_3" id="4a843153-021c-4b1d-b7c1-38f4f4b72320" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="1">
+                  <labels>
+                    <label description="Histórico" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{47506cb4-3994-42ab-9636-da3c3c91a8e5}" rowspan="4" colspan="1" auto="false" ordinalvalue="10000">
+                        <labels>
+                          <label description="Transações" languagecode="1046" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>lt_tickets</TargetEntityType>
+                            <ViewId>{C61DD505-25D6-42F1-9220-96AF771CCB08}</ViewId>
+                            <ViewIds>{C61DD505-25D6-42F1-9220-96AF771CCB08}</ViewIds>
+                            <RelationshipName>lt_tickets_nomeCliente_contact</RelationshipName>
+                            <VisualizationId>{8A1EED45-A5F2-EE11-A1FD-000D3A8904EE}</VisualizationId>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="dff437bc-feb6-4675-8570-3ad379dea7af" IsUserDefined="0" locklevel="0" showlabel="true" ordinalvalue="2" solutionaction="Added">
+          <labels>
+            <label description="Linha do Tempo" languagecode="1046" />
+          </labels>
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="tab_2_section_1" id="bc59f9cc-d210-4a99-bbf1-66a6b1b2420a" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="0">
+                  <labels>
+                    <label description="Nova Seção" languagecode="1046" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{95672935-308c-4cc6-b09d-12dd3459995c}" ordinalvalue="10000">
+                        <labels>
+                          <label description="" languagecode="1046" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f25676eb-f610-4906-a9c0-a1d33a218c6d}" rowspan="15" colspan="1" ordinalvalue="10001">
+                        <labels>
+                          <label description="Texto da Observação" languagecode="1046" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{3ff9aa06-4e43-41ce-afa9-22a038af5c19}" celllabelposition="Top" columns="1" labelwidth="115">
+        <rows>
+          <row>
+            <cell id="{24be01cc-16a6-8eea-8916-42d20a1097ae}" showlabel="true" locklevel="1" ordinalvalue="10000">
+              <labels>
+                <label description="Proprietário" languagecode="1046" solutionaction="Modified" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <events>
+        <event name="onchange" application="false" active="false" attribute="lt_cpf" solutionaction="Added">
+          <Handlers>
+            <Handler functionName="ValidarCPF" libraryName="lt_validarCpf" handlerUniqueId="{d48a51dc-38ab-467d-2c62-2c208c5b9510}" enabled="true" parameters="" passExecutionContext="true" ordinalvalue="0" />
+          </Handlers>
+        </event>
+      </events>
+      <Navigation>
+        <NavBar>
+          <NavBarByRelationshipItem RelationshipName="quote_customer_contacts" Id="navQuotes" Sequence="10" Area="Info" Show="false" solutionaction="Removed" />
+          <NavBarByRelationshipItem RelationshipName="order_customer_contacts" Id="navOrders" Sequence="10" Area="Info" Show="false" solutionaction="Removed" />
+          <NavBarByRelationshipItem RelationshipName="invoice_customer_contacts" Id="navInvoices" Sequence="10" Area="Info" Show="false" solutionaction="Removed" />
+        </NavBar>
+        <NavBarAreas solutionaction="Added">
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1046" Text="Comum" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1046" Text="Vendas" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1046" Text="Serviços" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1046" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1046" Text="Sessões de Processo" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions>
+        <controlDescription forControl="{3FF9A528-DD50-4ACA-8F10-2E5ED73513AD}" solutionaction="Removed" />
+      </controlDescriptions>
+      <footer id="{b2f08c35-dba4-48b8-98b2-8c0d494b786e}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left" solutionaction="Added">
+        <rows>
+          <row>
+            <cell id="{52e5f068-1e17-49cc-b93e-fdf53a832824}" showlabel="false" ordinalvalue="10000">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{78c12fe1-0d9c-4c4c-a6af-985a0533f7db}" showlabel="false" ordinalvalue="20001">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+            <cell id="{e089585b-45f5-4510-9fda-bb1bb3568f74}" showlabel="false" ordinalvalue="30002">
+              <labels>
+                <label description="" languagecode="1046" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <formLibraries solutionaction="Added">
+        <Library name="lt_validarCpf" libraryUniqueId="{8b967838-9e92-774a-870b-cac4dbd5e3a0}" />
+      </formLibraries>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Contato" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Formulário padrão de Contato atualizado." languagecode="1046" />
+    </Descriptions>
+  </systemform>
+</forms>

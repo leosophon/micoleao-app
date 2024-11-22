@@ -1,0 +1,218 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "lt_sharedcommondataserviceforapps_6bc80"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "a963d89d-0f32-440c-bce4-b63e788ef772"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "crb76_auditoriamaquina",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condição": {
+          "actions": {
+            "Listar_linhas": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "02fd5d56-395f-45c4-81ac-ce1d43f2dee9"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "lt_funcionarioses"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Matriz_do_filtro": {
+              "runAfter": {
+                "Listar_linhas": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "9c10babf-6aa3-4529-b4ef-99e057fae7eb"
+              },
+              "type": "Query",
+              "inputs": {
+                "from": "@outputs('Listar_linhas')?['body/value']",
+                "where": "@equals(item()?['_lt_usuariosistema_value'], triggerOutputs()?['body/_createdby_value'])"
+              }
+            },
+            "Analisar_JSON": {
+              "runAfter": {
+                "Matriz_do_filtro": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "019d0bb4-0412-42c6-94da-ddb39848c166"
+              },
+              "type": "ParseJson",
+              "inputs": {
+                "content": "@body('Matriz_do_filtro')",
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "lt_funcionariosid": {
+                        "type": "string"
+                      },
+                      "lt_name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "lt_funcionariosid",
+                      "lt_name"
+                    ]
+                  }
+                }
+              }
+            },
+            "Condição_2": {
+              "actions": {
+                "Aplicar_a_cada": {
+                  "foreach": "@body('Analisar_JSON')",
+                  "actions": {
+                    "Obter_uma_linha_por_ID": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "e5146865-8f97-428e-8f27-d9b2def9656c"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "GetItem",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "lt_funcionarioses",
+                          "recordId": "@items('Aplicar_a_cada')['lt_funcionariosid']"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    },
+                    "Compor": {
+                      "runAfter": {
+                        "Obter_uma_linha_por_ID": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "3f4b1365-8e0c-463c-bcae-afd8ee73347e"
+                      },
+                      "type": "Compose",
+                      "inputs": "@outputs('Obter_uma_linha_por_ID')?['body/@odata.id']"
+                    },
+                    "Atualizar_uma_linha": {
+                      "runAfter": {
+                        "Compor": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "eda9e1f3-04cf-41e1-ae3f-2ba474cd33f3"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "UpdateRecord",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "crb76_auditoriamaquinas",
+                          "recordId": "@triggerOutputs()?['body/crb76_auditoriamaquinaid']",
+                          "item/lt_Colaborador@odata.bind": "@outputs('Compor')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "c8f3c095-59e3-4c35-98ac-0bff6e789f6a"
+                  },
+                  "type": "Foreach"
+                }
+              },
+              "runAfter": {
+                "Analisar_JSON": [
+                  "Succeeded"
+                ]
+              },
+              "expression": {
+                "equals": [
+                  "@length(body('Analisar_JSON'))",
+                  1
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1449b77b-c017-4d95-b07a-7891d79d8bb0"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {},
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/_lt_colaborador_value']",
+              "@null"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b2877210-1a97-4885-bdf6-afb881ab8ace"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

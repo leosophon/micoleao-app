@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>lt_appaberturadeosmicoleaodefaultcommandlibrary_02278</Name>
+  <AppVersion>2024-02-15T03:22:30Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24021.12.0</CreatedByClientVersion>
+  <MinClientVersion>0.0.0.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","sienaVersion":"20240215T032053Z-3.24021.12.0","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.24021.12","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","showStatusBar":"false","offlineLargeFilesSupport":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(251,101,60,1)</BackgroundColor>
+  <DisplayName>AppAberturadeOSMicoLeao_DefaultCommandLibrary</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage>Salvo pelo Designer de Comando.</CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds"},"dataSources":{"Ordem de Serviço":{"entitySetName":"cre0a_ordservicooses","logicalName":"cre0a_ordservicoos"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>1</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"cre0a_ordservicoos","componenttype":1}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/lt_appaberturadeosmicoleaodefaultcommandlibra67211_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/lt_appaberturadeosmicoleaodefaultcommandlibra46165_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

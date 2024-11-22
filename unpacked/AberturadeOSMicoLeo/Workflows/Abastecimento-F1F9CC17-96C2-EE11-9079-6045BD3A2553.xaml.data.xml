@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{f1f9cc17-96c2-ee11-9079-6045bd3a2553}" Name="Abastecimento" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/Abastecimento-F1F9CC17-96C2-EE11-9079-6045BD3A2553.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>0</StateCode>
+  <StatusCode>1</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>lt_vistoria</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.2</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>cre0a_vistorias</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1046" description="Abastecimento" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{3ec1c79b-64dd-4acd-89c2-33f2d1342be3}">
+      <label languagecode="1046" description="Iniciar Abastecimento" />
+    </steplabels>
+    <steplabels id="{a09ff1b0-4409-4f09-b4a4-a3d4f187da36}">
+      <label languagecode="1046" description="Selecione a Loja" />
+    </steplabels>
+    <steplabels id="{8ca97c06-492f-429f-8a56-b2973b03d102}">
+      <label languagecode="1046" description="Iniciar o abastecimento das máquinas ?" />
+    </steplabels>
+    <steplabels id="{822832d0-030d-43a1-9ecd-d5b0c4870da5}">
+      <label languagecode="1046" description="Finalizar O Abastecimento" />
+    </steplabels>
+    <steplabels id="{6777959b-8a5a-40f6-aee8-8fe0fbbbd170}">
+      <label languagecode="1046" description="Finalizar o abastecimento das máquinas ?" />
+    </steplabels>
+    <steplabels id="{d4bf7f55-4960-4c41-adad-1a9bdf081cff}">
+      <label languagecode="1046" description="Algo para reportar ?" />
+    </steplabels>
+    <steplabels id="{cca469c1-a7a5-46d4-82ab-05f48ea5d2aa}">
+      <label languagecode="1046" description="Ordem De Serviço" />
+    </steplabels>
+    <steplabels id="{4d788bf3-4800-4658-b9b9-238bad0e22b3}">
+      <label languagecode="1046" description="Proprietário" />
+    </steplabels>
+    <steplabels id="{cff60da1-dad9-4c8d-9ac5-a1edabc6d8c1}">
+      <label languagecode="1046" description="Avaliação Inicial OS" />
+    </steplabels>
+    <steplabels id="{94f86404-2df4-4e58-bbeb-b99afc2a0174}">
+      <label languagecode="1046" description="Avaliação Inicial OS" />
+    </steplabels>
+    <steplabels id="{8431d25b-18b2-49e4-b451-4752f558d988}">
+      <label languagecode="1046" description="Parecer Final OS" />
+    </steplabels>
+    <steplabels id="{0b6c322d-616c-452c-b22f-ace0d4a103c5}">
+      <label languagecode="1046" description="Parecer Final OS" />
+    </steplabels>
+    <steplabels id="{7ea486f7-75be-40e1-96b2-38744bb76688}">
+      <label languagecode="1046" description="Finalizar Vistoria Preventiva" />
+    </steplabels>
+    <steplabels id="{b79a3eaf-3802-4772-934f-3cde7c41ce87}">
+      <label languagecode="1046" description="Finalizar o abastecimento das máquinas ?" />
+    </steplabels>
+  </labels>
+</Workflow>
