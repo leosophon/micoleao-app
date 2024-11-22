@@ -1,4 +1,4 @@
-name: Export and Commit Solution Dev Branch
+name: Export and Commit Solution Dev
 
 on:
   workflow_dispatch:
