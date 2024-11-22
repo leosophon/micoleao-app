@@ -43,7 +43,7 @@ jobs:
         with:
           environment-url: ${{ env.ENVIRONMENT_URL }}
           app-id: ${{ env.CLIENT_ID }}
-          client-secret: ${{ secrets.PowerPlatformSPN }}
+          client-secret: ${{ secrets.POWERPLATFORMSPN }}
           tenant-id: ${{ env.TENANT_ID }}
 
       - name: Set unique filename for solution export
