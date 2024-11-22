@@ -1,4 +1,4 @@
-name: Export and Commit Solution Dev
+name: Export and Commit Solution Dev Branch
 
 on:
   workflow_dispatch:
@@ -12,14 +12,15 @@ permissions:
   contents: write
 
 jobs:
+
   export-from-dev:
     runs-on: ubuntu-latest
     env:
       RUNNER_DEBUG: 1
-      ENVIRONMENT_URL: ${{ vars.ENV_URL }}
-      SOLUTION_NAME: ${{ vars.SOLUTION_NAME }}
-      CLIENT_ID: ${{ vars.APPLICATION_ID }}
-      TENANT_ID: ${{ vars.TENANT_ID }}
+      ENVIRONMENT_URL: ${{ vars.ENV_URL }} >> $GITHUB_ENV
+      SOLUTION_NAME: ${{ vars.SOLUTION_NAME }} >> $GITHUB_ENV
+      CLIENT_ID: ${{ vars.APPLICATION_ID }} >> $GITHUB_ENV
+      TENANT_ID: ${{ vars.TENANT_ID }} >> $GITHUB_ENV
 
     steps:
       - name: Checkout the code
@@ -42,7 +43,7 @@ jobs:
         with:
           environment-url: ${{ env.ENVIRONMENT_URL }}
           app-id: ${{ env.CLIENT_ID }}
-          client-secret: ${{ secrets.POWERPLATFORMSPN }}
+          client-secret: ${{ secrets.PowerPlatformSPN }}
           tenant-id: ${{ env.TENANT_ID }}
 
       - name: Set unique filename for solution export
