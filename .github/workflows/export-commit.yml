@@ -14,7 +14,6 @@ permissions:
 jobs:
   export-from-dev:
     runs-on: ubuntu-latest
-    environment: DEV
     env:
       RUNNER_DEBUG: 1
       ENVIRONMENT_URL: ${{ vars.ENV_URL }}
