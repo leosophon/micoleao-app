@@ -1,0 +1,94 @@
+name: Export and Commit Solution Dev Branch
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_message:
+        description: 'The commit message'
+        required: true
+        default: 'Update from dev'
+
+permissions:
+  contents: write
+
+jobs:
+  export-from-dev:
+    runs-on: ubuntu-latest
+    environment: DEV
+    env:
+      RUNNER_DEBUG: 1
+      ENVIRONMENT_URL: ${{ vars.ENV_URL }}
+      SOLUTION_NAME: ${{ vars.SOLUTION_NAME }}
+      CLIENT_ID: ${{ vars.APPLICATION_ID }}
+      TENANT_ID: ${{ vars.TENANT_ID }}
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Install Power Platform Tools
+        uses: microsoft/powerplatform-actions/actions-install@v1
+
+      - name: Debug Environment Variables
+        run: |
+          echo "ENVIRONMENT_URL: $ENVIRONMENT_URL"
+          echo "SOLUTION_NAME: $SOLUTION_NAME"
+          echo "CLIENT_ID: $CLIENT_ID"
+          echo "TENANT_ID: $TENANT_ID"
+
+      - name: Authenticate with Power Platform
+        uses: microsoft/powerplatform-actions/who-am-i@v1
+        with:
+          environment-url: ${{ env.ENVIRONMENT_URL }}
+          app-id: ${{ env.CLIENT_ID }}
+          client-secret: ${{ secrets.PowerPlatformSPN }}
+          tenant-id: ${{ env.TENANT_ID }}
+
+      - name: Set unique filename for solution export
+        run: echo "SOLUTION_FILE_NAME=${{ env.SOLUTION_NAME }}_unmanaged_$(date +'%Y%m%d%H%M%S').zip" >> $GITHUB_ENV
+
+      - name: Export Solution Unmanaged
+        uses: microsoft/powerplatform-actions/export-solution@v1
+        with:
+          overwrite: true
+          environment-url: ${{ env.ENVIRONMENT_URL }}
+          app-id: ${{ env.CLIENT_ID }}
+          client-secret: ${{ secrets.PowerPlatformSPN }}
+          tenant-id: ${{ env.TENANT_ID }}
+          solution-name: ${{ env.SOLUTION_NAME }}
+          solution-output-file: ${{ github.workspace }}/${{ env.SOLUTION_NAME }}_unmanaged.zip
+
+      - name: Export Solution Managed
+        uses: microsoft/powerplatform-actions/export-solution@v1
+        with:
+          overwrite: true
+          managed: true
+          environment-url: ${{ env.ENVIRONMENT_URL }}
+          app-id: ${{ env.CLIENT_ID }}
+          client-secret: ${{ secrets.PowerPlatformSPN }}
+          tenant-id: ${{ env.TENANT_ID }}
+          solution-name: ${{ env.SOLUTION_NAME }}
+          solution-output-file: ${{ github.workspace }}/${{ env.SOLUTION_NAME }}_managed.zip
+
+      - name: Prepare Unpack Folder
+        run: mkdir -p ${{ github.workspace }}/unpacked/${{ env.SOLUTION_NAME }}
+
+      - name: Unpack Solution
+        uses: microsoft/powerplatform-actions/unpack-solution@v1
+        with:
+          solution-file: ${{ github.workspace }}/${{ env.SOLUTION_NAME }}_unmanaged.zip
+          solution-folder: ${{ github.workspace }}/unpacked/${{ env.SOLUTION_NAME }}
+          solution-type: 'Unmanaged'
+          overwrite-files: true
+
+      - name: Handle Untracked Files and Checkout Dev Branch
+        run: |
+          git fetch --all
+          git config --global user.email "no-reply@github.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "${{ github.event.inputs.commit_message }}" || echo "No changes to commit"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push
