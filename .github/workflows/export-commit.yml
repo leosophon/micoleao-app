@@ -12,14 +12,13 @@ permissions:
   contents: write
 
 jobs:
-
   export-from-dev:
     runs-on: ubuntu-latest
     env:
       RUNNER_DEBUG: 1
-      ENVIRONMENT_URL: ${{ vars.ENV_URL }} >> $GITHUB_ENV
-      SOLUTION_NAME: ${{ vars.SOLUTION_NAME }} >> $GITHUB_ENV
-      CLIENT_ID: ${{ vars.APPLICATION_ID }} >> $GITHUB_ENV
+      ENVIRONMENT_URL: https://micoleaodev.crm2.dynamics.com/
+      SOLUTION_NAME: AberturadeOSMicoLeo
+      CLIENT_ID: c4db9780-b726-4a7e-a20c-ec1a5b281d48
       TENANT_ID: cea68a13-45c3-41e9-93a0-ed17a7217b21
 
     steps:
